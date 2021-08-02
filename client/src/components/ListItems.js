@@ -8,7 +8,7 @@ const ListItems = () => {
 
     const deleteItem = async (id) => {
         try {
-            const deleteItem = await fetch(`http://localhost:5000/item/${id}`, {
+            const deleteItem = await fetch(`http://localhost:5000/exercise/item/${id}`, {
                 method: "DELETE"
             });
 
@@ -21,7 +21,7 @@ const ListItems = () => {
     const getItems = async () => {
         try {
 
-            const response = await fetch("http://localhost:5000/items");
+            const response = await fetch("http://localhost:5000/exercise/items");
             const jsonData = await response.json();
             
             setItems(jsonData);

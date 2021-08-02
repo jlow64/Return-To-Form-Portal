@@ -8,7 +8,7 @@ const InputItem = () => {
         e.preventDefault();
         try {
             const body = { description };
-            const response = fetch("http://localhost:5000/item", {
+            const response = fetch("http://localhost:5000/exercise/item", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
