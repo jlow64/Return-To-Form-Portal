@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+    height: 100vh;
+    margin: 15px;
+    background: linear-gradient(180deg, #FFD066 0%, #F99F1E 100%);
+}
+
+.container {
+    width: 30%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.168px;
+    color: #FFFFFF;
+}
+
+.form-control {
+    border: 0;
+}
+
+.login-logo {
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.login-input, .btn {
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 2px solid #FFFFFF;
+    border-left: 0;
+    background-color: transparent;
+}
+
+.login-input::placeholder {
+    color: #FFFFFF;
+}
+
+.login-icon {
+    border: 2px solid #FFFFFF;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-right: none;
+}
+
+.login-icon-right {
+    border: 2px solid #FFFFFF;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left: none;
+}
+
+.passbar {
+    border-right: 0;
+}
+
+.input-group-text {
+    border: none;
+    color: #FFFFFF;
+}
+
+.input-group {
+    padding: 0.5rem 0;
+}
+
+.btn {
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #F99F1E;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.forgot-text {
+    position: relative;
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 12px;
+    color: whitesmoke;
+}

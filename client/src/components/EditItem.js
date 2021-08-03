@@ -15,7 +15,7 @@ const EditItem = ({ item }) => {
                 body: JSON.stringify(body)
             });
 
-            window.location = "/";
+            window.location = "/dashboard";
         } catch (err) {
             console.error(err.message);
         }

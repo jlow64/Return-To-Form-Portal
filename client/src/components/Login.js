@@ -1,5 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import logo from '../logos/rtf-logo-white.png';
+
+import { Person, LockFill, EyeSlashFill } from "react-bootstrap-icons";
+import "./Login.css";
 
 const Login = ({ setAuth }) => {
 
@@ -26,9 +31,14 @@ const Login = ({ setAuth }) => {
 
             const parseRes = await response.json();
 
-            localStorage.setItem("token", parseRes.token);
+            if (parseRes.token) {
+                localStorage.setItem("token", parseRes.token);
+                setAuth(true);
+                toast.success("Login Successfully!");
+            } else {
+                toast.error(parseRes);
+            }
 
-            setAuth(true);
         } catch (err) {
             console.error(err.message);
         }
@@ -36,27 +46,47 @@ const Login = ({ setAuth }) => {
 
     return (
         <Fragment>
-            <h1 className="text-center mt-5">Login</h1>
-            <form onSubmit={onSubmitForm} >
-                <input 
-                    type="text" 
-                    name="email" 
-                    placeholder="email" 
-                    className="form-control my-3" 
-                    value={email} 
-                    onChange={e => onChange(e)} 
-                />
-                <input 
-                    type="password" 
-                    name="password" 
-                    placeholder="password" 
-                    className="form-control my-3" 
-                    value={password} 
-                    onChange={e => onChange(e)} 
-                />
+            <img src={logo} className="login-logo" width="100%"/>
+            <h2 className="text-left mt-5">Welcome back</h2>
+            <form className="form-group" onSubmit={onSubmitForm} >
+                <div className="input-group mb-1">
+                    <span className="input-group-prepend login-icon">
+                        <div className="input-group-text bg-transparent">
+                            <Person size={18} />
+                        </div>
+                    </span>
+                    <input 
+                        type="text" 
+                        name="email" 
+                        placeholder="Email Address" 
+                        className="form-control login-input" 
+                        value={email} 
+                        onChange={e => onChange(e)} 
+                    />
+                </div>
+                <div className="input-group mb-1">
+                    <span className="input-group-prepend login-icon">
+                        <div className="input-group-text bg-transparent">
+                            <LockFill size={18} />
+                        </div>
+                    </span>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder="Password" 
+                        className="form-control login-input passbar" 
+                        value={password} 
+                        onChange={e => onChange(e)} 
+                    />
+                    <span className="input-group-append login-icon-right">
+                        <div className="input-group-text bg-transparent">
+                            <EyeSlashFill size={18} />
+                        </div>
+                    </span>
+                </div>
                 <button className="btn btn-success btn-block">Submit</button>
+                <Link to="/forgot-password" style={{ textDecoration: 'none' }} ><p className="forgot-text text-right">Forgot Password?</p></Link>
             </form>
-            <Link to="/forgot-password">Forgot Password?</Link>
         </Fragment>
     );
 };
