@@ -21,6 +21,18 @@ body {
     border: 0;
 }
 
+.form-control:valid {
+    color:  #FFFFFF!important;
+}
+
+.form-control:focus {
+    background-color: transparent;
+}
+
+.form-control::selection {
+    background-color: transparent;
+}
+
 .login-logo {
     width: 100%;
     margin-left: 1rem;

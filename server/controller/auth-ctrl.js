@@ -48,7 +48,8 @@ reqLogin = async (req, res) => {
         console.log(validPassword);
 
         if (!validPassword) {
-            return res.status(401).json("Password or Email is incorrect");
+            return res.status(401).json(password);
+            // return res.status(401).json("Password or Email is incorrect");
         }
 
         const token = jwtGenerator(user.rows[0].user_id);
