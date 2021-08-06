@@ -18,4 +18,4 @@ CREATE TABLE users(
 );
 
 --insert fake user
-INSERT INTO users(first_name, last_name, email, password) VALUES ('demo first', 'demo_last', 'demo@gmail.com', 'asdfg123');
+INSERT INTO users(title, first_name, last_name, email, password, role) VALUES ('', 'demo first', 'demo_last', 'demo@gmail.com', 'asdfg123', 'admin');INSERT INTO users(title, first_name, last_name, email, password, role) VALUES ('', 'demo first', 'demo_last', 'demo@gmail.com', 'asdfg123', 'admin');

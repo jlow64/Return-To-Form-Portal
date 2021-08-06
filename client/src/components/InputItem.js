@@ -8,12 +8,13 @@ const InputItem = () => {
         e.preventDefault();
         try {
             const body = { description };
-            const response = fetch("http://localhost:5000/exercise/item", {
+            const response =  await fetch("http://localhost:5000/exercise/item", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
 
+            console.log(response);
             window.location = "/dashboard";
         } catch (err) {
             console.error(err.message);
