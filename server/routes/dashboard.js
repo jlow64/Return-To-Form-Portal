@@ -7,8 +7,6 @@ require('dotenv').config();
 router.get("/", authorization, async (req, res) => {
     try {
         
-        // res.json(req.user);
-
         const user = await pool.query(
             "SELECT first_name FROM users WHERE user_id = $1", 
             [req.user]
@@ -33,7 +31,9 @@ router.get("/cliniko", async (req, res) => {
             }
         });
 
-        res.json(users);
+        const parseRes = await users.json();
+
+        res.json(parseRes);
     } catch (err) {
         console.error(err.message);
         res.status(500).json("Server Error");

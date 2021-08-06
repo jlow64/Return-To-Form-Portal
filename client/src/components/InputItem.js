@@ -22,14 +22,14 @@ const InputItem = () => {
 
     return (
         <Fragment>
-            <form className="d-flex mt-5" onSubmit={onSubmitForm} >
+            <form className="d-flex mt-4" onSubmit={onSubmitForm} >
                 <input 
                     type="text" 
                     className="form-control" 
                     value={description} 
                     onChange={e => setDescription(e.target.value)} 
                 />
-                <button className="btn btn-success">Add</button>
+                <button className="btn btn-success" style={{marginLeft: 15}} >Add</button>
             </form>
         </Fragment>
     );

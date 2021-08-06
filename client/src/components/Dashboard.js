@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import InputItem from "./InputItem";
 import ListItems from "./ListItems";
 import "./Dashboard.css";
+import { toast } from "react-toastify";
 
 const Dashboard = ({ setAuth }) => {
     const [name, setName] = useState("");
@@ -25,7 +26,7 @@ const Dashboard = ({ setAuth }) => {
         try {
             localStorage.removeItem("token");
             setAuth(false);
-            
+            toast.success("Logged out Successfully!");
         } catch (err) {
             console.error(err.message);
         }

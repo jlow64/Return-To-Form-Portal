@@ -22,7 +22,6 @@ body {
 }
 
 .login-logo {
-    width: 100%;
     margin-left: 1rem;
 }
 
@@ -32,6 +31,7 @@ body {
     border: 2px solid #FFFFFF;
     border-left: 0;
     background-color: transparent;
+    height: 48px;
 }
 
 .login-input::placeholder {
