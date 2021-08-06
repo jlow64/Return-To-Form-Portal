@@ -21,9 +21,9 @@ body {
     border: 0;
 }
 
-.form-control:valid {
+/* .form-control:valid {
     color:  #FFFFFF!important;
-}
+} */
 
 .form-control:focus {
     background-color: transparent;

@@ -2,7 +2,11 @@ CREATE DATABASE physiopern;
 
 CREATE TABLE physio_item(
     item_id SERIAL PRIMARY KEY,
-    description VARCHAR(255)
+    description VARCHAR(255),
+    exercise_name VARCHAR(255),
+    sets INT NOT NULL DEFAULT 0, 
+    reps INT NOT NULL DEFAULT 0,
+    frequency INT NOT NULL DEFAULT 0
 );
 
 --set extension

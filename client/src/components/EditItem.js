@@ -1,14 +1,18 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useState } from "react";
 
 const EditItem = ({ item }) => {
     const [description, setDescription] = useState(item.description);
+    const [exercise_name, setName] = useState(item.exercise_name);
+    const [sets, changeSet] = useState(item.sets);
+    const [reps, setreps] = useState(item.reps);
+    const [frequency, setFrequency] = useState(item.frequency);
 
     // edit description function
     
-    const editDescription = async e => {
+    const editExercise = async e => {
         e.preventDefault();
         try {
-            const body = { description };
+            const body = { exercise_name, description, sets, reps, frequency };
             const response = await fetch(`http://localhost:5000/exercise/item/${item.item_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
@@ -35,7 +39,7 @@ const EditItem = ({ item }) => {
             <div 
                 className="modal" 
                 id={`id${item.item_id}`}
-                onClick={() => {setDescription(item.description)}} 
+                onClick={() => {setDescription(item.description);setName(item.exercise_name);changeSet(item.sets);setreps(item.reps);setFrequency(item.frequency)}} 
             >
                 <div className="modal-dialog">
                     <div className="modal-content">
@@ -45,7 +49,7 @@ const EditItem = ({ item }) => {
                                 type="button" 
                                 className="close" 
                                 data-dismiss="modal" 
-                                onClick={() => {setDescription(item.description)}} 
+                                onClick={() => {setDescription(item.description);setName(item.exercise_name);changeSet(item.sets);setreps(item.reps);setFrequency(item.frequency)}} 
                             >
                                 &times;
                             </button>
@@ -55,8 +59,8 @@ const EditItem = ({ item }) => {
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                value={description} 
-                                onChange={e => setDescription(e.target.value)} 
+                                value={exercise_name} 
+                                onChange={e => setName(e.target.value)} 
                             />
                         </div>
 
@@ -65,7 +69,7 @@ const EditItem = ({ item }) => {
                                 type="button" 
                                 className="btn btn-warning" 
                                 data-dismiss="modal"
-                                onClick={e => editDescription(e)}
+                                onClick={e => editExercise(e)}
                             >
                                 Edit
                             </button>
@@ -73,7 +77,7 @@ const EditItem = ({ item }) => {
                                 type="button" 
                                 className="btn btn-danger" 
                                 data-dismiss="modal"
-                                onClick={() => {setDescription(item.description)}} 
+                                onClick={() => {setDescription(item.description);setName(item.exercise_name);changeSet(item.sets);setreps(item.reps);setFrequency(item.frequency)}} 
                             >
                                 Close
                             </button>

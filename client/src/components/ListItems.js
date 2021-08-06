@@ -40,7 +40,10 @@ const ListItems = () => {
             <table className="table mt-5 text-center table-hover">
                 <thead>
                     <tr>
-                        <th>Description</th>
+                        <th>Name</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Frequency</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -48,7 +51,10 @@ const ListItems = () => {
                 <tbody>
                     {items.map(item => (
                         <tr key={item.item_id}>
-                            <td>{item.description}</td>
+                            <td>{item.exercise_name}</td>
+                            <td>{item.sets}</td>
+                            <td>{item.reps}</td>
+                            <td>{item.frequency}</td>
                             <td>
                                 <EditItem item={item} />
                             </td>
