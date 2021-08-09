@@ -13,6 +13,7 @@ import ForgotPassword from "./components/ForgotPassword";
 toast.configure();
 
 function App() {
+  const [pageColor, setPageColor] = useState("")
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const setAuth = (boolean) => {

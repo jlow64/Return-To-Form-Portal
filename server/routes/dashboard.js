@@ -33,7 +33,9 @@ router.get("/cliniko", async (req, res) => {
             }
         });
 
-        res.json(users);
+        const parseRes = await users.json();
+
+        res.json(parseRes);
     } catch (err) {
         console.error(err.message);
         res.status(500).json("Server Error");

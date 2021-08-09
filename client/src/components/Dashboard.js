@@ -1,7 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react";
 import InputItem from "./InputItem";
 import ListItems from "./ListItems";
+import ClinikoUserList from "./ClinikoUserList";
 import "./Dashboard.css";
+
 
 const Dashboard = ({ setAuth }) => {
     const [name, setName] = useState("");
@@ -37,13 +39,16 @@ const Dashboard = ({ setAuth }) => {
 
     return (
         <Fragment>
-            <h1 className="mt-5" >Dashboard</h1>
-            <h2>Welcome {name}</h2>
-            <InputItem />
-            <ListItems />
-            <button onClick={e => logout(e)}  className="btn btn-primary">
-                Log Out
-            </button>
+            <div className="dashboard-container">
+                <h1 className="mt-5" >Dashboard</h1>
+                <h2>Welcome {name}</h2>
+                <InputItem />
+                <ListItems />
+                <button onClick={e => logout(e)}  className="btn btn-primary">
+                    Log Out
+                </button>
+                <ClinikoUserList />
+            </div>
         </Fragment>
     );
 };

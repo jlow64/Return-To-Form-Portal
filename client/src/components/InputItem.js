@@ -26,7 +26,7 @@ const InputItem = () => {
             <form className="d-flex mt-5" onSubmit={onSubmitForm} >
                 <input 
                     type="text" 
-                    className="form-control" 
+                    className="form-control dashboard-input" 
                     value={exercise_name} 
                     onChange={e => setName(e.target.value)} 
                 />
