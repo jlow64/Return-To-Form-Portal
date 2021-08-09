@@ -33,7 +33,7 @@ reqAuth = async (req, res) => {
 };
 
 reqLogin = async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, rememberMe } = req.body;
 
     try {
 
@@ -51,7 +51,7 @@ reqLogin = async (req, res) => {
             return res.status(401).json("Password or Email is incorrect");
         }
 
-        const token = jwtGenerator(user.rows[0].user_id);
+        const token = jwtGenerator(user.rows[0].user_id, rememberMe);
 
         res.json({ token });
     } catch (err) {

@@ -29,7 +29,7 @@ const UserSearchBar = ({ placeholder, data }) => {
                 <div className="searchInputs">
                     <input
                         type="text"
-                        className="form-control"
+                        className="form-control search-bar"
                         placeholder={placeholder}
                         value={wordEntered}
                         onChange={handleFilter}

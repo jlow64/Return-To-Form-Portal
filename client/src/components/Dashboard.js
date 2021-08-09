@@ -42,12 +42,12 @@ const Dashboard = ({ setAuth }) => {
             <div className="dashboard-container">
                 <h1 className="mt-5" >Dashboard</h1>
                 <h2>Welcome {name}</h2>
+                <ClinikoUserList />
                 <InputItem />
                 <ListItems />
                 <button onClick={e => logout(e)}  className="btn btn-primary">
                     Log Out
                 </button>
-                <ClinikoUserList />
             </div>
         </Fragment>
     );

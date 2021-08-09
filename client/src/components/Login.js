@@ -20,6 +20,10 @@ const Login = ({ setAuth }) => {
         setInputs({ ...inputs, [e.target.name]: e.target.value });
     };
 
+    const onCheck = (e) => {
+        setInputs({...inputs, rememberMe: e.target.checked });
+    }
+
     const onSubmitForm = async e  => {
         e.preventDefault();
         try {
@@ -87,7 +91,21 @@ const Login = ({ setAuth }) => {
                         </span>
                     </div>
                     <button className="btn btn-success btn-block btn-login">Admin Login</button>
-                    <Link to="/forgot-password" style={{ textDecoration: 'none' }} ><p className="forgot-text text-right">Forgot Password?</p></Link>
+                    <div>
+                        <div className="form-check">
+                            <input 
+                                className="form-check-input remember-checkbox" 
+                                type="checkbox" 
+                                value={rememberMe} 
+                                onChange={e => onCheck(e)}
+                                id="rememberMe" />
+                            <label className="form-check-label remember-text" >
+                                Remember me
+                            </label>
+                        </div>
+                        <Link to="/forgot-password" style={{ textDecoration: 'none' }} ><p className="forgot-text text-right">Forgot Password?</p></Link>
+                    </div>
+                    
                 </form>
             </div>
         </Fragment>
