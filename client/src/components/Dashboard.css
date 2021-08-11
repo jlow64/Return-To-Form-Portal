@@ -1,3 +1,16 @@
+.btn.logout {
+    position: fixed;
+    bottom: 15px;
+    float: left;
+    margin-top: 3rem;
+    border: 1px solid #F99F1E;
+}
+
+.btn.logout:hover {
+    background-color: #F99F1E;
+    color: #FFFFFF;
+}
+
 .dashboard-container {
     font-family: Montserrat;
     font-style: normal;
@@ -7,30 +20,26 @@
     letter-spacing: -0.168px;
     color: black;
     width: 100%;
-    background-color: transparent;
+    height: 100vh;
+    opacity: 0.8;
+    background-color: white;
     padding: 1rem;
     border: 1px solid black;
 }
 
-.dashboard-input {
-    width: 100%;
-    margin-right: 1rem;
+.dashboard-logo {
+    width: 25%;
+    margin-bottom: 2rem;
+}
+
+.form-control.search-bar {
     border: 1px solid black;
+    margin-top: 3rem;
+    width: 80%;
 }
 
 .modal-title {
     color: black;
-}
-
-.search-bar {
-    margin-top: 3rem;
-    width: 20%;
-}
-
-
-img, iframe, object, embed, video {
-    width: 100%;
-    max-width: 100%;
 }
 
 @media only screen and (max-width: 770px) {

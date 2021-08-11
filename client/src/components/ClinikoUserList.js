@@ -10,7 +10,7 @@ const ClinikoUserList = () => {
 
             const response = await fetch("http://localhost:5000/dashboard/cliniko");
             const jsonData = await response.json();
-            
+
             jsonData.users.forEach(element => {
                parsedUserData.push(element);
             });

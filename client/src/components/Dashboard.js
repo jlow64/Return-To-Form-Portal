@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import InputItem from "./InputItem";
 import ListItems from "./ListItems";
 import ClinikoUserList from "./ClinikoUserList";
+import logo from "../logos/rtf-logo-grey.png";
 import "./Dashboard.css";
 
 
@@ -40,12 +41,10 @@ const Dashboard = ({ setAuth }) => {
     return (
         <Fragment>
             <div className="dashboard-container">
-                <h1 className="mt-5" >Dashboard</h1>
+                <img src={logo} className="dashboard-logo" width="100%"/>
                 <h2>Welcome {name}</h2>
                 <ClinikoUserList />
-                <InputItem />
-                <ListItems />
-                <button onClick={e => logout(e)}  className="btn btn-primary">
+                <button onClick={e => logout(e)}  className="btn btn-primary logout">
                     Log Out
                 </button>
             </div>
