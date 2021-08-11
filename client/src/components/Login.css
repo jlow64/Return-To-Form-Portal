@@ -131,7 +131,8 @@ select:-webkit-autofill:focus {
     color: #FFFFFF;
 }
 
-.remember-checkbox {
+input[type=checkbox] {
+    border: 1px solid #FFFFFF;
     margin-top: 1.5rem;
 }
 
@@ -140,3 +141,26 @@ select:-webkit-autofill:focus {
         width: 100%;
     }
 }
+
+.checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+
+.checkbox .form-check input[type="checkbox"] {
+    display: none;
+}
+

@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import { Search, XCircle } from "react-bootstrap-icons";
 
 const UserSearchBar = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
@@ -27,19 +28,26 @@ const UserSearchBar = ({ placeholder, data }) => {
         <Fragment>
             <div className="search">
                 <div className="searchInputs">
-                    <input
-                        type="text"
-                        className="form-control search-bar"
-                        placeholder={placeholder}
-                        value={wordEntered}
-                        onChange={handleFilter}
-                    />
-                    <div className="searchIcon">
-                        {/* {filteredData.length === 0 ? (
-                            <SearchIcon />
-                        ) : (
-                            <CloseIcon id="clearBtn" onClick={clearInput} />
-                        )} */}
+                    <div className="input-group mb-3">
+                        <input
+                            type="text"
+                            className="form-control search-bar"
+                            placeholder={placeholder}
+                            value={wordEntered}
+                            onChange={handleFilter}
+                            aria-describedby="search-addon"
+                        />
+                        <div className="input-group-append">
+                            <span className="input-group-text search-icon" id="search-addon">
+                                <Search size={18} />
+                            </span>
+                        </div>
+                    </div> 
+                    <div class="input-group mb-3">
+                        <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <div className="input-group-append">
+                            <span className="input-group-text" id="basic-addon2">@example.com</span>
+                        </div>
                     </div>
                 </div>
                 {filteredData.length !== 0 && (

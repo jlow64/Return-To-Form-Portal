@@ -42,7 +42,8 @@ const Dashboard = ({ setAuth }) => {
         <Fragment>
             <div className="dashboard-container">
                 <img src={logo} className="dashboard-logo" width="100%"/>
-                <h2>Welcome {name}</h2>
+                <h2 className="exercise-label">Exercise History</h2>
+                <h3 className="select-client-label">Select Client: {name}</h3>
                 <ClinikoUserList />
                 <button onClick={e => logout(e)}  className="btn btn-primary logout">
                     Log Out

@@ -18,7 +18,7 @@
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.168px;
-    color: black;
+    color: #353a3e;
     width: 100%;
     height: 100vh;
     opacity: 0.8;
@@ -32,14 +32,38 @@
     margin-bottom: 2rem;
 }
 
+.exercise-label {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #353A3E;
+}
+
 .form-control.search-bar {
-    border: 1px solid black;
-    margin-top: 3rem;
+    border: 1px solid #C9C9C9;
+    margin-top: 2rem;
     width: 80%;
 }
 
 .modal-title {
     color: black;
+}
+
+span#search-addon.input-group-text.search-icon {
+    background-color: black;
+    color: #808184;
+    margin-top: 2rem;
+    height: 2.5rem;
+    border: 2px solid #353A3E;
+}
+
+.input-group-text {
+    color: black;
+}
+
+.select-client-label {
+    font-size: 1.2rem;
+    font-style: bold;
+    line-height: 20px;
 }
 
 @media only screen and (max-width: 770px) {
