@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import UserSearchBar from "./UserSearchBar";
+import SearchBar from "./SearchBar";
 
 const ClinikoUserList = () => {
     const [users, setUsers] = useState([]);
@@ -27,7 +27,7 @@ const ClinikoUserList = () => {
 
     return (
         <Fragment>
-            <UserSearchBar placeholder="Search for Client..." data={parsedUserData} />
+            <SearchBar placeholder="Search for Client..." data={parsedUserData} />
         </Fragment>
     );
 };

@@ -19,12 +19,11 @@
     line-height: 29px;
     letter-spacing: -0.168px;
     color: #353a3e;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     opacity: 0.8;
     background-color: white;
     padding: 1rem;
-    border: 1px solid black;
 }
 
 .dashboard-logo {
@@ -40,6 +39,7 @@
 
 .form-control.search-bar {
     border: 1px solid #C9C9C9;
+    border-right: none;
     margin-top: 2rem;
     width: 80%;
 }
@@ -49,11 +49,12 @@
 }
 
 span#search-addon.input-group-text.search-icon {
-    background-color: black;
+    background-color: transparent;
     color: #808184;
     margin-top: 2rem;
     height: 2.5rem;
-    border: 2px solid #353A3E;
+    border-left: none;
+    border: 1px solid #C9C9C9;
 }
 
 .input-group-text {

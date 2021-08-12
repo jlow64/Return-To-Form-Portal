@@ -94,7 +94,7 @@ const Login = ({ setAuth }) => {
                     <div>
                         <div className="form-check">
                             <input 
-                                className="form-check-input checkbox remember-checkbox" 
+                                className="form-check-input checkbox" 
                                 type="checkbox" 
                                 value={rememberMe} 
                                 onChange={e => onCheck(e)}
