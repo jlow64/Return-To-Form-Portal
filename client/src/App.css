@@ -1,19 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     height: 100vh;
-    margin: 15px;
-    margin-top: 10%;
+    width: 100vw;
     background: linear-gradient(180deg, #FFD066 0%, #F99F1E 100%);
 }
 
-.container {
-    width: 30%;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: -0.168px;
-    color: #FFFFFF;
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }

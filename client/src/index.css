@@ -12,3 +12,7 @@ code {
     monospace;
 }
 
+img, iframe, object, embed, video {
+    width: 100%;
+    max-width: 100%;
+}

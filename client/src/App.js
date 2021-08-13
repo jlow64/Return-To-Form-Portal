@@ -9,10 +9,12 @@ import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
+import Patient from "./components/Patient";
 
 toast.configure();
 
 function App() {
+  const [pageColor, setPageColor] = useState("")
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const setAuth = (boolean) => {
@@ -40,10 +42,14 @@ function App() {
   return (
     <Fragment>
       <Router>
-        <div className="container">
-          <Switch>          
+        <div className="container-fluid">
+          <Switch>       
+            <Route exact path="/" >
+              <Redirect to="/login" />
+            </Route>   
             <Route exact path="/login" render={props => !isAuthenticated ? <Login {...props} setAuth={setAuth} /> : <Redirect to="/dashboard" />} />
             <Route exact path="/dashboard" render={props => isAuthenticated ? <Dashboard {...props} setAuth={setAuth} /> : <Redirect to="/login" />} />
+            <Route exact path="/patient" render={props => isAuthenticated ? <Patient {...props} setAuth={setAuth} /> : <Redirect to="/login" />} />
             <Route exact path="/forgot-password" render={props => <ForgotPassword {...props} />} />
           </Switch>
         </div>

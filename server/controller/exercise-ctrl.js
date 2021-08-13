@@ -2,10 +2,10 @@ const pool = require("../db");
 
 createExercise = async(req, res) => {
     try {
-        const { description } = req.body;
+        const { exercise_name } = req.body;
         const newItem = await pool.query(
-            "INSERT INTO physio_item (description) VALUES($1) RETURNING *", 
-            [description]
+            "INSERT INTO physio_item (exercise_name) VALUES($1) RETURNING *", 
+            [exercise_name]
         );
 
         res.json(newItem.rows[0]);
@@ -43,10 +43,10 @@ getExerciseItem = async(req, res) => {
 updateExercise = async(req, res) => {
     try {
         const { id } = req.params;
-        const { description } = req.body;
+        const { exercise_name } = req.body;
         const updateItem = await pool.query(
-            "UPDATE physio_item SET description = $1 WHERE item_id = $2", 
-            [description, id]
+            "UPDATE physio_item SET exercise_name = $1 WHERE item_id = $2", 
+            [exercise_name, id]
         );
 
         res.json("Item was updated!");

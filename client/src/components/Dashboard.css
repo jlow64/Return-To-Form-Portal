@@ -1,0 +1,78 @@
+.btn.logout {
+    position: fixed;
+    bottom: 15px;
+    float: left;
+    margin-top: 3rem;
+    border: 1px solid #F99F1E;
+}
+
+.btn.logout:hover {
+    background-color: #F99F1E;
+    color: #FFFFFF;
+}
+
+.dashboard-container {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.168px;
+    color: #353a3e;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    background-color: white;
+    padding: 1rem;
+}
+
+.dashboard-logo {
+    width: 25%;
+    margin-bottom: 2rem;
+}
+
+.exercise-label {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #353A3E;
+}
+
+.form-control.search-bar {
+    border: 1px solid #C9C9C9;
+    border-right: none;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.modal-title {
+    color: black;
+}
+
+span#search-addon.input-group-text.search-icon {
+    background-color: transparent;
+    color: #808184;
+    margin-top: 2rem;
+    height: 2.5rem;
+    border-left: none;
+    border: 1px solid #C9C9C9;
+}
+
+.input-group-text {
+    color: black;
+}
+
+.select-client-label {
+    font-size: 1.2rem;
+    font-style: bold;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 770px) {
+    table {
+        width: 100%;
+    }
+
+    .dashboard-container {
+        font-size: 16px;
+    }
+}

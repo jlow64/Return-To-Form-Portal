@@ -1,13 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-body {
-    height: 100vh;
-    margin: 15px;
-    background: linear-gradient(180deg, #FFD066 0%, #F99F1E 100%);
-}
-
-.container {
-    width: 30%;
+.login-container {
+    width: 35%;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -21,14 +15,6 @@ body {
     border: 0;
 }
 
-.form-control:valid {
-    color:  #FFFFFF!important;
-}
-
-.form-control:focus {
-    background-color: transparent;
-}
-
 .form-control::selection {
     background-color: transparent;
 }
@@ -37,13 +23,27 @@ body {
     margin-left: 1rem;
 }
 
-.login-input, .btn {
+.login-input {
     padding: 0.5rem;
     border-radius: 15px;
     border: 2px solid #FFFFFF;
     border-left: 0;
     background-color: transparent;
-    height: 48px;
+    color: #FFFFFF;
+    justify-content: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
 }
 
 .login-input::placeholder {
@@ -64,6 +64,10 @@ body {
     border-left: none;
 }
 
+.modal-title {
+    color: black;
+}
+
 .passbar {
     border-right: 0;
 }
@@ -80,6 +84,7 @@ body {
 .btn {
     padding: 0.5rem;
     border-radius: 15px;
+    font-size: 16px;
     border: 2px solid #FFFFFF;
     background-color: #FFFFFF;
     color: #F99F1E;
@@ -91,10 +96,45 @@ body {
     border: 2px solid #FFFFFF;
 }
 
-.forgot-text {
-    position: relative;
+.btn-login {
+    padding: 0.5rem;
+    border-radius: 15px;
+    font-size: 16px;
+    border: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #F99F1E;
     margin-top: 1rem;
-    text-align: right;
-    font-size: 12px;
-    color: whitesmoke;
 }
+
+.btn-login:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.forgot-text {
+    float: right;
+    margin-top: 1rem;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.remember-text {
+    float: left;
+    margin-top: 1rem;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+input[type=checkbox] {
+    border: 1px solid #FFFFFF;
+    margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 770px) {
+    .login-container {
+        width: 100%;
+    }
+}
+
+

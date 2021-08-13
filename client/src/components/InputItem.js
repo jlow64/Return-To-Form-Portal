@@ -2,12 +2,12 @@ import React, { Fragment, useState } from "react";
 
 const InputItem = () => {
 
-    const [description, setDescription] = useState("");
+    const [exercise_name, setName] = useState("");
 
     const onSubmitForm = async(e) => {
         e.preventDefault();
         try {
-            const body = { description };
+            const body = { exercise_name };
             const response =  await fetch("http://localhost:5000/exercise/item", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -26,9 +26,9 @@ const InputItem = () => {
             <form className="d-flex mt-4" onSubmit={onSubmitForm} >
                 <input 
                     type="text" 
-                    className="form-control" 
-                    value={description} 
-                    onChange={e => setDescription(e.target.value)} 
+                    className="form-control patient-input" 
+                    value={exercise_name} 
+                    onChange={e => setName(e.target.value)} 
                 />
                 <button className="btn btn-success" style={{marginLeft: 15}} >Add</button>
             </form>

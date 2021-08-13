@@ -1,8 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
 import InputItem from "./InputItem";
 import ListItems from "./ListItems";
+import ClinikoUserList from "./ClinikoUserList";
+import logo from "../logos/rtf-logo-grey.png";
 import "./Dashboard.css";
 import { toast } from "react-toastify";
+
 
 const Dashboard = ({ setAuth }) => {
     const [name, setName] = useState("");
@@ -38,13 +41,15 @@ const Dashboard = ({ setAuth }) => {
 
     return (
         <Fragment>
-            <h1 className="mt-5" >Dashboard</h1>
-            <h2>Welcome {name}</h2>
-            <InputItem />
-            <ListItems />
-            <button onClick={e => logout(e)}  className="btn btn-primary">
-                Log Out
-            </button>
+            <div className="dashboard-container">
+                <img src={logo} className="dashboard-logo" width="100%"/>
+                <h2 className="exercise-label">Exercise History</h2>
+                <h3 className="select-client-label">Select Client: {name}</h3>
+                <ClinikoUserList />
+                <button onClick={e => logout(e)}  className="btn btn-primary logout">
+                    Log Out
+                </button>
+            </div>
         </Fragment>
     );
 };
