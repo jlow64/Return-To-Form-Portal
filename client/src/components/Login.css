@@ -20,7 +20,6 @@
 }
 
 .login-logo {
-    width: 100%;
     margin-left: 1rem;
 }
 
@@ -45,10 +44,6 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: black;
   -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-}
-
-.input:-webkit-autofill {
-    background-color: transparent;
 }
 
 .login-input::placeholder {

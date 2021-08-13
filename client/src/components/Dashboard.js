@@ -4,6 +4,7 @@ import ListItems from "./ListItems";
 import ClinikoUserList from "./ClinikoUserList";
 import logo from "../logos/rtf-logo-grey.png";
 import "./Dashboard.css";
+import { toast } from "react-toastify";
 
 
 const Dashboard = ({ setAuth }) => {
@@ -28,7 +29,7 @@ const Dashboard = ({ setAuth }) => {
         try {
             localStorage.removeItem("token");
             setAuth(false);
-            
+            toast.success("Logged out Successfully!");
         } catch (err) {
             console.error(err.message);
         }
