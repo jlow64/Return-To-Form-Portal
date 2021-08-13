@@ -87,22 +87,17 @@ const Login = ({ setAuth }) => {
                         </InputGroup>
                     </Form.Group>
                     <Button variant="primary">Admin Login</Button>
-                    <button className="btn btn-success btn-block btn-login">Admin Login</button>
-                    <div>
-                        <div className="form-check">
-                            <input 
-                                className="form-check-input checkbox" 
-                                type="checkbox" 
+                    <Form.Group controlId="formCheck">
+                        <Form.InputGroup className="mb-1">
+                            <Form.Check 
+                                label="Remember me"
                                 value={rememberMe} 
                                 onChange={e => onCheck(e)}
-                                id="rememberMe" />
-                            <label className="form-check-label remember-text" >
-                                Remember me
-                            </label>
-                        </div>
+                                id="rememberMe"
+                            />
+                        </Form.InputGroup>
                         <Link to="/forgot-password" style={{ textDecoration: 'none' }} ><p className="forgot-text text-right">Forgot Password?</p></Link>
-                    </div>
-                    
+                    </Form.Group>
                 </Form>
             </div>
         </Fragment>
