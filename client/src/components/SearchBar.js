@@ -6,20 +6,6 @@ const SearchBar = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
 
-    const handleFilter = (event) => {
-        const searchWord = event.target.value;
-        setWordEntered(searchWord);
-        const newFilter = data.filter((value) => {
-          return value.title.toLowerCase().includes(searchWord.toLowerCase());
-        });
-    
-        if (searchWord === "") {
-          setFilteredData([]);
-        } else {
-          setFilteredData(newFilter);
-        }
-    };
-    
     return (
         <Fragment>
             <div className="search">
@@ -30,8 +16,6 @@ const SearchBar = ({ placeholder, data }) => {
                             className="form-control search-bar"
                             placeholder={placeholder}
                             value={wordEntered}
-                            onChange={handleFilter}
-                            aria-describedby="search-addon"
                         />
                         <div className="input-group-append search-icon">
                             <span className="input-group-text search-icon" id="search-addon">

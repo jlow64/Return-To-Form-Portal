@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import logo from '../logos/rtf-logo-white-Solid.png';
 
+import  { Form, InputGroup, Button } from "react-bootstrap";
 import { Person, LockFill, EyeSlashFill } from "react-bootstrap-icons";
 import "./Login.css";
 
@@ -54,42 +55,38 @@ const Login = ({ setAuth }) => {
             <div className="login-container">
                 <img src={logo} className="login-logo" width="100%"/>
                 <h2 className="text-left mt-5">Welcome back</h2>
-                <form className="form-group" onSubmit={onSubmitForm} >
-                    <div className="input-group mb-1">
-                        <span className="input-group-prepend login-icon">
-                            <div className="input-group-text bg-transparent">
+                <Form onSubmit={onSubmitForm} >
+                    <Form.Group controlId="formEmail">
+                        <InputGroup className="mb-1">
+                            <InputGroup.Text>
                                 <Person size={18} />
-                            </div>
-                        </span>
-                        <input 
-                            type="text" 
-                            name="email" 
-                            placeholder="Email Address" 
-                            className="form-control login-input" 
-                            value={email} 
-                            onChange={e => onChange(e)} 
-                        />
-                    </div>
-                    <div className="input-group mb-1">
-                        <span className="input-group-prepend login-icon">
-                            <div className="input-group-text bg-transparent">
+                            </InputGroup.Text>
+                            <Form.Control
+                                type="email"
+                                placeholder="Emaill Address"
+                                value={email}
+                                onChange={e => onChange(e)}
+                            />
+                        </InputGroup>
+                    </Form.Group>
+                    <Form.Group controlId="formPassword">
+                        <InputGroup className="mb-1">
+                            <InputGroup.Text>
                                 <LockFill size={18} />
-                            </div>
-                        </span>
-                        <input 
-                            type="password" 
-                            name="password" 
-                            placeholder="Password" 
-                            className="form-control login-input passbar" 
-                            value={password} 
-                            onChange={e => onChange(e)} 
-                        />
-                        <span className="input-group-append login-icon-right">
-                            <div className="input-group-text bg-transparent">
+                            </InputGroup.Text>
+                            <Form.Control 
+                                type="password"
+                                placeholder="Password"
+                                className="login-input passbar"
+                                value={password}
+                                onChange={e => onChange(e)}
+                            />
+                            <InputGroup.Text>
                                 <EyeSlashFill size={18} />
-                            </div>
-                        </span>
-                    </div>
+                            </InputGroup.Text>
+                        </InputGroup>
+                    </Form.Group>
+                    <Button variant="primary">Admin Login</Button>
                     <button className="btn btn-success btn-block btn-login">Admin Login</button>
                     <div>
                         <div className="form-check">
@@ -106,7 +103,7 @@ const Login = ({ setAuth }) => {
                         <Link to="/forgot-password" style={{ textDecoration: 'none' }} ><p className="forgot-text text-right">Forgot Password?</p></Link>
                     </div>
                     
-                </form>
+                </Form>
             </div>
         </Fragment>
     );
