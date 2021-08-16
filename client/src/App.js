@@ -4,11 +4,12 @@ import './App.css';
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // components
-import Dashboard from "../pages/Dashboard";
-import Login from "../pages/Login";
-import ForgotPassword from "../pages/ForgotPassword";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
 
 toast.configure();
 

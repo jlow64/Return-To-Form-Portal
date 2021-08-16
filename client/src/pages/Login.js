@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import logo from '../logos/rtf-logo-white-Solid.png';
 
-import  { Form, InputGroup, Button } from "react-bootstrap";
+import  { Form, InputGroup, Button, Row, Col } from "react-bootstrap";
 import { Person, LockFill, EyeSlashFill } from "react-bootstrap-icons";
-import "./Login.css";
+import "../styles/Login.css";
 
 const Login = ({ setAuth }) => {
 
@@ -29,6 +29,7 @@ const Login = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { email, password, rememberMe };
+            console.log(body);
             const response = await fetch("http://localhost:5000/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -36,7 +37,6 @@ const Login = ({ setAuth }) => {
             });
 
             const parseRes = await response.json();
-
             if (parseRes.token) {
                 localStorage.setItem("token", parseRes.token);
                 setAuth(true);
@@ -53,51 +53,73 @@ const Login = ({ setAuth }) => {
     return (
         <Fragment>
             <div className="login-container">
-                <img src={logo} className="login-logo" width="100%"/>
+                <img src={logo} alt="logo" className="login-logo" width="100%"/>
                 <h2 className="text-left mt-5">Welcome back</h2>
                 <Form onSubmit={onSubmitForm} >
-                    <Form.Group controlId="formEmail">
+                    <Form.Group as={Row} controlId="formEmail">
                         <InputGroup className="mb-1">
-                            <InputGroup.Text>
-                                <Person size={18} />
+                            <InputGroup.Text className="login-icon">
+                                <Person size={18} fill="#FFFFFF"/>
                             </InputGroup.Text>
                             <Form.Control
                                 type="email"
-                                placeholder="Emaill Address"
-                                value={email}
+                                name="email"
+                                placeholder="Email Address"
+                                className="form-control login-input"
+                                defaultValue={email}
                                 onChange={e => onChange(e)}
                             />
                         </InputGroup>
                     </Form.Group>
-                    <Form.Group controlId="formPassword">
+                    
+                    <Form.Group as={Row} controlId="formPassword">
                         <InputGroup className="mb-1">
-                            <InputGroup.Text>
+                            <InputGroup.Text className="login-icon">
                                 <LockFill size={18} />
                             </InputGroup.Text>
                             <Form.Control 
                                 type="password"
+                                name="password"
                                 placeholder="Password"
                                 className="login-input passbar"
-                                value={password}
+                                defaultValue={password}
                                 onChange={e => onChange(e)}
                             />
-                            <InputGroup.Text>
+                            <InputGroup.Text className="login-icon-right">
                                 <EyeSlashFill size={18} />
                             </InputGroup.Text>
                         </InputGroup>
                     </Form.Group>
-                    <Button variant="primary">Admin Login</Button>
-                    <Form.Group controlId="formCheck">
-                        <Form.InputGroup className="mb-1">
-                            <Form.Check 
-                                label="Remember me"
-                                value={rememberMe} 
-                                onChange={e => onCheck(e)}
-                                id="rememberMe"
-                            />
-                        </Form.InputGroup>
-                        <Link to="/forgot-password" style={{ textDecoration: 'none' }} ><p className="forgot-text text-right">Forgot Password?</p></Link>
+
+                    <Form.Group as={Row} role="form">
+                        <Button 
+                            type="submit" 
+                            variant="success" 
+                            className="btn btn-login"
+                            value="submit"
+                        >
+                            Admin Login
+                        </Button>
                     </Form.Group>
+
+                    <Row className="mb-1 bot-row">
+                        <Form.Group as={Col} controlId="formCheck" className="remember-text">
+                            <InputGroup className="mb-1">
+                                <Form.Check 
+                                    label="Remember me"
+                                    value={rememberMe} 
+                                    onChange={e => onCheck(e)}
+                                    className=""
+                                    id="rememberMe"
+                                />
+                            </InputGroup>
+                        </Form.Group>
+                        <Form.Group as={Col} controlId="formForgotPassword">
+                            <Link to="/forgot-password" style={{ textDecoration: 'none' }} >
+                                <p className="forgot-text">Forgot Password?</p>
+                            </Link>
+                        </Form.Group>
+                    </Row>
                 </Form>
             </div>
         </Fragment>

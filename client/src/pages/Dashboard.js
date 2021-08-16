@@ -10,23 +10,6 @@ const Dashboard = ({ setAuth }) => {
     const [users, setUsers] = useState([]);
     const [name, setName] = useState("");
 
-    const getClinikoUsers = async () => {
-        try {
-
-            const response = await fetch("http://localhost:5000/dashboard/cliniko");
-            const jsonData = await response.json();
-
-            jsonData.users.forEach(element => {
-               parsedUserData.push(element);
-            });
-
-            setUsers(jsonData.users);
-            console.log(users);
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
-
     const getProfile = async () => {
         try {
             const res = await fetch("http://localhost:5000/dashboard/", {
@@ -54,13 +37,29 @@ const Dashboard = ({ setAuth }) => {
 
     useEffect(() => {
         getProfile();
+        const getClinikoUsers = async () => {
+            try {
+    
+                const response = await fetch("http://localhost:5000/dashboard/cliniko");
+                const jsonData = await response.json();
+    
+                jsonData.users.forEach(element => {
+                   parsedUserData.push(element);
+                });
+    
+                setUsers(jsonData.users);
+                console.log(users);
+            } catch (err) {
+                console.error(err.message);
+            }
+        };
         getClinikoUsers();
     }, []);
 
     return (
         <Fragment>
             <div className="dashboard-container">
-                <img src={logo} className="dashboard-logo" width="100%"/>
+                <img src={logo} alt="" className="dashboard-logo" width="100%"/>
                 <h2 className="exercise-label">Exercise History</h2>
                 <h3 className="select-client-label">Select Client: {name}</h3>
                 <SearchBar placeholder="Search for Client..." data={parsedUserData} />

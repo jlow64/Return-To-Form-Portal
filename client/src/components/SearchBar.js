@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { Search, XCircle } from "react-bootstrap-icons";
-import "./SearchBar.css";
+import "../styles/SearchBar.css";
 
 const SearchBar = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);

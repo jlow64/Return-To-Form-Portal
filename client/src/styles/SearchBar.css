@@ -1,0 +1,12 @@
+.searchInputs {
+    margin-top: 1rem;
+    display: flex;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchIcon svg {
+    font-size: 2rem;
+}

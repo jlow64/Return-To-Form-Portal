@@ -9,10 +9,7 @@
     line-height: 29px;
     letter-spacing: -0.168px;
     color: #FFFFFF;
-}
-
-.form-control {
-    border: 0;
+    border: 1px solid red;
 }
 
 .form-control::selection {
@@ -37,22 +34,22 @@
     color: #FFFFFF;
 }
 
-.login-icon {
+span.login-icon.input-group-text {
+    margin-left: 1rem;
+    background-color: transparent;
     border: 2px solid #FFFFFF;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-right: none;
 }
 
-.login-icon-right {
+span.login-icon-right.input-group-text {
+    margin-right: 1rem;
+    background-color: transparent;
     border: 2px solid #FFFFFF;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     border-left: none;
-}
-
-.modal-title {
-    color: black;
 }
 
 .passbar {
@@ -69,7 +66,8 @@
 }
 
 .btn {
-    padding: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
     border-radius: 15px;
     font-size: 16px;
     border: 2px solid #FFFFFF;
@@ -100,27 +98,22 @@
 }
 
 .forgot-text {
+    margin-top: 1.5rem;
     float: right;
-    margin-top: 1rem;
     font-size: 12px;
     color: #FFFFFF;
 }
 
 .remember-text {
-    float: left;
     margin-top: 1rem;
-    font-size: 12px;
+    font-size: 15px;
     color: #FFFFFF;
 }
 
-input[type=checkbox] {
-    border: 1px solid #FFFFFF;
-    margin-top: 1.5rem;
-}
 
 @media only screen and (max-width: 770px) {
     .login-container {
-        width: 100%;
+        width: 100vw;
     }
 }
 
