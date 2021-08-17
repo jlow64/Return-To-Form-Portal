@@ -29,7 +29,6 @@ const Login = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { email, password, rememberMe };
-            console.log(body);
             const response = await fetch("http://localhost:5000/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -54,7 +53,7 @@ const Login = ({ setAuth }) => {
         <Fragment>
             <div className="login-container">
                 <img src={logo} alt="logo" className="login-logo" width="100%"/>
-                <h2 className="text-left mt-5">Welcome back</h2>
+                <h2 className="text-left mt-5 welcome-text">Welcome back</h2>
                 <Form onSubmit={onSubmitForm} >
                     <Form.Group as={Row} controlId="formEmail">
                         <InputGroup className="mb-1">
@@ -91,15 +90,18 @@ const Login = ({ setAuth }) => {
                         </InputGroup>
                     </Form.Group>
 
-                    <Form.Group as={Row} role="form">
-                        <Button 
-                            type="submit" 
-                            variant="success" 
-                            className="btn btn-login"
-                            value="submit"
-                        >
-                            Admin Login
-                        </Button>
+                    <Form.Group as={Row} controlId="formButton" role="form">
+                        <InputGroup className="mb-1">
+                           <Button 
+                                type="submit" 
+                                variant="" 
+                                className="btn-login"
+                                value="submit"
+                                size="large"
+                            >
+                                Admin Login
+                            </Button> 
+                        </InputGroup>
                     </Form.Group>
 
                     <Row className="mb-1 bot-row">
@@ -115,9 +117,11 @@ const Login = ({ setAuth }) => {
                             </InputGroup>
                         </Form.Group>
                         <Form.Group as={Col} controlId="formForgotPassword">
-                            <Link to="/forgot-password" style={{ textDecoration: 'none' }} >
-                                <p className="forgot-text">Forgot Password?</p>
-                            </Link>
+                            <InputGroup className="mb-1">
+                                <Link to="/forgot-password" style={{ textDecoration: 'none' }} >
+                                    <p className="forgot-text">Forgot Password?</p>
+                                </Link>
+                            </InputGroup>
                         </Form.Group>
                     </Row>
                 </Form>

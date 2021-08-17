@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+html { font-size: 8px; }
+
 body {
     height: 100vh;
     width: 100vw;
     background: linear-gradient(180deg, #FFD066 0%, #F99F1E 100%);
 }
-
