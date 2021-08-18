@@ -1,5 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import Button from "react-bootstrap/Button";
+import { BoxArrowRight } from "react-bootstrap-icons";
 import SearchBar from "../components/SearchBar";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/Dashboard.css";
@@ -43,12 +45,11 @@ const Dashboard = ({ setAuth }) => {
                 const response = await fetch("http://localhost:5000/dashboard/cliniko");
                 const jsonData = await response.json();
     
-                jsonData.users.forEach(element => {
+                jsonData.patients.forEach(element => {
                    parsedUserData.push(element);
                 });
     
-                setUsers(jsonData.users);
-                console.log(users);
+                setUsers(jsonData.patients);
             } catch (err) {
                 console.error(err.message);
             }
@@ -60,12 +61,17 @@ const Dashboard = ({ setAuth }) => {
         <Fragment>
             <div className="dashboard-container">
                 <img src={logo} alt="" className="dashboard-logo" width="100%"/>
+                <Button 
+                    className="logout"
+                    variant="secondary"
+                    onClick={e => logout(e)}  
+                >
+                    <BoxArrowRight size={24} />
+                </Button>
                 <h2 className="exercise-label">Exercise History</h2>
-                <h3 className="select-client-label">Select Client: {name}</h3>
-                <SearchBar placeholder="Search for Client..." data={parsedUserData} />
-                <button onClick={e => logout(e)}  className="btn btn-primary logout">
-                    Log Out
-                </button>
+                <h3 className="select-client-label">Search Client</h3>
+                <SearchBar placeholder="Search..." data={users} />
+                
             </div>
         </Fragment>
     );

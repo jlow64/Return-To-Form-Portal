@@ -1,17 +1,20 @@
-.btn.logout {
+.logout {
     position: fixed;
-    bottom: 15px;
-    float: left;
-    margin-top: 3rem;
-    border: 1px solid #F99F1E;
+    top: 4rem;
+    right: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #353a3e;
 }
 
-.btn.logout:hover {
+.logout:hover {
     background-color: #F99F1E;
     color: #FFFFFF;
 }
 
 .dashboard-container {
+    position: absolute;
+    left: 0;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -32,14 +35,19 @@
 }
 
 .exercise-label {
-    font-size: 2.2rem;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
     margin-bottom: 3rem;
     color: #353A3E;
 }
 
 .form-control.search-bar {
+    min-height: 40px;
     border: 1px solid #C9C9C9;
     border-right: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     margin-top: 2rem;
     width: 80%;
 }
@@ -49,12 +57,15 @@
 }
 
 span#search-addon.input-group-text.search-icon {
+    font-size: 18px;
     background-color: transparent;
     color: #808184;
     margin-top: 2rem;
-    height: 2.5rem;
-    border-left: none;
+    min-height: 5rem;
     border: 1px solid #C9C9C9;
+    border-left: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .input-group-text {
@@ -62,17 +73,8 @@ span#search-addon.input-group-text.search-icon {
 }
 
 .select-client-label {
-    font-size: 1.2rem;
-    font-style: bold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
     line-height: 20px;
-}
-
-@media only screen and (max-width: 770px) {
-    table {
-        width: 100%;
-    }
-
-    .dashboard-container {
-        font-size: 16px;
-    }
 }

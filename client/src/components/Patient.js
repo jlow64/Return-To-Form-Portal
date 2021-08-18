@@ -3,8 +3,6 @@ import InputItem from "./InputItem";
 import ListItems from "./ListItems";
 
 const Patient = () => {
-    const [name, setName] = useState("");
-
     return (
         <Fragment>
             <div className="patient-container">

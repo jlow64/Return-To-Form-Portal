@@ -22,7 +22,7 @@ router.get("/", authorization, async (req, res) => {
 router.get("/cliniko", async (req, res) => {
     try {
         const API_KEY = Buffer.from(process.env.CLINIKO_API + ':').toString('base64');
-        const users = await fetch('https://api.au1.cliniko.com/v1/users', {
+        const patients = await fetch('https://api.au1.cliniko.com/v1/patients', {
             method: 'GET',
             headers: {
                 'Authorization': `Basic ${API_KEY}`,
@@ -31,12 +31,45 @@ router.get("/cliniko", async (req, res) => {
             }
         });
 
-        const parseRes = await users.json();
+        const parseRes = await patients.json();
 
         res.json(parseRes);
     } catch (err) {
         console.error(err.message);
         res.status(500).json("Server Error");
+    }
+});
+
+router.post("/appointment", async (req, res) => {
+    try {
+        const { url } = req.body;
+        const API_KEY = Buffer.from(process.env.CLINIKO_API + ':').toString('base64');
+        const appointments = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Basic ${API_KEY}`,
+                'Accept': 'application/json',
+                'User-Agent': 'Return-To-Form (justinl@missionreadyhq.com)'
+            }
+        });
+
+        const parseRes = await appointments.json();
+        const appointmentsList = parseRes.appointments;
+        const times = await fetch(`https://api.au1.cliniko.com/v1/individual_appointments/${appointmentsList[0].id}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Basic ${API_KEY}`,
+                'Accept': 'application/json',
+                'User-Agent': 'Return-To-Form (justinl@missionreadyhq.com)'
+            }
+        });
+
+        const parseTime = await times.json();
+
+        res.json(parseTime);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).json("Server Error or no current appointments");
     }
 });
 
