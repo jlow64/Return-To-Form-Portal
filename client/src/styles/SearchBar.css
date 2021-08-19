@@ -10,3 +10,37 @@ input:focus {
 .searchIcon svg {
     font-size: 2rem;
 }
+
+.dataResult {
+    margin-top: 5px;
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+  
+.dataResult::-webkit-scrollbar {
+    display: none;
+}
+  
+.dataResult .dataItem {
+    padding: 1rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+  
+.dataItem  {
+    margin-top: 3rem;
+    margin-left: 10px;
+}
+.patient-card {
+    text-decoration: none;
+}
+  
+.patient-card:hover {
+    background-color: lightgrey;
+}

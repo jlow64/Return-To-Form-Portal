@@ -78,3 +78,16 @@ span#search-addon.input-group-text.search-icon {
     font-size: 16px;
     line-height: 20px;
 }
+
+.pname-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.patient-card {
+    width: 100%;
+    border: 1px solid red;
+}

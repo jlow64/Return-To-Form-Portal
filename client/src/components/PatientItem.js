@@ -1,15 +1,25 @@
 import React, { Fragment, useState, useEffect } from "react";
+import { Card } from "react-bootstrap";
+import { Clock } from "react-bootstrap-icons";
 
 const Appointment = ({ url, first_name, last_name }) => {
     const [time, setTime] = useState({
-        start_time: "",
-        end_time: ""
+        start_time: undefined,
+        meridian: ""
     });
-    
-    const {start_time, end_time} = time;
 
-    const onSetTime = (s, e) => {
-        setTime({ ...time, start_time:s, end_time: e});
+    const CapFirstName = first_name.charAt(0).toUpperCase() + first_name.slice(1);
+    const CapLastName = last_name.charAt(0).toUpperCase() + last_name.slice(1);
+    
+    const { start_time, meridian } = time;
+
+    const onSetTime = (s) => {
+        try {
+            const ToD = parseInt(s.indexOf(11)) < 12? "am" : "pm";
+            setTime({ ...time, start_time:s.slice(11, 16), meridian:ToD});
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     const getAppointment = async (url) => {
@@ -22,7 +32,12 @@ const Appointment = ({ url, first_name, last_name }) => {
             });
 
             const parseRes = await response.json();
-            onSetTime(parseRes.starts_at, parseRes.ends_at);
+            console.log(parseRes.starts_at);
+            if (parseRes.starts_at === undefined) {
+                console.log("no appointment");
+            } else {
+                onSetTime(parseRes.starts_at);
+            }
         } catch (err) {
             console.error(err);
         }
@@ -35,14 +50,21 @@ const Appointment = ({ url, first_name, last_name }) => {
     console.log(time);
     return (
         <Fragment>
-            {start_time===undefined? (
+            {start_time==undefined? (
                 ""
             ) : (
-            <div>                   
-                <h1>{start_time + " " + end_time}</h1>
-                <div>
-                    {first_name + " " + last_name}
-                </div>
+            <div className="patient-card">   
+                <Card>
+                    <Card.Header>
+                        <Clock />
+                        {start_time + meridian}
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Title className="pname-title">
+                            {CapFirstName + " " + CapLastName}
+                        </Card.Title>
+                    </Card.Body>
+                </Card>                
             </div>
             )
             }

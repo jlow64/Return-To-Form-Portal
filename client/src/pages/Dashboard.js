@@ -5,6 +5,7 @@ import { BoxArrowRight } from "react-bootstrap-icons";
 import SearchBar from "../components/SearchBar";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/Dashboard.css";
+import Data from "../components/Data.json";
 
 
 const Dashboard = ({ setAuth }) => {
@@ -70,7 +71,7 @@ const Dashboard = ({ setAuth }) => {
                 </Button>
                 <h2 className="exercise-label">Exercise History</h2>
                 <h3 className="select-client-label">Search Client</h3>
-                <SearchBar placeholder="Search..." data={users} />
+                <SearchBar placeholder="Search..." data={Data.patients} />
                 
             </div>
         </Fragment>

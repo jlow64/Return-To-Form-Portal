@@ -54,6 +54,7 @@ router.post("/appointment", async (req, res) => {
         });
 
         const parseRes = await appointments.json();
+        console.log(parseRes);
         const appointmentsList = parseRes.appointments;
         const times = await fetch(`https://api.au1.cliniko.com/v1/individual_appointments/${appointmentsList[0].id}`, {
             method: 'GET',
