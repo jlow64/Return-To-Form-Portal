@@ -1,16 +1,16 @@
 import React, { useState, Fragment } from "react";
 import { Search, XCircle } from "react-bootstrap-icons";
-import PatientItem from "./PatientItem";
+import PatientCard from "./PatientCard";
 import "../styles/SearchBar.css";
 
-const SearchBar = ({ placeholder, data }) => {
+const SearchBar = ({ placeholder, patient_data }) => {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
-  
+
     const handleFilter = (e) => {
       const input = e.target.value;
       setWordEntered(input);
-      const newFilter = data.filter((value) => {
+      const newFilter = patient_data.filter((value) => {
         return value.first_name.toLowerCase().includes(input.toLowerCase());
       });
   
@@ -51,15 +51,20 @@ const SearchBar = ({ placeholder, data }) => {
                         </div>
                     </div> 
                 </div>
-                {filteredData.length != 0 && (
+                {filteredData.length !== 0 && (
                     <div className="dataResult">
-                        {filteredData.slice(0, 7).map((value, key) => {
+                        <h5 className="results-label">Search results</h5>
+                        {filteredData.slice(0, 8).map((value, key) => {
                             return (
                                 <a  key={key} 
-                                    onClick={() => console.log(value.first_name, value.last_name)}
+                                    onClick={() => console.log(value.id)}
                                     className="dataItem"
                                 >
-                                    <PatientItem url={value.appointments.links.self} first_name={value.first_name} last_name={value.last_name} />
+                                    <PatientCard
+                                        patient_id={value.id} 
+                                        first_name={value.first_name} 
+                                        last_name={value.last_name} 
+                                    />
                                 </a>
                             );
                         })}

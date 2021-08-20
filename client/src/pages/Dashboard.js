@@ -2,16 +2,36 @@ import React, { Fragment, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import Button from "react-bootstrap/Button";
 import { BoxArrowRight } from "react-bootstrap-icons";
+
 import SearchBar from "../components/SearchBar";
+import AppointmentCard from "../components/AppointmentCard";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/Dashboard.css";
-import Data from "../components/Data.json";
 
+import PatientData from "../Data/Patient.json";
+import AppointmentData from "../Data/Appointment.json";
 
 const Dashboard = ({ setAuth }) => {
-    const parsedUserData = [];
     const [users, setUsers] = useState([]);
+    const [appointments, setAppointments] = useState([]);
     const [name, setName] = useState("");
+    
+    const getClinikoUsers = async () => {
+        try {
+
+            const response = await fetch("http://localhost:5000/dashboard/cliniko");
+            const parseRes = await response.json();
+            const parsedPatientData = [];
+
+            parseRes.patients.forEach(element => {
+               parsedPatientData.push(element);
+            });
+
+            setUsers(parseRes.patients);
+        } catch (err) {
+            console.error(err.message);
+        }
+    };
 
     const getProfile = async () => {
         try {
@@ -40,22 +60,26 @@ const Dashboard = ({ setAuth }) => {
 
     useEffect(() => {
         getProfile();
-        const getClinikoUsers = async () => {
+        const getAppointment = async (url) => {
             try {
-    
-                const response = await fetch("http://localhost:5000/dashboard/cliniko");
-                const jsonData = await response.json();
-    
-                jsonData.patients.forEach(element => {
-                   parsedUserData.push(element);
-                });
-    
-                setUsers(jsonData.patients);
+                const response = await fetch("http://localhost:5000/dashboard/appointment");
+                const parseRes = await response.json();
+                setAppointments(parseRes.individual_appointments);
             } catch (err) {
-                console.error(err.message);
+                console.error(err);
             }
         };
-        getClinikoUsers();
+        const getPatients = async (url) => {
+            try {
+                const response = await fetch("http://localhost:5000/dashboard/patients");
+                const parseRes = await response.json();
+                setAppointments(parseRes.individual_appointments);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        // getPatients();
+        // getAppointment();
     }, []);
 
     return (
@@ -71,8 +95,24 @@ const Dashboard = ({ setAuth }) => {
                 </Button>
                 <h2 className="exercise-label">Exercise History</h2>
                 <h3 className="select-client-label">Search Client</h3>
-                <SearchBar placeholder="Search..." data={Data.patients} />
-                
+                <SearchBar 
+                    placeholder="Search..." 
+                    patient_data={PatientData.patients} 
+                />       
+                <div className="appointment-display-container">
+                    {AppointmentData.individual_appointments.slice(0,50).map((value, key) => {
+                        return (
+                            <a  key={key} 
+                                onClick={() => console.log(value.id)}
+                            >
+                                <AppointmentCard
+                                    patient_name={value.patient_name} 
+                                    time={value.starts_at} 
+                                />
+                            </a>
+                        );
+                    })}
+                </div>         
             </div>
         </Fragment>
     );
