@@ -1,23 +1,32 @@
 .patient-container {
+    position: absolute;
+    left: 0;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.168px;
-    color: #353A3E;
-    width: 100%;
+    color: #353a3e;
+    width: 100vw;
     height: 100vh;
     opacity: 0.8;
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 1rem;
-    border: 1px solid #353A3E;
 }
 
-.form-control.patient-input {
-    border: 1px solid #C9C9C9;
-    width: 100%;
-    margin-right: 1rem;
+.dashboard-logo {
+    width: 25%;
+    margin-bottom: 2rem;
+}
+
+.exercise-label {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 3rem;
+    color: #353A3E;
 }
 
 @media only screen and (max-width: 770px) {

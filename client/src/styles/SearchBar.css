@@ -3,14 +3,6 @@
     display: flex;
 }
 
-input:focus {
-    outline: none;
-}
-
-.searchIcon svg {
-    font-size: 2rem;
-}
-
 .dataResult {
     margin-top: 5px;
     width: 100%;
@@ -26,21 +18,16 @@ input:focus {
 }
   
 .dataResult .dataItem {
-    padding: 1rem;
+    padding: 0.5rem;
     height: 9rem;
     display: flex;
-    align-items: center;
+    justify-items: center;
     color: #353A3E;
     text-decoration: none;
 }
   
 .dataItem  {
-    margin-top: 1rem;
-    margin-left: 10px;
-}
-.patient-card {
-    width: 100%;
-    margin-left: -0.5rem;
+    margin-top: 0.5rem;
 }
 
 .results-label {
@@ -49,7 +36,7 @@ input:focus {
     font-weight: 600;
     font-size: 12px;
     line-height: 150%;
-    padding: 1rem;
+    padding-top: 1rem;
     padding-left: 3rem;
     color: #353A3E;
     background-color: transparent;
@@ -68,6 +55,7 @@ input:focus {
     display: flex;
     align-items: center;
     padding: 1rem;
+    width: 100%;
 }
 
 .patient-card-name {

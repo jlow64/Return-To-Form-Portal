@@ -57,7 +57,6 @@ const SearchBar = ({ placeholder, patient_data }) => {
                         {filteredData.slice(0, 8).map((value, key) => {
                             return (
                                 <a  key={key} 
-                                    onClick={() => console.log(value.id)}
                                     className="dataItem"
                                 >
                                     <PatientCard

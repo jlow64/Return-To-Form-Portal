@@ -5,7 +5,7 @@ const jwtGenerator = require("../utils/jwtGenerator");
 reqAuth = async (req, res) => {
     try {
         
-        const { title, first_name, last_name, email, password, role } = req.body;
+        const {patient_id, first_name, last_name, email, password, role } = req.body;
 
         const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
 
@@ -18,8 +18,8 @@ reqAuth = async (req, res) => {
         const bcryptPassword = await bcrypt.hash(password, salt);
 
         const newUser = await pool.query(
-            "INSERT INTO users (title, first_name, last_name, email, password, role) values ($1, $2, $3, $4, $5, $6) RETURNING *", 
-            [title, first_name, last_name, email, bcryptPassword, role]
+            "INSERT INTO users (patient_id, first_name, last_name, email, password, role) values ($1, $2, $3, $4, $5, $6) RETURNING *", 
+            [patient_id, first_name, last_name, email, bcryptPassword, role]
         );
 
         const token = jwtGenerator(newUser.rows[0].user_id);
@@ -41,6 +41,10 @@ reqLogin = async (req, res) => {
         
         if (user.rows.length === 0) {
             return res.status(401).send("Password or Email is incorrect");
+        }
+
+        if (user.rows[0].role !== "admin") {
+            return res.status(401).json("Unauthorised User");
         }
 
         const validPassword = await bcrypt.compare(password, user.rows[0].password);

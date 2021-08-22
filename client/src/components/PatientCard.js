@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
-import { Card, Image } from "react-bootstrap";
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 
 const PatientCard = ({ patient_id, first_name, last_name }) => {
     const name_list = [first_name, last_name];
@@ -11,17 +12,24 @@ const PatientCard = ({ patient_id, first_name, last_name }) => {
             iter_list.push(element[0].toUpperCase() + element.slice(1))
         )
     });
+    const patient_name = first_name + " " + last_name;
 
     return (
         <Fragment>
-            <div className="patient-card">   
-                <Card>  
+            <Link 
+                style={{ textDecoration: "none", color: "#353A3E", width: "100%"}}
+                to={{
+                    pathname: "/dashboard/patient",
+                    state: { patient_id: patient_id, patient_name: patient_name }
+                }}
+            >
+                <Card>    
                     <Card.Title className="patient-card-content">    
                         <div data-initials={iter_list[0][0] + iter_list[1][0]} />
-                        <p className="patient-card-name">{first_name + " " + last_name}</p>
+                        <p className="patient-card-name">{patient_name}</p>
                     </Card.Title>
-                </Card>                
-            </div>
+                </Card>   
+            </Link>                   
         </Fragment>
     );
 };
