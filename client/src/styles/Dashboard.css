@@ -107,6 +107,7 @@ p.appointment-card-name {
 }
 
 .select-client-label {
+    margin-left: 1rem;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;

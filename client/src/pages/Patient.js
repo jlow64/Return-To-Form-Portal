@@ -1,20 +1,24 @@
-import React, { useState, Fragment } from "react";
+import React, { Fragment } from "react";
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
-import { BoxArrowRight, ChevronLeft } from "react-bootstrap-icons";
+import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
 import { useLocation, useHistory } from "react-router-dom";
 
-import InputItem from "../components/InputItem";
-import ListItems from "../components/ListItems";
+// import InputItem from "../components/InputItem";
+// import ListItems from "../components/ListItems";
+import Exercises from "../components/Exercises";
 import logo from "../logos/rtf-logo-grey.png";
 
 import "../styles/Patient.css";
+
 
 const Patient = ({ setAuth }) => {
     const location = useLocation();
     const history = useHistory();
     const patient_id = location.state?.patient_id;
-    const patient_name = location.state?.patient_name;
+    const patient_fullname = location.state?.patient_name;
+    const first_name = location.state?.first_name;
+    const last_name = location.state?.last_name;
 
     const logout = async (e) => {
         e.preventDefault();
@@ -44,11 +48,13 @@ const Patient = ({ setAuth }) => {
                         onClick={() => history.goBack()}
                         style={{ margin: "2px" }}
                     />
-                    <h2 className="exercise-label">{patient_name}</h2>
+                    <h2 className="exercise-label">{patient_fullname}</h2>
                 </div>
-                <h3>{patient_id}</h3>
-                <InputItem />
-                <ListItems /> 
+                <div className="create-exercise">
+                    <PlusCircleFill size={"5rem"} style={{ margin: "0 3rem"}} />
+                    Create a new exercise
+                </div>
+                <Exercises patient_id={patient_id} first_name={first_name} last_name={last_name} />
             </div>
         </Fragment>
     );

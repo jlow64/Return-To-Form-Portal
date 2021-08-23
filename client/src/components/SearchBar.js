@@ -56,7 +56,7 @@ const SearchBar = ({ placeholder, patient_data }) => {
                         <h5 className="results-label">Search results</h5>
                         {filteredData.slice(0, 8).map((value, key) => {
                             return (
-                                <a  key={key} 
+                                <div key={key} 
                                     className="dataItem"
                                 >
                                     <PatientCard
@@ -64,7 +64,7 @@ const SearchBar = ({ placeholder, patient_data }) => {
                                         first_name={value.first_name} 
                                         last_name={value.last_name} 
                                     />
-                                </a>
+                                </div>
                             );
                         })}
                     </div>

@@ -20,7 +20,7 @@ const PatientCard = ({ patient_id, first_name, last_name }) => {
                 style={{ textDecoration: "none", color: "#353A3E", width: "100%"}}
                 to={{
                     pathname: "/dashboard/patient",
-                    state: { patient_id: patient_id, patient_name: patient_name }
+                    state: { patient_id: patient_id, patient_name: patient_name, first_name: iter_list[0], last_name: iter_list[1] }
                 }}
             >
                 <Card>    

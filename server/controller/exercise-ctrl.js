@@ -1,11 +1,22 @@
 const pool = require("../db");
 
+getUser = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const user = await pool.query("SELECT * FROM users WHERE patient_id = $1", [id]);
+
+        res.json(user.rows);
+    } catch (err) {
+        console.error(err);
+    }
+};
+
 createExercise = async(req, res) => {
     try {
-        const { exercise_name } = req.body;
+        const { patient_id, description, exercise_name, sets, reps, frequency  } = req.body;
         const newItem = await pool.query(
-            "INSERT INTO physio_item (exercise_name) VALUES($1) RETURNING *", 
-            [exercise_name]
+            "INSERT INTO exercises (patient_id, description, exercise_name, sets, reps, frequency) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", 
+            [patient_id, description, exercise_name, sets, reps, frequency]
         );
 
         res.json(newItem.rows[0]);
@@ -18,19 +29,30 @@ createExercise = async(req, res) => {
 
 getExercises = async(req, res) => {
     try {
-        const allItems = await pool.query("SELECT * FROM physio_item");
+        const allItems = await pool.query("SELECT * FROM exercises");
         res.json(allItems.rows);
     } catch (err) {
         console.error(err.message);
     }
 };
 
+getUserExercises = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const userExercises = await pool.query("SELECT * FROM exercises WHERE patient_id = $1", [id]);
+
+        res.json(userExercises.rows);
+    } catch (err) {
+        console.error(err.message);
+    }
+}
+
 // get an exercise item
 
 getExerciseItem = async(req, res) => {
     try {
         const { id } = req.params;
-        const items = await pool.query("SELECT * FROM physio_item WHERE item_id = $1", [id]);
+        const items = await pool.query("SELECT * FROM exercises WHERE exercise_id = $1", [id]);
 
         res.json(items.rows);
     } catch(err) {
@@ -43,10 +65,10 @@ getExerciseItem = async(req, res) => {
 updateExercise = async(req, res) => {
     try {
         const { id } = req.params;
-        const { exercise_name } = req.body;
+        const { description, exercise_name, sets, reps, frequency } = req.body;
         const updateItem = await pool.query(
-            "UPDATE physio_item SET exercise_name = $1 WHERE item_id = $2", 
-            [exercise_name, id]
+            "UPDATE exercises SET description = $1, exercise_name = $2, sets = $3, reps = $4, frequency = $5 WHERE exercise_id = $6", 
+            [description, exercise_name, sets, reps, frequency, id]
         );
 
         res.json("Item was updated!");
@@ -60,7 +82,7 @@ updateExercise = async(req, res) => {
 deleteExercise = async(req, res) => {
     try {
         const { id } = req.params;
-        const deleteItem = await pool.query("DELETE FROM physio_item WHERE item_id = $1", [id]);
+        const deleteItem = await pool.query("DELETE FROM exercises WHERE exercise_id = $1", [id]);
 
         res.json("Item was deleted!");
     } catch (err) {
@@ -69,9 +91,11 @@ deleteExercise = async(req, res) => {
 };
 
 module.exports = {
+    getUser,
     createExercise,
     getExercises,
     getExerciseItem,
+    getUserExercises,
     updateExercise,
     deleteExercise
 }

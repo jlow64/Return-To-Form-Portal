@@ -1,7 +1,8 @@
 CREATE DATABASE physiopern;
 
-CREATE TABLE physio_item(
-    item_id SERIAL PRIMARY KEY,
+CREATE TABLE exercises(
+    exercise_id SERIAL PRIMARY KEY,
+    patient_id VARCHAR(255) NOT NULL,
     description VARCHAR(255),
     exercise_name VARCHAR(255),
     sets INT NOT NULL DEFAULT 0, 
@@ -16,8 +17,8 @@ CREATE TABLE users(
     patient_id VARCHAR(255),
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    password VARCHAR(255),
     role VARCHAR(255) DEFAULT 'patient'
 );
 

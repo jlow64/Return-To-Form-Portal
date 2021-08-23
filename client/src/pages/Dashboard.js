@@ -12,26 +12,26 @@ import PatientData from "../Data/Patient.json";
 import AppointmentData from "../Data/Appointment.json";
 
 const Dashboard = ({ setAuth }) => {
-    const [users, setUsers] = useState([]);
-    const [appointments, setAppointments] = useState([]);
+    // const [users, setUsers] = useState([]);
+    // const [appointments, setAppointments] = useState([]);
     const [name, setName] = useState("");
     
-    const getClinikoUsers = async () => {
-        try {
+    // const getClinikoUsers = async () => {
+    //     try {
 
-            const response = await fetch("http://localhost:5000/dashboard/cliniko");
-            const parseRes = await response.json();
-            const parsedPatientData = [];
+    //         const response = await fetch("http://localhost:5000/dashboard/cliniko");
+    //         const parseRes = await response.json();
+    //         const parsedPatientData = [];
 
-            parseRes.patients.forEach(element => {
-               parsedPatientData.push(element);
-            });
+    //         parseRes.patients.forEach(element => {
+    //            parsedPatientData.push(element);
+    //         });
 
-            setUsers(parseRes.patients);
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
+    //         setUsers(parseRes.patients);
+    //     } catch (err) {
+    //         console.error(err.message);
+    //     }
+    // };
 
     const getProfile = async () => {
         try {
@@ -60,24 +60,24 @@ const Dashboard = ({ setAuth }) => {
 
     useEffect(() => {
         getProfile();
-        const getAppointment = async (url) => {
-            try {
-                const response = await fetch("http://localhost:5000/dashboard/appointment");
-                const parseRes = await response.json();
-                setAppointments(parseRes.individual_appointments);
-            } catch (err) {
-                console.error(err);
-            }
-        };
-        const getPatients = async (url) => {
-            try {
-                const response = await fetch("http://localhost:5000/dashboard/patients");
-                const parseRes = await response.json();
-                setAppointments(parseRes.individual_appointments);
-            } catch (err) {
-                console.error(err);
-            }
-        };
+        // const getAppointment = async (url) => {
+        //     try {
+        //         const response = await fetch("http://localhost:5000/dashboard/appointment");
+        //         const parseRes = await response.json();
+        //         setAppointments(parseRes.individual_appointments);
+        //     } catch (err) {
+        //         console.error(err);
+        //     }
+        // };
+        // const getPatients = async (url) => {
+        //     try {
+        //         const response = await fetch("http://localhost:5000/dashboard/patients");
+        //         const parseRes = await response.json();
+        //         setAppointments(parseRes.individual_appointments);
+        //     } catch (err) {
+        //         console.error(err);
+        //     }
+        // };
         // getPatients();
         // getAppointment();
     }, []);
@@ -102,14 +102,12 @@ const Dashboard = ({ setAuth }) => {
                 <div className="appointment-display-container">
                     {AppointmentData.individual_appointments.slice(0,50).map((value, key) => {
                         return (
-                            <a  key={key} 
-                                onClick={() => console.log(value.id)}
-                            >
+                            <div key={key}>
                                 <AppointmentCard
                                     patient_name={value.patient_name} 
                                     time={value.starts_at} 
                                 />
-                            </a>
+                            </div>
                         );
                     })}
                 </div>         
