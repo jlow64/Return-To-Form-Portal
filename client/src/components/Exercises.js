@@ -1,4 +1,3 @@
-import { parse } from "ipaddr.js";
 import React, { Fragment, useState, useEffect } from "react";
 
 const Exercises = ({ patient_id, first_name, last_name }) => {

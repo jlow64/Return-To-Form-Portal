@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory, Link } from "react-router-dom";
 
 // import InputItem from "../components/InputItem";
 // import ListItems from "../components/ListItems";
@@ -51,8 +51,15 @@ const Patient = ({ setAuth }) => {
                     <h2 className="exercise-label">{patient_fullname}</h2>
                 </div>
                 <div className="create-exercise">
-                    <PlusCircleFill size={"5rem"} style={{ margin: "0 3rem"}} />
-                    Create a new exercise
+                    <Link 
+                        style={{textDecoration: "none", color: "#7BC17F"}}
+                        to={{
+                        pathname: "/dashboard/patient/create-exercise",
+                        state: { patient_id: patient_id }
+                    }}>
+                        <PlusCircleFill size={"5rem"} style={{ margin: "0 3rem"}} />
+                        Create a new exercise
+                    </Link>
                 </div>
                 <Exercises patient_id={patient_id} first_name={first_name} last_name={last_name} />
             </div>
