@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import { Form, Button, Row, InputGroup } from "react-bootstrap";
@@ -8,6 +8,13 @@ import logo from "../logos/rtf-logo-grey.png";
 const CreateExercise = ({ setAuth }) => {
 
     const history = useHistory();
+    const [data, setData] = useState({
+        reps: 0,
+        sets: 0,
+        frequency: 0,
+    });
+
+    const { reps, sets, frequency } = data;
 
     const logout = async (e) => {
         e.preventDefault();
@@ -18,6 +25,10 @@ const CreateExercise = ({ setAuth }) => {
         } catch (err) {
             console.error(err.message);
         }
+    };
+
+    const dataInputChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value });
     };
 
     return (
@@ -58,6 +69,7 @@ const CreateExercise = ({ setAuth }) => {
                             style={{ height: '160px', resize: "none"}}
                         />
                     </Form.Group>
+
                     <Form.Group as={Row} controlId="formReps" >  
                         <InputGroup className="mb-1" >
                             <Form.Label>
@@ -66,17 +78,20 @@ const CreateExercise = ({ setAuth }) => {
                             <DashCircleFill 
                                 size={24} 
                                 style={{color: "#FCB333"}} 
-                                onClick={() => console.log("minus 1")}
+                                onClick={() => {setData({ ...data, reps: parseInt(data.reps) -1 })}}
                             />
                             <Form.Control
-                                as="text"
+                                type="number"
+                                min="0"
                                 name="reps"
-                                placeholder={0}
+                                value={data.reps}
+                                defaultValue={0}
+                                onChange={dataInputChange}
                             />
                             <PlusCircleFill 
                                 size={24} 
                                 style={{color: "#FCB333"}} 
-                                onClick={() => console.log("plus 1")}
+                                onClick={() => {setData({ ...data, reps: parseInt(data.reps) + 1})}}
                             />
                         </InputGroup>                      
                     </Form.Group>
@@ -89,42 +104,46 @@ const CreateExercise = ({ setAuth }) => {
                             <DashCircleFill 
                                 size={24} 
                                 style={{color: "#FCB333"}} 
-                                onClick={() => console.log("minus 1")}
+                                onClick={() => {setData({ ...data, sets: parseInt(data.sets) - 1})}}
                             />
                             <Form.Control
-                                as="text"
-                                name="reps"
-                                placeholder={0}
+                                type="number"
+                                min="0"
+                                name="sets"
+                                value={data.sets}
+                                defaultValue={0}
+                                onChange={dataInputChange}
                             />
                             <PlusCircleFill 
                                 size={24} 
                                 style={{color: "#FCB333"}} 
-                                onClick={() => console.log("plus 1")}
+                                onClick={() => {setData({ ...data, sets: parseInt(data.sets) + 1})}}
                             />
                         </InputGroup>                       
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formFrequency" >      
+                    <Form.Group as={Row} controlId="formFrequency" >  
                         <InputGroup className="mb-1" >
-                            <Form.Label>
-                                Frequency
-                            </Form.Label>
+                            <Form.Label>Frequency</Form.Label>
                             <DashCircleFill 
                                 size={24} 
                                 style={{color: "#FCB333"}} 
-                                onClick={() => console.log("minus 1")}
+                                onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) -1 })}}
                             />
                             <Form.Control
-                                as="text"
-                                name="reps"
-                                placeholder={0}
+                                type="number"
+                                min="0"
+                                name="frequency"
+                                value={data.frequency}
+                                defaultValue={0}
+                                onChange={dataInputChange}
                             />
                             <PlusCircleFill 
                                 size={24} 
                                 style={{color: "#FCB333"}} 
-                                onClick={() => console.log("plus 1")}
+                                onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) + 1})}}
                             />
-                        </InputGroup>                    
+                        </InputGroup>                      
                     </Form.Group>
 
                 </Form>
