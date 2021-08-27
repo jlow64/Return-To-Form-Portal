@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
+import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ patient_id, first_name, last_name }) => {
     const [exercises, setExercises] = useState([]);
@@ -47,6 +48,7 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
             if (exerciseParse.length === 0) {
                 console.log("currently no exercise items");
             } else {
+                console.log(exercises);
                 console.log("iterate through current exercise items");
             }
         } catch (err) {
@@ -62,6 +64,16 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
         <Fragment>
             <div className="exercise-container" >
                <h1>{exercises.length===0? "No assigned exercises" : "Assigned exercises"}</h1> 
+               <div style={{marginTop: "3rem"}}>
+                    {exercises.map((value, key) => {
+                        return (
+                            <div key={key}>
+                            <ExerciseCard exercise={value} />
+                            </div>
+                        );
+                    })}
+               </div>
+               
             </div>
         </Fragment>
     );

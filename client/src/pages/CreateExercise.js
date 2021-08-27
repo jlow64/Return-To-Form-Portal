@@ -1,20 +1,26 @@
 import React, { Fragment, useState } from "react";
 import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { Form, Button, Row, InputGroup } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill } from "react-bootstrap-icons";
 import logo from "../logos/rtf-logo-grey.png";
+import "../styles/CreateExercise.css";
 
 const CreateExercise = ({ setAuth }) => {
-
+    const location = useLocation();
     const history = useHistory();
+
+    const patient_id = location.state?.patient_id;
+
     const [data, setData] = useState({
+        exercise_name: "",
+        description: "",
         reps: 0,
         sets: 0,
         frequency: 0,
     });
 
-    const { reps, sets, frequency } = data;
+    const { exercise_name, description, reps, sets, frequency } = data;
 
     const logout = async (e) => {
         e.preventDefault();
@@ -29,6 +35,25 @@ const CreateExercise = ({ setAuth }) => {
 
     const dataInputChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
+    };
+
+    const submitExercise = async (e) => {
+        e.preventDefault();
+        try {
+            const body = { patient_id, exercise_name, description, reps, sets, frequency };
+            const response =  await fetch("http://localhost:5000/exercise/item", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+            });
+
+            const parseRes = await response.json();
+
+            console.log(parseRes);
+            
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     return (
@@ -50,23 +75,28 @@ const CreateExercise = ({ setAuth }) => {
                     />
                     <h2 className="exercise-label">Create a new exercise</h2>
                 </div>
-                <Form>
+                <Form onSubmit={submitExercise}>
                     <Form.Group as={Row} controlId="formExerciseName">
                         <Form.Label>Exercise name</Form.Label>
                         <Form.Control
                             type="text"
-                            name="exerciseName"
+                            name="exercise_name"
+                            value={data.exercise_name}
                             placeholder="Enter text"
+                            onChange={dataInputChange}
                         />
                     </Form.Group>
                     <Form.Group as={Row} controlId="formDescription">
                         <Form.Label>Description</Form.Label>
                         <Form.Control
+                            style={{ height: '160px', resize: "none"}}
                             as="textarea"
                             type="text"
                             name="description"
+                            value={data.description}
                             placeholder="Enter text"
-                            style={{ height: '160px', resize: "none"}}
+                            onChange={dataInputChange}
+                            
                         />
                     </Form.Group>
 
@@ -144,6 +174,21 @@ const CreateExercise = ({ setAuth }) => {
                                 onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) + 1})}}
                             />
                         </InputGroup>                      
+                    </Form.Group>
+
+                    <Form.Group as={Row} controlId="formButton" role="form">
+                        <InputGroup className="mb-1">
+                           <Button 
+                                type="submit" 
+                                variant="" 
+                                className="btn-exercise"
+                                value="submit"
+                                size="large"
+                                onClick={() => history.goBack()}
+                            >
+                                Assign to client
+                            </Button> 
+                        </InputGroup>
                     </Form.Group>
 
                 </Form>

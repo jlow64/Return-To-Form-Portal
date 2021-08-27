@@ -13,10 +13,10 @@ getUser = async (req, res) => {
 
 createExercise = async(req, res) => {
     try {
-        const { patient_id, description, exercise_name, sets, reps, frequency  } = req.body;
+        const { patient_id, exercise_name, description, sets, reps, frequency  } = req.body;
         const newItem = await pool.query(
-            "INSERT INTO exercises (patient_id, description, exercise_name, sets, reps, frequency) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", 
-            [patient_id, description, exercise_name, sets, reps, frequency]
+            "INSERT INTO exercises (patient_id, exercise_name, description, sets, reps, frequency) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", 
+            [patient_id, exercise_name, description, sets, reps, frequency]
         );
 
         res.json(newItem.rows[0]);

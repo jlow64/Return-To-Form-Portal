@@ -4,8 +4,6 @@ import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
 import { useLocation, useHistory, Link } from "react-router-dom";
 
-// import InputItem from "../components/InputItem";
-// import ListItems from "../components/ListItems";
 import Exercises from "../components/Exercises";
 import logo from "../logos/rtf-logo-grey.png";
 
