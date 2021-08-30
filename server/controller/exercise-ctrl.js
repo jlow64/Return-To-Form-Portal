@@ -65,10 +65,10 @@ getExerciseItem = async(req, res) => {
 updateExercise = async(req, res) => {
     try {
         const { id } = req.params;
-        const { description, exercise_name, sets, reps, frequency } = req.body;
+        const { exercise_name, description, sets, reps, frequency } = req.body;
         const updateItem = await pool.query(
-            "UPDATE exercises SET description = $1, exercise_name = $2, sets = $3, reps = $4, frequency = $5 WHERE exercise_id = $6", 
-            [description, exercise_name, sets, reps, frequency, id]
+            "UPDATE exercises SET exercise_name = $1, description = $2, sets = $3, reps = $4, frequency = $5 WHERE exercise_id = $6", 
+            [exercise_name, description, sets, reps, frequency, id]
         );
 
         res.json("Item was updated!");

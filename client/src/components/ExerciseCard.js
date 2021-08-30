@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 import { ThreeDotsVertical } from "react-bootstrap-icons" ;
 
 const ExerciseCard = ({ exercise }) => {
-    console.log(exercise);
+    /* Make edit page and delete section from three vertical dots from a modal */
     return (
         <Fragment>
             <Card className="exercise-card-container" >   

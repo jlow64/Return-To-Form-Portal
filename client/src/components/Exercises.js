@@ -68,7 +68,7 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
                     {exercises.map((value, key) => {
                         return (
                             <div key={key}>
-                            <ExerciseCard exercise={value} />
+                                <ExerciseCard exercise={value} />
                             </div>
                         );
                     })}

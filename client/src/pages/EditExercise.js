@@ -7,7 +7,7 @@ import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
 
-const CreateExercise = ({ setAuth }) => {
+const EditExercise = ({ setAuth }) => {
     const location = useLocation();
     const history = useHistory();
 
@@ -47,8 +47,8 @@ const CreateExercise = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { patient_id, exercise_name, description, reps, sets, frequency };
-            const response =  await fetch("http://localhost:5000/exercise/item", {
-                method: "POST",
+            const response =  await fetch(`http://localhost:5000/exercise/item/${patient_id}`, {
+                method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
@@ -250,4 +250,4 @@ const CreateExercise = ({ setAuth }) => {
     );
 };
 
-export default CreateExercise;
+export default EditExercise;

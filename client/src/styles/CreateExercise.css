@@ -13,6 +13,23 @@
     justify-content: center;
 }
 
+.exercise-form {
+    padding: 1rem;
+    width: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.form-input {
+    max-width: 5rem;
+}
+
+.form-headers {
+    font-size: 7rem;
+}
+
 .exercise-card-container {
     border-radius: 10px;
     border: 1px solid rgba(53, 58, 62, 0.3);
@@ -26,4 +43,22 @@
     line-height: 150%;
     color: #353A3E;
     word-spacing: 3rem;
+}
+
+.modal-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #353A3E;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.num-input-group {
+    display: flex;
+    position: absolute;
+    right: 1rem;
 }
