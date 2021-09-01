@@ -45,7 +45,6 @@ const CreateExercise = ({ setAuth }) => {
 
     const submitExercise = async (e) => {
         e.preventDefault();
-        console.log("submit");
         try {
             const body = { patient_id, exercise_name, description, reps, sets, frequency };
             const response =  await fetch("http://localhost:5000/exercise/item", {
@@ -65,9 +64,7 @@ const CreateExercise = ({ setAuth }) => {
 
     return (
         <Fragment>
-            <div className="patient-container"
-                onClick={e => e.stopPropagation()}
-            >
+            <div className="patient-container">
                 <img src={logo} alt="" className="dashboard-logo" width="100%"/>
                 <Button 
                     className="logout"
@@ -84,8 +81,8 @@ const CreateExercise = ({ setAuth }) => {
                     />
                     <h2 className="exercise-label">Create a new exercise</h2>
                 </div>
-                <Form onSubmit={submitExercise} className="exercise-form" >
-                    <Form.Group as={Row} controlId="formExerciseName">
+                <Form onSubmit={submitExercise} className="exercise-form" id="createExercise" >
+                    <Form.Group as={Row} controlId="formExerciseName" role="form" >
                         <Form.Label>Exercise name</Form.Label>
                         <Form.Control
                             type="text"
@@ -97,7 +94,7 @@ const CreateExercise = ({ setAuth }) => {
                             style={{height: "5rem", width:"100%"}}
                         />
                     </Form.Group>
-                    <Form.Group as={Row} controlId="formDescription">
+                    <Form.Group as={Row} controlId="formDescription" role="form" >
                         <Form.Label>Description</Form.Label>
                         <Form.Control
                             style={{ height: '160px', resize: "none"}}
@@ -112,7 +109,7 @@ const CreateExercise = ({ setAuth }) => {
                         />
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formReps" >  
+                    <Form.Group as={Row} controlId="formReps" role="form" >  
                         <InputGroup className="mb-3 mt-3" >
                             <Form.Label className="ml-10">
                                 Reps
@@ -142,7 +139,7 @@ const CreateExercise = ({ setAuth }) => {
                         </InputGroup>                      
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formSets" >   
+                    <Form.Group as={Row} controlId="formSets" role="form" >   
                         <InputGroup className="mb-3 mt-3" >
                             <Form.Label>
                                 Sets
@@ -171,7 +168,7 @@ const CreateExercise = ({ setAuth }) => {
                         </InputGroup>                       
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formFrequency" >  
+                    <Form.Group as={Row} controlId="formFrequency" role="form">  
                         <InputGroup className="mb-3 mt-3" >
                             <Form.Label>Frequency</Form.Label>
                             <div className="num-input-group">
@@ -210,41 +207,40 @@ const CreateExercise = ({ setAuth }) => {
                         </InputGroup>
                     </Form.Group>
                     
-                    <Form.Group role="form">
-                        <Modal
-                            show={show}
-                            onHide={handleClose}
-                            backdrop="static"
-                            keyboard={false}
-                            centered
-                        >
-                            <Modal.Header>
-                                <Modal.Title className="modal-title" >Confirm you want to assign?</Modal.Title>
-                            </Modal.Header>
+                    <Modal
+                        show={show}
+                        onHide={handleClose}
+                        backdrop="static"
+                        keyboard={false}
+                        centered
+                    >
+                        <Modal.Header>
+                            <Modal.Title className="modal-title" >Confirm you want to assign?</Modal.Title>
+                        </Modal.Header>
 
-                            <Modal.Body>
-                                <ExerciseCard exercise={data} />
-                            </Modal.Body>
+                        <Modal.Body>
+                            <ExerciseCard exercise={data} />
+                        </Modal.Body>
 
-                            <Modal.Footer>
-                                <Button 
-                                    className="btn-exercise"
-                                    variant="primary" 
-                                    type="submit" 
-                                    onClick={() => history.goBack()} 
-                                >
-                                    Yes
-                                </Button>
-                                <Button 
-                                    className="btn-exercise"
-                                    variant="secondary" 
-                                    onClick={handleClose} 
-                                >
-                                    No, return to edit
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </Form.Group>
+                        <Modal.Footer>
+                            <Button 
+                                className="btn-exercise"
+                                form="createExercise"
+                                variant="primary"
+                                type="submit" 
+                                onClick={() => history.goBack()} 
+                            >
+                                Yes
+                            </Button>
+                            <Button 
+                                className="btn-exercise"
+                                variant="secondary" 
+                                onClick={handleClose} 
+                            >
+                                No, return to edit
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>                    
                 </Form>
             </div>
         </Fragment>

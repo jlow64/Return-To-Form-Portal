@@ -11,7 +11,7 @@ const EditExercise = ({ setAuth }) => {
     const location = useLocation();
     const history = useHistory();
 
-    const patient_id = location.state?.patient_id;
+    const exercise_id = location.state?.exercise_id;
 
     const [data, setData] = useState({
         exercise_name: "",
@@ -46,8 +46,8 @@ const EditExercise = ({ setAuth }) => {
     const submitExercise = async (e) => {
         e.preventDefault();
         try {
-            const body = { patient_id, exercise_name, description, reps, sets, frequency };
-            const response =  await fetch(`http://localhost:5000/exercise/item/${patient_id}`, {
+            const body = { exercise_name, description, reps, sets, frequency };
+            const response =  await fetch(`http://localhost:5000/exercise/item/${exercise_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -81,7 +81,7 @@ const EditExercise = ({ setAuth }) => {
                     />
                     <h2 className="exercise-label">Edit exercise</h2>
                 </div>
-                <Form onSubmit={submitExercise} className="exercise-form" >
+                <Form onSubmit={submitExercise} className="exercise-form" id="editExercise" >
                     <Form.Group as={Row} controlId="formExerciseName">
                         <Form.Label>Exercise name</Form.Label>
                         <Form.Control
@@ -208,42 +208,40 @@ const EditExercise = ({ setAuth }) => {
                             </Button> 
                         </InputGroup>
                     </Form.Group>
-                    
-                    <Form.Group role="form">
-                        <Modal
-                            show={show}
-                            onHide={handleClose}
-                            backdrop="static"
-                            keyboard={false}
-                            centered
-                        >
-                            <Modal.Header>
-                                <Modal.Title className="modal-title" >Confirm you want to assign?</Modal.Title>
-                            </Modal.Header>
+                    <Modal
+                        show={show}
+                        onHide={handleClose}
+                        backdrop="static"
+                        keyboard={false}
+                        centered
+                    >
+                        <Modal.Header>
+                            <Modal.Title className="modal-title" >Confirm you want to edit?</Modal.Title>
+                        </Modal.Header>
 
-                            <Modal.Body>
-                                <ExerciseCard exercise={data} />
-                            </Modal.Body>
+                        <Modal.Body>
+                            <ExerciseCard exercise={data} />
+                        </Modal.Body>
 
-                            <Modal.Footer>
-                                <Button 
-                                    className="btn-exercise"
-                                    variant="primary" 
-                                    type="submit" 
-                                    onClick={() => history.goBack()} 
-                                >
-                                    Yes
-                                </Button>
-                                <Button 
-                                    className="btn-exercise"
-                                    variant="secondary" 
-                                    onClick={handleClose} 
-                                >
-                                    No, return to edit
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </Form.Group>
+                        <Modal.Footer>
+                            <Button 
+                                className="btn-exercise"
+                                form="editExercise"
+                                variant="primary" 
+                                type="submit" 
+                                onClick={() => history.goBack()} 
+                            >
+                                Yes
+                            </Button>
+                            <Button 
+                                className="btn-exercise"
+                                variant="secondary" 
+                                onClick={handleClose} 
+                            >
+                                No, return to edit
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </Form>
             </div>
         </Fragment>

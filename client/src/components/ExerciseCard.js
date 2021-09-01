@@ -57,14 +57,23 @@ const ExerciseCard = ({ exercise_list, refreshExercises, exercise, showOptions }
                 style={{border: "none", minHeight: "32rem"}}
             >
                 <Modal.Body className="edit-modal-text">
-                    <h1 className="modal-text-row"><PenFill /><p>Edit Exercise</p></h1>
-                    <h1 style={{margin: "1rem"}}
+                    <Link 
+                        style={{textDecoration: "none", color: "#353A3E"}}
+                        to={{
+                        pathname: "/dashboard/patient/edit-exercise",
+                        state: { exercise_id: exercise.exercise_id }
+                    }}>
+                        <div className="modal-text-row">
+                            <PenFill style={{marginRight: "2rem"}} /> Edit Exercise
+                        </div>
+                    </Link>
+                    <div className="modal-text-row" style={{margin: "1rem"}}
                         onClick={() => {
                             setShow({...show, deleteModal:true, editModal:false});
                         }}
                     >
-                        <TrashFill />    Delete
-                    </h1>                                 
+                        <TrashFill style={{marginRight: "2rem"}} />    Delete
+                    </div>                                 
                 </Modal.Body>
 
                 <Modal.Footer>

@@ -9,12 +9,11 @@
 
 .modal-text-row {
     display: flex;
-    text-align: right;
     align-items: center;
-    vertical-align: middle;
+    vertical-align: top;
     justify-content: left;
-    margin: 10px;
-    border: 1px solid red;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .btn-exercise {
@@ -31,6 +30,7 @@
     color: #FFFFFF;
     margin-top: 1rem;
     justify-content: center;
+    margin: 1rem;
 }
 
 .btn-exercise-exit {

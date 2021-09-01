@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import Patient from "./pages/Patient";
 import CreateExercise from "./pages/CreateExercise";
+import EditExercise from"./pages/EditExercise";
 
 toast.configure();
 
@@ -52,6 +53,7 @@ function App() {
             <Route exact path="/dashboard" render={props => isAuthenticated ? <Dashboard {...props} setAuth={setAuth} /> : <Redirect to="/login" />} />
             <Route exact path="/dashboard/patient" render={props => isAuthenticated ? <Patient {...props} setAuth={setAuth} /> : <Redirect to="/login" />} />
             <Route exact path="/dashboard/patient/create-exercise" render={props => isAuthenticated ? <CreateExercise {...props} setAuth={setAuth} /> : <Redirect to="/login" />} />
+            <Route exact path="/dashboard/patient/edit-exercise" render={props => isAuthenticated ? <EditExercise {...props} setAuth={setAuth} /> : <Redirect to="/login" />} />
             <Route exact path="/forgot-password" render={props => <ForgotPassword {...props} />} />
           </Switch>
         </div>
