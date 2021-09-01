@@ -79,7 +79,7 @@ const EditExercise = ({ setAuth }) => {
                         onClick={() => history.goBack()}
                         style={{ margin: "2px" }}
                     />
-                    <h2 className="exercise-label">Create a new exercise</h2>
+                    <h2 className="exercise-label">Edit exercise</h2>
                 </div>
                 <Form onSubmit={submitExercise} className="exercise-form" >
                     <Form.Group as={Row} controlId="formExerciseName">

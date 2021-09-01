@@ -48,12 +48,15 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
             if (exerciseParse.length === 0) {
                 console.log("currently no exercise items");
             } else {
-                console.log(exercises);
                 console.log("iterate through current exercise items");
             }
         } catch (err) {
             console.error(err.message);
         }
+    };
+
+    const refreshExercises = (exercise_list, id) => {
+        setExercises(exercise_list.filter(exercise => exercise.exercise_id !== id));
     };
 
     useEffect(() => {
@@ -68,7 +71,12 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
                     {exercises.map((value, key) => {
                         return (
                             <div key={key}>
-                                <ExerciseCard exercise={value} />
+                                <ExerciseCard 
+                                    exercise_list={exercises} 
+                                    refreshExercises={refreshExercises} 
+                                    exercise={value} 
+                                    showOptions={true} 
+                                />
                             </div>
                         );
                     })}
