@@ -1,25 +1,31 @@
 import React, { useState, Fragment } from "react";
 import { Search, XCircle } from "react-bootstrap-icons";
-import "./SearchBar.css";
+import PatientCard from "./PatientCard";
+import "../styles/SearchBar.css";
 
-const SearchBar = ({ placeholder, data }) => {
+const SearchBar = ({ placeholder, patient_data }) => {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
 
-    const handleFilter = (event) => {
-        const searchWord = event.target.value;
-        setWordEntered(searchWord);
-        const newFilter = data.filter((value) => {
-          return value.title.toLowerCase().includes(searchWord.toLowerCase());
-        });
-    
-        if (searchWord === "") {
-          setFilteredData([]);
-        } else {
-          setFilteredData(newFilter);
-        }
+    const handleFilter = (e) => {
+      const input = e.target.value;
+      setWordEntered(input);
+      const newFilter = patient_data.filter((value) => {
+        return value.first_name.toLowerCase().includes(input.toLowerCase());
+      });
+  
+      if (input === "") {
+        setFilteredData([]);
+      } else {
+        setFilteredData(newFilter);
+      }
     };
-    
+  
+    const clearInput = () => {
+      setFilteredData([]);
+      setWordEntered("");
+    };
+
     return (
         <Fragment>
             <div className="search">
@@ -31,16 +37,38 @@ const SearchBar = ({ placeholder, data }) => {
                             placeholder={placeholder}
                             value={wordEntered}
                             onChange={handleFilter}
-                            aria-describedby="search-addon"
+                            style={{fontSize: 18}}
                         />
                         <div className="input-group-append search-icon">
                             <span className="input-group-text search-icon" id="search-addon">
-                                <Search size={18} />
+                                {filteredData.length === 0? (
+                                        <Search size={18}/> 
+                                    ) : (
+                                        <XCircle size={18} id="clearBtn" onClick={clearInput} /> 
+                                    )
+                                }
                             </span>
                         </div>
                     </div> 
                 </div>
-                <div className="dataResult"></div>
+                {filteredData.length !== 0 && (
+                    <div className="dataResult">
+                        <h5 className="results-label">Search results</h5>
+                        {filteredData.slice(0, 8).map((value, key) => {
+                            return (
+                                <div key={key} 
+                                    className="dataItem"
+                                >
+                                    <PatientCard
+                                        patient_id={value.id} 
+                                        first_name={value.first_name} 
+                                        last_name={value.last_name} 
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
             </div>
         </Fragment>
     );

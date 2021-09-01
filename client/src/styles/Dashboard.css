@@ -1,0 +1,115 @@
+.logout {
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #353a3e;
+}
+
+.logout:hover {
+    background-color: #F99F1E;
+    color: #FFFFFF;
+}
+
+.dashboard-container {
+    position: absolute;
+    left: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.168px;
+    color: #353a3e;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    background-color: #FFFFFF;
+    padding: 1rem;
+}
+
+.dashboard-logo {
+    width: 25%;
+    margin-bottom: 2rem;
+}
+
+.exercise-label {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 3rem;
+    color: #353A3E;
+}
+
+.form-control.search-bar {
+    min-height: 40px;
+    border: 1px solid #C9C9C9;
+    border-right: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin-top: 2rem;
+    width: 80%;
+    padding-left: 2rem;
+}
+
+.modal-title {
+    color: black;
+}
+
+span#search-addon.input-group-text.search-icon {
+    font-size: 18px;
+    background-color: transparent;
+    color: #808184;
+    margin-top: 2rem;
+    min-height: 5rem;
+    border: 1px solid #C9C9C9;
+    border-left: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.input-group-text {
+    color: black;
+}
+
+.appointment-display-container {
+    max-height: 600px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.appointment-card-title {
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #353A3E;
+}
+
+p.appointment-card-name {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    color: #353A3E;
+}
+
+.time-header {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #353A3E;
+}
+
+.select-client-label {
+    margin-left: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}

@@ -1,0 +1,64 @@
+.btn-exercise {
+    min-height: 48px;
+    width: 100%;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    border: 2px solid #F99F1E;
+    background-color: #F99F1E;
+    color: #FFFFFF;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.exercise-form {
+    padding: 1rem;
+    width: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.form-input {
+    max-width: 5rem;
+}
+
+.form-headers {
+    font-size: 7rem;
+}
+
+.exercise-card-container {
+    border-radius: 10px;
+    border: 1px solid rgba(53, 58, 62, 0.3);
+    height: 9rem;
+}
+
+.exercise-card-content {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #353A3E;
+    word-spacing: 3rem;
+}
+
+.modal-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #353A3E;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.num-input-group {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+}

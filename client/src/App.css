@@ -1,24 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
+html { font-size: 8px; }
 
 body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100vw;
     background: linear-gradient(180deg, #FFD066 0%, #F99F1E 100%);
-}
-
-.container-fluid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
 }

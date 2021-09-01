@@ -1,0 +1,65 @@
+.patient-container {
+    position: absolute;
+    left: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.168px;
+    color: #353a3e;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    background-color: #FFFFFF;
+    padding: 1rem;
+}
+
+.dashboard-logo {
+    width: 25%;
+    margin-bottom: 2rem;
+}
+
+.create-exercise {
+    display: flex;
+    align-items: center;
+    height: 9rem;
+    width: auto;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #7BC17F;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='green' stroke-width='1' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+
+.create-exercise .exercise-label {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 3rem;
+    color: #353A3E;
+}
+
+.exercise-container {
+    margin: 4rem 1rem 2rem;
+}
+
+.exercise-container h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #353A3E;
+}
+
+@media only screen and (max-width: 770px) {
+
+    .patient-container {
+        font-size: 16px;
+    }
+}

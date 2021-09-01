@@ -1,0 +1,4013 @@
+{
+    "patients": [
+        {
+            "id": "58336508",
+            "created_at": "2019-07-15T07:54:38Z",
+            "updated_at": "2021-08-11T23:41:20Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": true,
+            "accepted_sms_marketing": true,
+            "address_1": "76 Titirangi Road, New Lynn, 0600",
+            "address_2": "",
+            "address_3": "",
+            "appointment_notes": "Needs bathroom",
+            "city": "Auckland",
+            "country": "New Zealand",
+            "date_of_birth": "1985-10-08",
+            "email": "claire.smith1030@hotmail.co.uk",
+            "emergency_contact": "Andre Panapa Rooney 0212663852",
+            "first_name": "claire",
+            "gender_identity": "Woman",
+            "invoice_default_to": "",
+            "invoice_email": null,
+            "invoice_extra_information": "",
+            "last_name": "smith",
+            "medicare": "",
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "",
+            "occupation": "Other Health Associate Professional",
+            "old_reference_id": "",
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64212730668",
+                    "number": "0212730668",
+                    "phone_type": "Mobile"
+                },
+                {
+                    "normalized_number": "64212730668",
+                    "number": "212730668",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": "0600",
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": "",
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "claire smith",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/58336508/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/58336508/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/58336508/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/58336508/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/58336508/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/58336508"
+            }
+        },
+        {
+            "id": "59872006",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-10-07T22:41:05Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "46 Sunny Brae Crescent, Westmare, Auckland",
+            "address_2": "",
+            "address_3": "",
+            "appointment_notes": "",
+            "city": "",
+            "country": "New Zealand",
+            "date_of_birth": "1965-11-20",
+            "email": "barryjkeller@gmail.com",
+            "emergency_contact": "",
+            "first_name": "Barry",
+            "gender_identity": "",
+            "invoice_default_to": "",
+            "invoice_email": null,
+            "invoice_extra_information": "",
+            "last_name": "Keller",
+            "medicare": "",
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "",
+            "occupation": "IT Administrator",
+            "old_reference_id": "",
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421673082",
+                    "number": "021673082",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": "",
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": "",
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Barry Keller",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872006/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872006/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872006/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872006/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872006/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872006"
+            }
+        },
+        {
+            "id": "59871979",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": null,
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": null,
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Alex",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Tuia",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64210465622",
+                    "number": "210465622",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": null,
+            "state": null,
+            "title": null,
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Alex Tuia",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871979/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871979/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871979/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871979/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871979/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871979"
+            }
+        },
+        {
+            "id": "59871988",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "27 Lawrence St, Herne Bay, Akl",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1984-08-02",
+            "email": "j3nna1333@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Jenna",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Lee",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Area Manager",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421657437",
+                    "number": "21657437",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Jenna Lee",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871988/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871988/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871988/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871988/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871988/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871988"
+            }
+        },
+        {
+            "id": "59871976",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "1/198 Mt Albert Road, Sandringham, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1977-09-07",
+            "email": "smithy007@mac.com",
+            "emergency_contact": null,
+            "first_name": "Paula",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Smith",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Secondary School Teacher",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421979995",
+                    "number": "21979995",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Paula Smith",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871976/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871976/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871976/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871976/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871976/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871976"
+            }
+        },
+        {
+            "id": "59871984",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "2A/31 Scanlan Street, Grey Lynn, Auckland, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1971-12-02",
+            "email": "jwoodbridge@nzrpg.co.nz",
+            "emergency_contact": null,
+            "first_name": "Jason",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Woodbridge",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Project Manager",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6498310200",
+                    "number": "98310200",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "6421463522",
+                    "number": "21463522",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Jason Woodbridge",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871984/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871984/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871984/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871984/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871984/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871984"
+            }
+        },
+        {
+            "id": "59871986",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "4/63 Sussex Street, Grey Lynn, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1970-06-12",
+            "email": "karenc.nz@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Karen",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Codd",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Analyst Programmer",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421325640",
+                    "number": "021 325 640",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Karen Codd",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871986/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871986/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871986/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871986/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871986/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871986"
+            }
+        },
+        {
+            "id": "59871993",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "34 Jervois Road, Ponsonby, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1983-06-15",
+            "email": "ryan@circleit.co.nz",
+            "emergency_contact": null,
+            "first_name": "Ryan",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Ouston",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Network Administrator",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64212472532",
+                    "number": "212472532",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Ryan Ouston",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871993/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871993/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871993/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871993/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871993/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871993"
+            }
+        },
+        {
+            "id": "59871980",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "68 Kelmarna Av, Ponsonby, Akl 1011",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1986-07-01",
+            "email": "juligaitan@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Julian",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Herrera",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Bank Teller",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6495269501",
+                    "number": "95269501",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "642102282200",
+                    "number": "2102282200",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Julian Herrera",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871980/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871980/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871980/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871980/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871980/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871980"
+            }
+        },
+        {
+            "id": "59871989",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "1 Doreen Ave, Mt Albert, Auckland, NZ",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1956-09-19",
+            "email": "etd@xtra.co.nz",
+            "emergency_contact": null,
+            "first_name": "Ross",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Wilton",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Managing Director",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64274455756",
+                    "number": "274455756",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Ross Wilton",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871989/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871989/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871989/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871989/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871989/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871989"
+            }
+        },
+        {
+            "id": "59871985",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "71 Wellpark Ave, Grey Lynn, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1957-08-28",
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Stephanie",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Lenk",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "643760223",
+                    "number": "376 0223",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64272274098",
+                    "number": "272274098",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Stephanie Lenk",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871985/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871985/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871985/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871985/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871985/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871985"
+            }
+        },
+        {
+            "id": "59871997",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "15 Old Mill Road, Silverdale, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1975-07-30",
+            "email": "marthinusjoubert@yahoo.com",
+            "emergency_contact": null,
+            "first_name": "Marinda",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Joubert",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Administration Officer",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "643564225",
+                    "number": "3564225",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64272762616",
+                    "number": "272762616",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Mrs",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Marinda Joubert",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871997/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871997/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871997/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871997/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871997/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871997"
+            }
+        },
+        {
+            "id": "59871981",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "27 Kashmir Road, Glen Eden, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1962-09-23",
+            "email": "celeste.dutoit@nzl.fujixerox.com",
+            "emergency_contact": null,
+            "first_name": "Celeste",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Du Toit",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Receptionist",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "643564200",
+                    "number": "3564200",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64211077654",
+                    "number": "211077654",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Celeste Du Toit",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871981/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871981/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871981/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871981/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871981/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871981"
+            }
+        },
+        {
+            "id": "59872000",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "59 Killybegs Dr, Pinehill, Auckland 0632",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1987-06-13",
+            "email": "kasubscribes@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Kirsten",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Aves",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Finance Officer",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64210566032",
+                    "number": "210566032",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Kirsten Aves",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872000/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872000/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872000/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872000/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872000/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872000"
+            }
+        },
+        {
+            "id": "59871982",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "29 George Street, Papakura, Auckland, NZ",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1948-11-20",
+            "email": "colin.peter@xtra.co.nz",
+            "emergency_contact": null,
+            "first_name": "Colin",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Ash",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: alternative email address: Colin.Ash@transpower.co.nz\nRedFlags: \n\r\n\r\nClientNotes: alternative email address: Colin.Ash@transpower.co.nz\nRedFlags: \n",
+            "occupation": "Retired",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6492987744",
+                    "number": "92987744",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64274678835",
+                    "number": "274678835",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Colin Ash",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871982/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871982/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871982/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871982/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871982/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871982"
+            }
+        },
+        {
+            "id": "59871990",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "103c Market Rd, Epsom, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1999-05-10",
+            "email": "devonlowyim@icloud.com",
+            "emergency_contact": null,
+            "first_name": "Devon",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Lowyim",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Student",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6495292810",
+                    "number": "95292810",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64211388771",
+                    "number": "211388771",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Devon Lowyim",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871990/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871990/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871990/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871990/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871990/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871990"
+            }
+        },
+        {
+            "id": "59871996",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "2/139 Quay Street, City, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1985-06-30",
+            "email": "tbannister10@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Tim",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Bannister",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Unemployed",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64221908178",
+                    "number": "221908178",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Tim Bannister",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871996/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871996/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871996/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871996/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871996/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871996"
+            }
+        },
+        {
+            "id": "59871994",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "8 Hopetown St, Freemans Bay",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1971-04-10",
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Jimmy",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Gardner",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Management Consultant",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421857666",
+                    "number": "21857666",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "6421857666",
+                    "number": "21857666",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Jimmy Gardner",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871994/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871994/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871994/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871994/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871994/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871994"
+            }
+        },
+        {
+            "id": "59871998",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "C-Vu apartments \r\n4E\r\n36 Day Street, Auckland 1010, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1947-09-01",
+            "email": "ronny.franks.qsm.jp@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Ronny",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Franks",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Retired",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64272744166",
+                    "number": "272744166",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Ronny Franks",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871998/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871998/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871998/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871998/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871998/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871998"
+            }
+        },
+        {
+            "id": "59871987",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "512/28 College Hill, Freemans Bay, Akl",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1986-07-09",
+            "email": "ylanagiauque@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Ylana",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Giauque",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Public Relations Manager",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64212125143",
+                    "number": "212125143",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64212125143",
+                    "number": "212125143",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Mrs",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Ylana Giauque",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871987/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871987/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871987/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871987/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871987/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871987"
+            }
+        },
+        {
+            "id": "59871991",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "12 Edgars Road, Grey Lynn, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1956-07-31",
+            "email": "aunty_alaska@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Alison",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Granville",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n\r\n\r\nClientNotes: \nRedFlags: Dizziness\n",
+            "occupation": "Artist Painter",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "643765958",
+                    "number": "3765958",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64210330176",
+                    "number": "210330176",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Alison Granville",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871991/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871991/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871991/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871991/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871991/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871991"
+            }
+        },
+        {
+            "id": "59872001",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "57 sussex street, Grey Lyn, AKL",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1978-12-22",
+            "email": "kate.hardy1@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Kate",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Hardy",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Editor",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64211088045",
+                    "number": "211088045",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64211088045",
+                    "number": "211088045",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Kate Hardy",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872001/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872001/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872001/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872001/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872001/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872001"
+            }
+        },
+        {
+            "id": "59871995",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "15A Waiata Ave, Remuera, Auckland 1050, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1943-10-20",
+            "email": "pd.woodgate@xtra.co.nz",
+            "emergency_contact": null,
+            "first_name": "Paul",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Woodgate",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Retired",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "645203820",
+                    "number": "5203820",
+                    "phone_type": "Home"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Paul Woodgate",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871995/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871995/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871995/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871995/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871995/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871995"
+            }
+        },
+        {
+            "id": "59872003",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "55 Shelly Beach Road, Remuera, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1954-06-11",
+            "email": "glynis_williams@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Glyn",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Williams",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Nanny",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64212443807",
+                    "number": "212443807",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Glyn Williams",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872003/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872003/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872003/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872003/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872003/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872003"
+            }
+        },
+        {
+            "id": "59871999",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "132 Richmond Road,, Ponsonby, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1986-08-06",
+            "email": "nick@theedge.co.nz",
+            "emergency_contact": null,
+            "first_name": "Nick",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Oswald",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Sales Promotions Supervisor",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6492892009541",
+                    "number": "9289200 ext 9541",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "6421667925",
+                    "number": "21667925",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Nick Oswald",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871999/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871999/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871999/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871999/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871999/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871999"
+            }
+        },
+        {
+            "id": "59871992",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "5 O'Casey Place, Hillsborough, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1963-10-18",
+            "email": "spud2go@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Lloyd",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Williams",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \r\n\r\nTom Waits Music\nRedFlags: \n\r\n\r\nClientNotes: \r\n\r\nTom Waits Music\nRedFlags: \n\r\n\r\nClientNotes: \r\n\r\nTom Waits Music\nRedFlags: \n",
+            "occupation": "Contract Cleaner",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6496262739",
+                    "number": "96262739",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64211312088",
+                    "number": "211312088",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Lloyd Williams",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871992/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871992/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871992/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871992/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59871992/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59871992"
+            }
+        },
+        {
+            "id": "59872013",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "65 Gibraltar Cres, Parnell, Auckland, NZ",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1976-11-11",
+            "email": "david.fallu@lionco.com",
+            "emergency_contact": null,
+            "first_name": "David",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Fallu",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Accounts Administrator",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64275223603",
+                    "number": "275223603",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "David Fallu",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872013/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872013/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872013/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872013/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872013/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872013"
+            }
+        },
+        {
+            "id": "59872002",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "107 Blockhouse Bay Road, Avondale, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": null,
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Jeff",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Grey",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64226046972",
+                    "number": "226046972",
+                    "phone_type": "Home"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Jeff Grey",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872002/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872002/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872002/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872002/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872002/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872002"
+            }
+        },
+        {
+            "id": "59872005",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "74 Kohimarama Rd, Kohimarama, Auckland 1071, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1983-05-14",
+            "email": "sara_payne_@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Sara",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Payne",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: Login : Sara\r\nPassword ; Spayne12\nRedFlags: \n\r\n\r\nClientNotes: Login : Sara\r\nPassword ; Spayne12\nRedFlags: \n\r\n\r\nClientNotes: Login : Sara\r\nPassword ; Spayne12\nRedFlags: \n\r\n\r\nClientNotes: Login : Sara\r\nPassword ; Spayne12\nRedFlags: \n\r\n\r\nClientNotes: Login : Sara\r\nPassword ; Spayne12\nRedFlags: \n",
+            "occupation": "Physiotherapist",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421558477",
+                    "number": "21558477",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Sara Payne",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872005/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872005/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872005/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872005/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872005/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872005"
+            }
+        },
+        {
+            "id": "59872010",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "34 Roseberry Ave, Birkenhead, Auckland, NZ",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1976-10-07",
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Tyron",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Hollis",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Carpenter",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421862115",
+                    "number": "21862115",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Tyron Hollis",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872010/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872010/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872010/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872010/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872010/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872010"
+            }
+        },
+        {
+            "id": "59872009",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-12-15T19:04:29Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "1E/8 Howe Street",
+            "address_2": "",
+            "address_3": "",
+            "appointment_notes": null,
+            "city": "Auckland",
+            "country": "New Zealand",
+            "date_of_birth": "1986-01-23",
+            "email": "danielle.hjones@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Danielle",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Jones",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Registrar of Courts",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64223265663",
+                    "number": "022 326 5663",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64223265663",
+                    "number": "022 326 5663",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": "1011",
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": "Freemans Bay",
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Danielle Jones",
+            "time_zone": "Pacific/Auckland",
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872009/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872009/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872009/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872009/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872009/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872009"
+            }
+        },
+        {
+            "id": "59872007",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-06-30T01:18:40Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "50 Linwood Ave, Mt Albert, Auckland, NZ",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1941-07-22",
+            "email": "graeme.rogers@xtra.co.nz",
+            "emergency_contact": null,
+            "first_name": "Graham",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Rogers",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Retired",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6498460264",
+                    "number": "98460264",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64274978339",
+                    "number": "274978339",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Graham Rogers",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872007/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872007/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872007/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872007/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872007/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872007"
+            }
+        },
+        {
+            "id": "59872011",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "3 Ada Street, Remuera, Auckland 1050",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1947-12-19",
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Sally",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Casswell",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421655346",
+                    "number": "21655346",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": null,
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Sally Casswell",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872011/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872011/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872011/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872011/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872011/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872011"
+            }
+        },
+        {
+            "id": "59872015",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "44 Cromwell Street, Mt Eden, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1992-08-16",
+            "email": "loudaley1@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Louise",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Daley",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Student",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64274436343",
+                    "number": "027 443 6343",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Louise Daley",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872015/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872015/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872015/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872015/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872015/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872015"
+            }
+        },
+        {
+            "id": "59872014",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "2/65 The Esplanade, Balmoral, NSW 2008, Australia",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1953-09-15",
+            "email": "philip.ling@lasalle.com",
+            "emergency_contact": null,
+            "first_name": "Phillip",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Ling",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Investment Manager",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64448026460",
+                    "number": "448026460",
+                    "phone_type": "Home"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Phillip Ling",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872014/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872014/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872014/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872014/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872014/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872014"
+            }
+        },
+        {
+            "id": "59872021",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": null,
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": null,
+            "email": null,
+            "emergency_contact": null,
+            "first_name": "Joban",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Singh",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421533793",
+                    "number": "21533793",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": null,
+            "state": null,
+            "title": null,
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Joban Singh",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872021/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872021/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872021/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872021/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872021/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872021"
+            }
+        },
+        {
+            "id": "59872017",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "61A Empire Road, Epsom, Auckland, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1990-10-27",
+            "email": "richard@richardfoxdesign.com",
+            "emergency_contact": null,
+            "first_name": "Richard",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Fox",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Graphic Designer",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64273223817",
+                    "number": "273223817",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64273223817",
+                    "number": "273223817",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Richard Fox",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872017/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872017/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872017/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872017/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872017/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872017"
+            }
+        },
+        {
+            "id": "59872026",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "42 Matipo St, Mt eden, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1952-02-03",
+            "email": "tmbgroupltd@xtra.co.nz",
+            "emergency_contact": null,
+            "first_name": "Brennah",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Sukhdeo",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Retired",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421800935",
+                    "number": "021 800935",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Brennah Sukhdeo",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872026/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872026/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872026/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872026/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872026/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872026"
+            }
+        },
+        {
+            "id": "59872019",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "11B Swainston Road, St Johns, Auckland, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1990-05-03",
+            "email": "farrelgordon@windowslive.com",
+            "emergency_contact": null,
+            "first_name": "Farrel",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Gordon",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Student",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64220120255",
+                    "number": "220120255",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Farrel Gordon",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872019/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872019/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872019/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872019/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872019/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872019"
+            }
+        },
+        {
+            "id": "59872025",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "31 Grosvenor Street, Grey Lynn, Auckland, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1987-02-06",
+            "email": "nbabbage@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Natalie",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Babbage",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Textile Designing Worker",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64273387576",
+                    "number": "027 338 7576",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Ms",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Natalie Babbage",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872025/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872025/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872025/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872025/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872025/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872025"
+            }
+        },
+        {
+            "id": "59872028",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "23 Union Street, CBD, Auckland, New Zealand",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1958-09-17",
+            "email": "david@lm3.co.nz",
+            "emergency_contact": null,
+            "first_name": "David",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Lewis",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Property Developer",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421962170",
+                    "number": "21962170",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "David Lewis",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872028/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872028/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872028/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872028/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872028/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872028"
+            }
+        },
+        {
+            "id": "59872018",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "82 Malvern Road, Mt Albert, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1996-04-27",
+            "email": "kaitlin.griffen@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Kaitlin",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Griffen",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: Web Portal Created\nRedFlags: \n",
+            "occupation": "Student",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6498466694",
+                    "number": "98466694",
+                    "phone_type": "Home"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": null,
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Kaitlin Griffen",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872018/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872018/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872018/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872018/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872018/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872018"
+            }
+        },
+        {
+            "id": "59872022",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "206 Garnet Road, Westmere, Auckland 1022",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1965-05-13",
+            "email": "a.zigliani@taurus.co.nz",
+            "emergency_contact": null,
+            "first_name": "Anthony",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Zigliani",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6493760966",
+                    "number": "93760966",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "6421330083",
+                    "number": "21330083",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Anthony Zigliani",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872022/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872022/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872022/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872022/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872022/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872022"
+            }
+        },
+        {
+            "id": "59872030",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "54 Bassett Rd, Remuera",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1996-01-09",
+            "email": "ringwood@xtra.co.nz",
+            "emergency_contact": null,
+            "first_name": "Charlotte",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Ringwood",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6421333446",
+                    "number": "21333446",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Charlotte Ringwood",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872030/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872030/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872030/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872030/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872030/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872030"
+            }
+        },
+        {
+            "id": "59872024",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": null,
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": null,
+            "email": "judithdreid@btinternet.com",
+            "emergency_contact": null,
+            "first_name": "Judith",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Reid",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: reside in the UK\nRedFlags: \n",
+            "occupation": null,
+            "old_reference_id": null,
+            "patient_phone_numbers": [],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": null,
+            "state": null,
+            "title": null,
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Judith Reid",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872024/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872024/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872024/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872024/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872024/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872024"
+            }
+        },
+        {
+            "id": "59872032",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "20 Browning street, Grey Lynn, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1977-02-28",
+            "email": "suzannahmiller@hotmail.com",
+            "emergency_contact": null,
+            "first_name": "Suzannah",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Malcolm",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n\r\n\r\nClientNotes: \nRedFlags: \n",
+            "occupation": "Dentist",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "6493769481",
+                    "number": "09 3769481",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64212883399",
+                    "number": "021 2883399",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Mrs",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Suzannah Malcolm",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872032/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872032/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872032/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872032/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872032/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872032"
+            }
+        },
+        {
+            "id": "59872023",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "42 Tui Street, Pt Chevalier, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1957-10-27",
+            "email": "phillipa.oates@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Phillipa",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Oates",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Retired",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "648466644",
+                    "number": "8466644",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64210379279",
+                    "number": "210379279",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Phillipa Oates",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872023/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872023/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872023/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872023/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872023/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872023"
+            }
+        },
+        {
+            "id": "59872031",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "59A Namata Road, One Tree Hill, Auckland",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1987-10-02",
+            "email": "ssicose@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Sung Yong",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Lim",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Engineering Illustrator",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64210593151",
+                    "number": "021 059 3151",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64210593151",
+                    "number": "021 059 3151",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Sung Yong Lim",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872031/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872031/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872031/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872031/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872031/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872031"
+            }
+        },
+        {
+            "id": "59872027",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "2/14 Norfolk Street, Ponsonby",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1992-03-05",
+            "email": "evecarvell@hotmail.co.uk",
+            "emergency_contact": null,
+            "first_name": "Eve",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Carvell",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Office Junior",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64212465502",
+                    "number": "212465502",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Female",
+            "state": null,
+            "title": "Miss",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Eve Carvell",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872027/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872027/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872027/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872027/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872027/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872027"
+            }
+        },
+        {
+            "id": "59872046",
+            "created_at": "2019-09-25T00:36:09Z",
+            "updated_at": "2020-05-29T00:44:56Z",
+            "accepted_email_marketing": false,
+            "accepted_privacy_policy": null,
+            "accepted_sms_marketing": true,
+            "address_1": "49B Tutanekai St, Grey Lynn, Auckland 1021, NZ",
+            "address_2": null,
+            "address_3": null,
+            "appointment_notes": null,
+            "city": null,
+            "country": "New Zealand",
+            "date_of_birth": "1993-10-18",
+            "email": "laurencebarron@gmail.com",
+            "emergency_contact": null,
+            "first_name": "Laurence",
+            "gender_identity": null,
+            "invoice_default_to": null,
+            "invoice_email": null,
+            "invoice_extra_information": null,
+            "last_name": "Brown",
+            "medicare": null,
+            "medicare_reference_number": null,
+            "merged_at": null,
+            "notes": "ClientNotes: \nRedFlags: \n",
+            "occupation": "Chef",
+            "old_reference_id": null,
+            "patient_phone_numbers": [
+                {
+                    "normalized_number": "64272635322",
+                    "number": "272635322",
+                    "phone_type": "Home"
+                },
+                {
+                    "normalized_number": "64272635322",
+                    "number": "272635322",
+                    "phone_type": "Mobile"
+                }
+            ],
+            "post_code": null,
+            "preferred_first_name": null,
+            "pronouns": null,
+            "receives_confirmation_emails": true,
+            "referral_source": null,
+            "reminder_type": "SMS & Email",
+            "sex": "Male",
+            "state": null,
+            "title": "Mr",
+            "archived_at": null,
+            "deleted_at": null,
+            "gender": null,
+            "label": "Laurence Brown",
+            "time_zone": null,
+            "appointments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872046/appointments"
+                }
+            },
+            "attendees": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872046/attendees"
+                }
+            },
+            "invoices": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872046/invoices"
+                }
+            },
+            "patient_attachments": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872046/patient_attachments"
+                }
+            },
+            "medical_alerts": {
+                "links": {
+                    "self": "https://api.au1.cliniko.com/v1/patients/59872046/medical_alerts"
+                }
+            },
+            "links": {
+                "self": "https://api.au1.cliniko.com/v1/patients/59872046"
+            }
+        }
+    ],
+    "total_entries": 6104,
+    "links": {
+        "self": "https://api.au1.cliniko.com/v1/patients?page=1",
+        "next": "https://api.au1.cliniko.com/v1/patients?page=2"
+    }
+}
