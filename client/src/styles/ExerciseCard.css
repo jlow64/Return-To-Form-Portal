@@ -48,3 +48,11 @@
     margin-top: 1rem;
     justify-content: center;
 }
+
+.exercise-card-container {
+    border-radius: 10px;
+    border: 1px solid rgba(53, 58, 62, 0.3);
+    height: 9rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}

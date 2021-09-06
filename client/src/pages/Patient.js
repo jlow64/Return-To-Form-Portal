@@ -1,10 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
 import { useLocation, useHistory, Link } from "react-router-dom";
 
 import Exercises from "../components/Exercises";
+import WebcamCapture from "../components/WebcamCapture";
 import logo from "../logos/rtf-logo-grey.png";
 
 import "../styles/Patient.css";

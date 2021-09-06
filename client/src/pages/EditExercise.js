@@ -11,14 +11,14 @@ const EditExercise = ({ setAuth }) => {
     const location = useLocation();
     const history = useHistory();
 
-    const exercise_id = location.state?.exercise_id;
+    const exercise = location.state?.exercise;
 
     const [data, setData] = useState({
-        exercise_name: "",
-        description: "",
-        reps: 0,
-        sets: 0,
-        frequency: 0,
+        exercise_name: exercise.exercise_name,
+        description: exercise.description,
+        reps: exercise.reps,
+        sets: exercise.sets,
+        frequency: exercise.frequency
     });
 
     const { exercise_name, description, reps, sets, frequency } = data;
@@ -47,7 +47,7 @@ const EditExercise = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { exercise_name, description, reps, sets, frequency };
-            const response =  await fetch(`http://localhost:5000/exercise/item/${exercise_id}`, {
+            const response =  await fetch(`http://localhost:5000/exercise/item/${exercise.exercise_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -117,7 +117,7 @@ const EditExercise = ({ setAuth }) => {
                             <div className="num-input-group">
                                 <DashCircleFill 
                                     size={32} 
-                                    style={{color: data.reps===0?"#EFEFF0":"#FCB333"}} 
+                                    style={{color: data.reps<=0?"#EFEFF0":"#FCB333"}} 
                                     onClick={() => {setData({ ...data, reps: parseInt(data.reps) -1 })}}
                                 />
                                 <Form.Control

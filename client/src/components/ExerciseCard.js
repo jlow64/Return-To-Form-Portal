@@ -61,7 +61,7 @@ const ExerciseCard = ({ exercise_list, refreshExercises, exercise, showOptions }
                         style={{textDecoration: "none", color: "#353A3E"}}
                         to={{
                         pathname: "/dashboard/patient/edit-exercise",
-                        state: { exercise_id: exercise.exercise_id }
+                        state: { exercise: exercise }
                     }}>
                         <div className="modal-text-row">
                             <PenFill style={{marginRight: "2rem"}} /> Edit Exercise

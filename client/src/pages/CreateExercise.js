@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
-import { Form, Button, Row, InputGroup, Modal } from "react-bootstrap";
+import { Form, Button, Row, InputGroup, Modal, Input } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill } from "react-bootstrap-icons";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
@@ -79,8 +79,14 @@ const CreateExercise = ({ setAuth }) => {
                         onClick={() => history.goBack()}
                         style={{ margin: "2px" }}
                     />
-                    <h2 className="exercise-label">Create a new exercise</h2>
+                    <h2 className="exercise-label">Create a new exercise</h2>            
                 </div>
+                <Form.Control
+                    type="file" 
+                    name="video"
+                    accept="video/*" 
+                    capture="environment"
+                />
                 <Form onSubmit={submitExercise} className="exercise-form" id="createExercise" >
                     <Form.Group as={Row} controlId="formExerciseName" role="form" >
                         <Form.Label>Exercise name</Form.Label>
