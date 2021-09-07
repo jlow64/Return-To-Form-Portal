@@ -1,6 +1,7 @@
 .btn-exercise {
     min-height: 48px;
     width: 100%;
+    margin-left: 0;
     border-radius: 20px;
     font-style: normal;
     font-weight: 600;
@@ -9,6 +10,22 @@
     border: 2px solid #F99F1E;
     background-color: #F99F1E;
     color: #FFFFFF;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.btn-exercise-white {
+    min-height: 48px;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    border: 2px solid #F99F1E;
+    background-color: #FFFFFF;
+    color: #F99F1E;
     margin-top: 1rem;
     justify-content: center;
 }
@@ -61,4 +78,9 @@
     display: flex;
     position: absolute;
     right: 1rem;
+}
+
+.select-video-container {
+    border: 1px solid red;
+    flex-direction: row;
 }

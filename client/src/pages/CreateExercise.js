@@ -8,6 +8,7 @@ import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
 
 const CreateExercise = ({ setAuth }) => {
+    const [takingVideo, setTakingvideo] = useState(true);
     const location = useLocation();
     const history = useHistory();
 
@@ -81,12 +82,38 @@ const CreateExercise = ({ setAuth }) => {
                     />
                     <h2 className="exercise-label">Create a new exercise</h2>            
                 </div>
-                <Form.Control
-                    type="file" 
-                    name="video"
-                    accept="video/*" 
-                    capture="environment"
-                />
+                {takingVideo? (
+                <div className="select-video-container">
+                    <Form.Control
+                        type="file" 
+                        name="video"
+                        accept="video/*" 
+                        capture="environment"
+                    />
+                    <Button
+                        className="btn-exercise-white"
+                        size="large"
+                    >
+                        Select from gallery
+                    </Button>
+                    <Button
+                        className="btn-exercise-white"
+                        size="large"
+                    >
+                        Open camera
+                    </Button>
+                    <Button
+                        className="btn-exercise"
+                        size="large"
+                        onClick={() => setTakingvideo(false)}
+                    >
+                        Continue with selected
+                    </Button>
+
+                </div>
+
+                    ):(
+                
                 <Form onSubmit={submitExercise} className="exercise-form" id="createExercise" >
                     <Form.Group as={Row} controlId="formExerciseName" role="form" >
                         <Form.Label>Exercise name</Form.Label>
@@ -124,7 +151,7 @@ const CreateExercise = ({ setAuth }) => {
                                 <DashCircleFill 
                                     size={32} 
                                     style={{color: data.reps===0?"#EFEFF0":"#FCB333"}} 
-                                    onClick={() => {setData({ ...data, reps: parseInt(data.reps) -1 })}}
+                                    onClick={() => {setData({ ...data, reps: parseInt(data.reps) <= 0? 0 : parseInt(data.reps) -1 })}}
                                 />
                                 <Form.Control
                                     className="form-input"
@@ -154,7 +181,7 @@ const CreateExercise = ({ setAuth }) => {
                                 <DashCircleFill 
                                     size={32} 
                                     style={{color: data.sets===0?"#EFEFF0":"#FCB333"}} 
-                                    onClick={() => {setData({ ...data, sets: parseInt(data.sets) - 1})}}
+                                    onClick={() => {setData({ ...data, sets: parseInt(data.sets) <= 0? 0 : parseInt(data.sets) - 1})}}
                                 />
                                 <Form.Control
                                     className="form-input"
@@ -181,7 +208,7 @@ const CreateExercise = ({ setAuth }) => {
                                 <DashCircleFill 
                                     size={32} 
                                     style={{color: data.frequency===0?"#EFEFF0":"#FCB333"}} 
-                                    onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) -1 })}}
+                                    onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) <= 0? 0 : parseInt(data.frequency) -1 })}}
                                 />
                                 <Form.Control
                                     className="form-input"
@@ -248,6 +275,7 @@ const CreateExercise = ({ setAuth }) => {
                         </Modal.Footer>
                     </Modal>                    
                 </Form>
+                )}
             </div>
         </Fragment>
     );
