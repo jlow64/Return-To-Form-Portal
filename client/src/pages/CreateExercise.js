@@ -1,14 +1,17 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
-import { Form, Button, Row, InputGroup, Modal, Input } from "react-bootstrap";
+import { Form, Button, Row, InputGroup, Modal } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill } from "react-bootstrap-icons";
+import ReactPlayer from "react-player";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
 
+
 const CreateExercise = ({ setAuth }) => {
     const [takingVideo, setTakingvideo] = useState(true);
+    const [video, setVideo] = useState();
     const location = useLocation();
     const history = useHistory();
 
@@ -32,7 +35,7 @@ const CreateExercise = ({ setAuth }) => {
     const logout = async (e) => {
         e.preventDefault();
         try {
-            localStorage.removeItem("token");
+            sessionStorage.removeItem("token");
             setAuth(false);
             toast.success("Logged out Successfully!");
         } catch (err) {
@@ -48,7 +51,7 @@ const CreateExercise = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { patient_id, exercise_name, description, reps, sets, frequency };
-            const response =  await fetch("http://localhost:5000/exercise/item", {
+            const response =  await fetch("http://192.168.1.79:5000/exercise/item", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -62,6 +65,23 @@ const CreateExercise = ({ setAuth }) => {
             console.error(err);
         }
     };
+
+    const onSubmitVideo = async (e) => {
+        console.log(e);
+        const formData = new FormData();
+
+        formData.append('File', video);
+    };
+
+    const handleVideo = (e) => {
+        // 562263172261812
+        setVideo(URL.createObjectURL(e.target.files[0]));
+        console.log(video);
+    }
+
+    useEffect(() => {
+        document.getElementById('file-upload').click();
+    }, []);
 
     return (
         <Fragment>
@@ -84,11 +104,19 @@ const CreateExercise = ({ setAuth }) => {
                 </div>
                 {takingVideo? (
                 <div className="select-video-container">
-                    <Form.Control
+                    <ReactPlayer
+                        url={video} 
+                        width="100%"
+                        heigh="100px"
+                        controls
+                    />
+                    <input
+                        id="file-upload"
                         type="file" 
                         name="video"
                         accept="video/*" 
                         capture="environment"
+                        onChange={handleVideo}
                     />
                     <Button
                         className="btn-exercise-white"
@@ -99,8 +127,9 @@ const CreateExercise = ({ setAuth }) => {
                     <Button
                         className="btn-exercise-white"
                         size="large"
+                        onClick={() => document.getElementById('file-upload').click()}
                     >
-                        Open camera
+                        Open camera                      
                     </Button>
                     <Button
                         className="btn-exercise"
@@ -109,7 +138,6 @@ const CreateExercise = ({ setAuth }) => {
                     >
                         Continue with selected
                     </Button>
-
                 </div>
 
                     ):(

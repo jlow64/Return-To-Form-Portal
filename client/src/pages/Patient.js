@@ -5,7 +5,6 @@ import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icon
 import { useLocation, useHistory, Link } from "react-router-dom";
 
 import Exercises from "../components/Exercises";
-import WebcamCapture from "../components/WebcamCapture";
 import logo from "../logos/rtf-logo-grey.png";
 
 import "../styles/Patient.css";
@@ -22,7 +21,7 @@ const Patient = ({ setAuth }) => {
     const logout = async (e) => {
         e.preventDefault();
         try {
-            localStorage.removeItem("token");
+            sessionStorage.removeItem("token");
             setAuth(false);
             toast.success("Logged out Successfully!");
         } catch (err) {

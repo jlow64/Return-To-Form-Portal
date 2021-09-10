@@ -14,7 +14,7 @@ const ExerciseCard = ({ exercise_list, refreshExercises, exercise, showOptions }
 
     const deleteExercise = async () => {
          try {
-            const response = await fetch(`http://localhost:5000/exercise/item/${exercise.exercise_id}`, {
+            const response = await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
                 method: "DELETE"
             });
 

@@ -35,7 +35,7 @@ const Dashboard = ({ setAuth }) => {
 
     const getProfile = async () => {
         try {
-            const res = await fetch("http://localhost:5000/dashboard/", {
+            const res = await fetch("http://192.168.1.79:5000/dashboard/", {
                 method: "GET",
                 headers: { jwt_token: localStorage.token }
             });
@@ -50,7 +50,7 @@ const Dashboard = ({ setAuth }) => {
     const logout = async (e) => {
         e.preventDefault();
         try {
-            localStorage.removeItem("token");
+            sessionStorage.removeItem("token");
             setAuth(false);
             toast.success("Logged out Successfully!");
         } catch (err) {

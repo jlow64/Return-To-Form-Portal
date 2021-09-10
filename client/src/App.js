@@ -27,7 +27,7 @@ function App() {
     try {
       const response = await fetch("http://localhost:5000/auth/is-verify", {
         method: "GET",
-        headers: { jwt_token: localStorage.token }
+        headers: { jwt_token: sessionStorage.token }
       });
 
       const parseRes = await response.json(); 

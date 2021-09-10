@@ -31,7 +31,7 @@ const EditExercise = ({ setAuth }) => {
     const logout = async (e) => {
         e.preventDefault();
         try {
-            localStorage.removeItem("token");
+            sessionStorage.removeItem("token");
             setAuth(false);
             toast.success("Logged out Successfully!");
         } catch (err) {
@@ -47,7 +47,7 @@ const EditExercise = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { exercise_name, description, reps, sets, frequency };
-            const response =  await fetch(`http://localhost:5000/exercise/item/${exercise.exercise_id}`, {
+            const response =  await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)

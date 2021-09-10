@@ -25,7 +25,7 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
 
     const getUser = async () => {
         try {
-            const userResponse = await fetch(`http://localhost:5000/exercise/user/${patient_id}`);
+            const userResponse = await fetch(`http://192.168.1.79:5000/exercise/user/${patient_id}`);
             const parseRes = await userResponse.json();
 
             if (parseRes.length === 0) {
@@ -41,7 +41,7 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
 
     const getExercises = async () => {
         try {
-            const exerciseRes = await fetch(`http://localhost:5000/exercise/user-items/${patient_id}`);
+            const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
             const exerciseParse = await exerciseRes.json();
             
             setExercises(exerciseParse);

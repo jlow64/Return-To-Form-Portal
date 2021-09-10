@@ -28,6 +28,7 @@
     color: #F99F1E;
     margin-top: 1rem;
     justify-content: center;
+    text-align: center;
 }
 
 .exercise-form {
@@ -81,6 +82,27 @@
 }
 
 .select-video-container {
-    border: 1px solid red;
     flex-direction: row;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    text-align: center;
+    border: 1px solid #ccc;
+    display: flex;
+    padding: 6px 12px;
+    cursor: pointer;
 }
