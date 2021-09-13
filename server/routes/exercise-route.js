@@ -30,4 +30,8 @@ router.put("/item/:id", ExerciseCtrl.updateExercise);
 
 router.delete("/item/:id", ExerciseCtrl.deleteExercise);
 
+// upload exercise_video
+
+router.post("/video", ExerciseCtrl.uploadVideo);
+
 module.exports = router;

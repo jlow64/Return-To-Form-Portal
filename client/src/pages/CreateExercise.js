@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
+
 import { Form, Button, Row, InputGroup, Modal } from "react-bootstrap";
-import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill } from "react-bootstrap-icons";
+import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
+
 import ReactPlayer from "react-player";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
@@ -12,6 +14,8 @@ import ExerciseCard from "../components/ExerciseCard";
 const CreateExercise = ({ setAuth }) => {
     const [takingVideo, setTakingvideo] = useState(true);
     const [video, setVideo] = useState();
+    const [fileBase64String, setFileBase64String] = useState("");
+    const [video_url, setVideo_url] = useState("");
     const location = useLocation();
     const history = useHistory();
 
@@ -50,7 +54,10 @@ const CreateExercise = ({ setAuth }) => {
     const submitExercise = async (e) => {
         e.preventDefault();
         try {
-            const body = { patient_id, exercise_name, description, reps, sets, frequency };
+            onSubmitVideo(function() {
+                console.log("finished");
+            });
+            const body = { patient_id, exercise_name, description, reps, sets, frequency, video_url  };
             const response =  await fetch("http://192.168.1.79:5000/exercise/item", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -66,21 +73,50 @@ const CreateExercise = ({ setAuth }) => {
         }
     };
 
-    const onSubmitVideo = async (e) => {
-        console.log(e);
-        const formData = new FormData();
+    const onSubmitVideo = async (_callback) => {
+        try {
+            const body = { 'file': fileBase64String };
+            const response =  await fetch("http://192.168.1.79:5000/exercise/video", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+            });
 
-        formData.append('File', video);
+            const parseRes = await response.json();
+
+            console.log(parseRes.secure_url);
+
+            setVideo_url(parseRes.secure_url);
+
+            return parseRes.secure_url;
+
+            _callback();
+            
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     const handleVideo = (e) => {
-        // 562263172261812
+
+        function getBase64(file) {
+            return new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.readAsDataURL(file);
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = error => reject(error);
+            });
+        }
+
+        getBase64(e.target.files[0]).then(
+            data => {setFileBase64String(data);}
+        );
+
         setVideo(URL.createObjectURL(e.target.files[0]));
-        console.log(video);
     }
 
     useEffect(() => {
-        document.getElementById('file-upload').click();
+        document.getElementById('capture').click();
     }, []);
 
     return (
@@ -107,29 +143,30 @@ const CreateExercise = ({ setAuth }) => {
                     <ReactPlayer
                         url={video} 
                         width="100%"
-                        heigh="100px"
+                        height="200px"
                         controls
+                    />
+                    <input 
+                        id="capture"
+                        type="file"
+                        capture="environment"
+                        accept="video/*"
+                        onChange={handleVideo}
                     />
                     <input
                         id="file-upload"
                         type="file" 
                         name="video"
                         accept="video/*" 
-                        capture="environment"
                         onChange={handleVideo}
                     />
                     <Button
                         className="btn-exercise-white"
                         size="large"
-                    >
-                        Select from gallery
-                    </Button>
-                    <Button
-                        className="btn-exercise-white"
-                        size="large"
                         onClick={() => document.getElementById('file-upload').click()}
                     >
-                        Open camera                      
+                        <Film  size={20} style={{margin: "1rem"}} />
+                        Video options                    
                     </Button>
                     <Button
                         className="btn-exercise"
@@ -170,15 +207,15 @@ const CreateExercise = ({ setAuth }) => {
                         />
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formReps" role="form" >  
+                    <Form.Group as={Row} controlId="formReps" role="form" style={{border: "1px solid #C9C9C9", borderRadius: "1rem", display: "flex"}} >  
                         <InputGroup className="mb-3 mt-3" >
-                            <Form.Label className="ml-10">
+                            <Form.Label className="ml-5 ml-8" >
                                 Reps
                             </Form.Label>
                             <div className="num-input-group">
                                 <DashCircleFill 
                                     size={32} 
-                                    style={{color: data.reps===0?"#EFEFF0":"#FCB333"}} 
+                                    style={{color: data.reps===0?"#EFEFF0":"#FCB333", marginLeft: "1rem"}} 
                                     onClick={() => {setData({ ...data, reps: parseInt(data.reps) <= 0? 0 : parseInt(data.reps) -1 })}}
                                 />
                                 <Form.Control
@@ -188,7 +225,6 @@ const CreateExercise = ({ setAuth }) => {
                                     min="0"
                                     name="reps"
                                     value={data.reps}
-                                    defaultValue={0}
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
@@ -200,7 +236,7 @@ const CreateExercise = ({ setAuth }) => {
                         </InputGroup>                      
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formSets" role="form" >   
+                    <Form.Group as={Row} controlId="formSets" role="form" style={{border: "1px solid #C9C9C9", borderRadius: "1rem", display: "flex"}} >   
                         <InputGroup className="mb-3 mt-3" >
                             <Form.Label>
                                 Sets
@@ -229,7 +265,7 @@ const CreateExercise = ({ setAuth }) => {
                         </InputGroup>                       
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formFrequency" role="form">  
+                    <Form.Group as={Row} controlId="formFrequency" role="form" style={{border: "1px solid #C9C9C9", borderRadius: "1rem", display: "flex"}} >  
                         <InputGroup className="mb-3 mt-3" >
                             <Form.Label>Frequency</Form.Label>
                             <div className="num-input-group">

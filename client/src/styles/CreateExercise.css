@@ -29,6 +29,7 @@
     margin-top: 1rem;
     justify-content: center;
     text-align: center;
+    vertical-align: center;
 }
 
 .exercise-form {
@@ -79,6 +80,7 @@
     display: flex;
     position: absolute;
     right: 1rem;
+    top: -4px;
 }
 
 .select-video-container {

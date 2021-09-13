@@ -1,4 +1,11 @@
 const pool = require("../db");
+const cloudinary = require("cloudinary").v2;
+cloudinary.config({ 
+    cloud_name: process.env.CLOUD_NAME, 
+    api_key: process.env.CLOUDINARY_API, 
+    api_secret: process.env.CLOUDINARY_SECRET 
+});
+require('dotenv').config();
 
 getUser = async (req, res) => {
     try {
@@ -13,10 +20,10 @@ getUser = async (req, res) => {
 
 createExercise = async(req, res) => {
     try {
-        const { patient_id, exercise_name, description, sets, reps, frequency  } = req.body;
+        const { patient_id, exercise_name, description, sets, reps, frequency, video_url  } = req.body;
         const newItem = await pool.query(
-            "INSERT INTO exercises (patient_id, exercise_name, description, sets, reps, frequency) VALUES($1, $2, $3, $4, $5, $6) RETURNING *", 
-            [patient_id, exercise_name, description, sets, reps, frequency]
+            "INSERT INTO exercises (patient_id, exercise_name, description, sets, reps, frequency, video_url) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *", 
+            [patient_id, exercise_name, description, sets, reps, frequency, video_url]
         );
 
         res.json(newItem.rows[0]);
@@ -65,10 +72,10 @@ getExerciseItem = async(req, res) => {
 updateExercise = async(req, res) => {
     try {
         const { id } = req.params;
-        const { exercise_name, description, sets, reps, frequency } = req.body;
+        const { exercise_name, description, sets, reps, frequency, video_url } = req.body;
         const updateItem = await pool.query(
-            "UPDATE exercises SET exercise_name = $1, description = $2, sets = $3, reps = $4, frequency = $5 WHERE exercise_id = $6", 
-            [exercise_name, description, sets, reps, frequency, id]
+            "UPDATE exercises SET exercise_name = $1, description = $2, sets = $3, reps = $4, frequency = $5, video_url = $6 WHERE exercise_id = $7", 
+            [exercise_name, description, sets, reps, frequency, video_url, id]
         );
 
         res.json("Item was updated!");
@@ -90,6 +97,25 @@ deleteExercise = async(req, res) => {
     }
 };
 
+// upload exercise video
+
+uploadVideo = async(req, res) => {
+    try {
+        const { file } = req.body;
+        cloudinary.uploader.unsigned_upload(file, 'test_preset',
+            {
+                resource_type: "video"
+            },
+        function(error, result) {
+            console.log(result, error);
+            res.json(result);
+        });
+
+    } catch (err) {
+        console.error(err.message);
+    }
+}
+
 module.exports = {
     getUser,
     createExercise,
@@ -97,5 +123,6 @@ module.exports = {
     getExerciseItem,
     getUserExercises,
     updateExercise,
-    deleteExercise
+    deleteExercise,
+    uploadVideo
 }
