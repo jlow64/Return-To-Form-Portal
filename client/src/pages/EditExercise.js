@@ -1,8 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useRef, useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
 import { Form, Button, Row, InputGroup, Modal } from "react-bootstrap";
-import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill } from "react-bootstrap-icons";
+import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
@@ -10,8 +11,11 @@ import ExerciseCard from "../components/ExerciseCard";
 const EditExercise = ({ setAuth }) => {
     const location = useLocation();
     const history = useHistory();
-
     const exercise = location.state?.exercise;
+
+    const [takingVideo, setTakingvideo] = useState(true);
+    const [video, setVideo] = useState(exercise.video_url);
+    const [fileBase64String, setFileBase64String] = useState("");
 
     const [data, setData] = useState({
         exercise_name: exercise.exercise_name,
@@ -20,6 +24,9 @@ const EditExercise = ({ setAuth }) => {
         sets: exercise.sets,
         frequency: exercise.frequency
     });
+
+    const video_url = useRef(exercise.video_url);
+    const video_id = useRef(exercise.video_id);
 
     const { exercise_name, description, reps, sets, frequency } = data;
 
@@ -46,7 +53,10 @@ const EditExercise = ({ setAuth }) => {
     const submitExercise = async (e) => {
         e.preventDefault();
         try {
-            const body = { exercise_name, description, reps, sets, frequency };
+            await onSubmitUpdatedVideo();
+            console.log(video_url);
+            console.log(video_id);
+            const body = { exercise_name, description, reps, sets, frequency, video_url: video_url.current, video_id: video_id.current };
             const response =  await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
@@ -61,6 +71,41 @@ const EditExercise = ({ setAuth }) => {
             console.error(err);
         }
     };
+
+    const onSubmitUpdatedVideo = async () => {
+        try {
+            const body = { 'file': fileBase64String, 'public_id': video_id };
+            const response =  await fetch("http://192.168.1.79:5000/exercise/video", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+            });
+
+            const parseRes = await response.json();
+            video_url.current = parseRes.secure_url;
+            video_id.current = parseRes.public_id;
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const handleVideo = (e) => {
+
+        function getBase64(file) {
+            return new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.readAsDataURL(file);
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = error => reject(error);
+            });
+        }
+
+        getBase64(e.target.files[0]).then(
+            data => {setFileBase64String(data);}
+        );
+
+        setVideo(URL.createObjectURL(e.target.files[0]));
+    }
 
     return (
         <Fragment>
@@ -81,6 +126,47 @@ const EditExercise = ({ setAuth }) => {
                     />
                     <h2 className="exercise-label">Edit exercise</h2>
                 </div>
+
+                {takingVideo? (
+                <div className="select-video-container">
+                    <ReactPlayer
+                        url={video} 
+                        width="100%"
+                        height="200px"
+                        controls
+                    />
+                    <input 
+                        id="capture"
+                        type="file"
+                        capture="environment"
+                        accept="video/*"
+                        onChange={handleVideo}
+                    />
+                    <input
+                        id="file-upload"
+                        type="file" 
+                        name="video"
+                        accept="video/*" 
+                        onChange={handleVideo}
+                    />
+                    <Button
+                        className="btn-exercise-white"
+                        size="large"
+                        onClick={() => document.getElementById('file-upload').click()}
+                    >
+                        <Film  size={20} style={{margin: "1rem"}} />
+                        Video options                    
+                    </Button>
+                    <Button
+                        className="btn-exercise"
+                        size="large"
+                        onClick={() => setTakingvideo(false)}
+                    >
+                        Continue with selected
+                    </Button>
+                </div>
+
+                    ):(
                 <Form onSubmit={submitExercise} className="exercise-form" id="editExercise" >
                     <Form.Group as={Row} controlId="formExerciseName">
                         <Form.Label>Exercise name</Form.Label>
@@ -127,7 +213,6 @@ const EditExercise = ({ setAuth }) => {
                                     min="0"
                                     name="reps"
                                     value={data.reps}
-                                    defaultValue={0}
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
@@ -157,7 +242,6 @@ const EditExercise = ({ setAuth }) => {
                                     min="0"
                                     name="sets"
                                     value={data.sets}
-                                    defaultValue={0}
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
@@ -185,7 +269,6 @@ const EditExercise = ({ setAuth }) => {
                                     min="0"
                                     name="frequency"
                                     value={data.frequency}
-                                    defaultValue={0}
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
@@ -243,6 +326,7 @@ const EditExercise = ({ setAuth }) => {
                         </Modal.Footer>
                     </Modal>
                 </Form>
+                )}
             </div>
         </Fragment>
     );

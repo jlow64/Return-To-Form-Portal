@@ -14,38 +14,6 @@ import AppointmentData from "../Data/Appointment.json";
 const Dashboard = ({ setAuth }) => {
     // const [users, setUsers] = useState([]);
     // const [appointments, setAppointments] = useState([]);
-    const [name, setName] = useState("");
-    
-    // const getClinikoUsers = async () => {
-    //     try {
-
-    //         const response = await fetch("http://localhost:5000/dashboard/cliniko");
-    //         const parseRes = await response.json();
-    //         const parsedPatientData = [];
-
-    //         parseRes.patients.forEach(element => {
-    //            parsedPatientData.push(element);
-    //         });
-
-    //         setUsers(parseRes.patients);
-    //     } catch (err) {
-    //         console.error(err.message);
-    //     }
-    // };
-
-    const getProfile = async () => {
-        try {
-            const res = await fetch("http://192.168.1.79:5000/dashboard/", {
-                method: "GET",
-                headers: { jwt_token: localStorage.token }
-            });
-
-            const parseRes = await res.json();
-            setName(parseRes.first_name);
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
 
     const logout = async (e) => {
         e.preventDefault();
@@ -58,11 +26,13 @@ const Dashboard = ({ setAuth }) => {
         }
     };
 
-    useEffect(() => {
-        getProfile();
+    // useEffect(() => {
         // const getAppointment = async (url) => {
         //     try {
-        //         const response = await fetch("http://localhost:5000/dashboard/appointment");
+        //         const response = await fetch("http://localhost:5000/dashboard/appointment", {
+        //         method: "GET",
+        //         headers: { jwt_token: sessionStorage.token }
+        //     });
         //         const parseRes = await response.json();
         //         setAppointments(parseRes.individual_appointments);
         //     } catch (err) {
@@ -71,7 +41,10 @@ const Dashboard = ({ setAuth }) => {
         // };
         // const getPatients = async (url) => {
         //     try {
-        //         const response = await fetch("http://localhost:5000/dashboard/patients");
+        //         const response = await fetch("http://localhost:5000/dashboard/patients", {
+        //         method: "GET",
+        //         headers: { jwt_token: sessionStorage.token }
+        //     });
         //         const parseRes = await response.json();
         //         setAppointments(parseRes.individual_appointments);
         //     } catch (err) {
@@ -80,7 +53,7 @@ const Dashboard = ({ setAuth }) => {
         // };
         // getPatients();
         // getAppointment();
-    }, []);
+    // }, []);
 
     return (
         <Fragment>

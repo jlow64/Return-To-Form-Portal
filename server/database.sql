@@ -8,7 +8,8 @@ CREATE TABLE exercises(
     sets INT NOT NULL DEFAULT 0, 
     reps INT NOT NULL DEFAULT 0,
     frequency INT NOT NULL DEFAULT 0,
-    video_url VARCHAR(255)
+    video_url VARCHAR(255),
+    video_id VARCHAR(255)
 );
 
 --set extension

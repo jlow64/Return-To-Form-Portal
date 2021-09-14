@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
 
@@ -15,7 +15,8 @@ const CreateExercise = ({ setAuth }) => {
     const [takingVideo, setTakingvideo] = useState(true);
     const [video, setVideo] = useState();
     const [fileBase64String, setFileBase64String] = useState("");
-    const [video_url, setVideo_url] = useState("");
+    const video_url = useRef("");
+    const video_id = useRef("");
     const location = useLocation();
     const history = useHistory();
 
@@ -26,7 +27,7 @@ const CreateExercise = ({ setAuth }) => {
         description: "",
         reps: 0,
         sets: 0,
-        frequency: 0,
+        frequency: 0
     });
 
     const { exercise_name, description, reps, sets, frequency } = data;
@@ -54,10 +55,8 @@ const CreateExercise = ({ setAuth }) => {
     const submitExercise = async (e) => {
         e.preventDefault();
         try {
-            onSubmitVideo(function() {
-                console.log("finished");
-            });
-            const body = { patient_id, exercise_name, description, reps, sets, frequency, video_url  };
+            await onSubmitVideo();
+            var body = { patient_id, exercise_name, description, reps, sets, frequency, video_url: video_url.current, video_id: video_id.current };
             const response =  await fetch("http://192.168.1.79:5000/exercise/item", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -73,7 +72,7 @@ const CreateExercise = ({ setAuth }) => {
         }
     };
 
-    const onSubmitVideo = async (_callback) => {
+    const onSubmitVideo = async () => {
         try {
             const body = { 'file': fileBase64String };
             const response =  await fetch("http://192.168.1.79:5000/exercise/video", {
@@ -83,15 +82,8 @@ const CreateExercise = ({ setAuth }) => {
             });
 
             const parseRes = await response.json();
-
-            console.log(parseRes.secure_url);
-
-            setVideo_url(parseRes.secure_url);
-
-            return parseRes.secure_url;
-
-            _callback();
-            
+            video_url.current = parseRes.secure_url;
+            video_id.current = parseRes.public_id;
         } catch (err) {
             console.error(err);
         }

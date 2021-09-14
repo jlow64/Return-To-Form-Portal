@@ -4,22 +4,7 @@ const pool = require("../db");
 const authorization = require("../middleware/authorization");
 require('dotenv').config();
 
-router.get("/", authorization, async (req, res) => {
-    try {
-        
-        const user = await pool.query(
-            "SELECT first_name FROM users WHERE user_id = $1", 
-            [req.user]
-        );
-        
-        res.json(user.rows[0]);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).json("Server Error");
-    }
-});
-
-router.get("/patients", async (req, res) => {
+router.get("/patients",  authorization, async (req, res) => {
     try {
         const API_KEY = Buffer.from(process.env.CLINIKO_API + ':').toString('base64');
         const patients = await fetch('https://api.au1.cliniko.com/v1/patients', {
@@ -40,7 +25,7 @@ router.get("/patients", async (req, res) => {
     }
 });
 
-router.get("/appointments", async (req, res) => {
+router.get("/appointments", authorization, async (req, res) => {
     try {
         const API_KEY = Buffer.from(process.env.CLINIKO_API + ':').toString('base64');
         const appointments = await fetch("https://api.au1.cliniko.com/v1/individual_appointments", {
