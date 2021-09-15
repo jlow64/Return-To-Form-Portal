@@ -74,7 +74,7 @@ span#search-addon.input-group-text.search-icon {
 }
 
 .appointment-display-container {
-    max-height: 600px;
+    max-height: 65vh;
     overflow: hidden;
     overflow-y: auto;
 }

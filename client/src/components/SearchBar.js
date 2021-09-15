@@ -3,13 +3,15 @@ import { Search, XCircle } from "react-bootstrap-icons";
 import PatientCard from "./PatientCard";
 import "../styles/SearchBar.css";
 
-const SearchBar = ({ placeholder, patient_data }) => {
+const SearchBar = ({ placeholder, patient_data, displayAppointments }) => {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
 
     const handleFilter = (e) => {
       const input = e.target.value;
+      console.log(input);
       setWordEntered(input);
+      input? displayAppointments(true):displayAppointments(false);
       const newFilter = patient_data.filter((value) => {
         return value.first_name.toLowerCase().includes(input.toLowerCase());
       });
@@ -24,6 +26,7 @@ const SearchBar = ({ placeholder, patient_data }) => {
     const clearInput = () => {
       setFilteredData([]);
       setWordEntered("");
+      displayAppointments(false);
     };
 
     return (

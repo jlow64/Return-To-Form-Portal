@@ -12,8 +12,13 @@ import PatientData from "../Data/Patient.json";
 import AppointmentData from "../Data/Appointment.json";
 
 const Dashboard = ({ setAuth }) => {
+    const [isSearch, setIsSearch] = useState(false);
     // const [users, setUsers] = useState([]);
     // const [appointments, setAppointments] = useState([]);
+
+    const displayAppointments = (bool) => {
+        setIsSearch(bool);
+    }
 
     const logout = async (e) => {
         e.preventDefault();
@@ -71,19 +76,25 @@ const Dashboard = ({ setAuth }) => {
                 <SearchBar 
                     placeholder="Search..." 
                     patient_data={PatientData.patients} 
+                    displayAppointments={displayAppointments}
                 />       
-                <div className="appointment-display-container">
-                    {AppointmentData.individual_appointments.slice(0,50).map((value, key) => {
-                        return (
-                            <div key={key}>
-                                <AppointmentCard
-                                    patient_name={value.patient_name} 
-                                    time={value.starts_at} 
-                                />
-                            </div>
-                        );
-                    })}
-                </div>         
+                {isSearch? (
+                    <>
+                    </>
+                    ) : (
+                    <div className="appointment-display-container">
+                        {AppointmentData.individual_appointments.slice(0,50).map((value, key) => {
+                            return (
+                                <div key={key}>
+                                    <AppointmentCard
+                                        patient_name={value.patient_name} 
+                                        time={value.starts_at} 
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>  
+                )}       
             </div>
         </Fragment>
     );
