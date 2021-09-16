@@ -12,8 +12,8 @@ const PatientCard = ({ patient_id, first_name, last_name }) => {
             iter_list.push(element[0].toUpperCase() + element.slice(1))
         )
     });
-    const patient_name = first_name + " " + last_name;
-
+    const patient_name = iter_list[0] + " " + iter_list[1];
+    
     return (
         <Fragment>
             <Link 

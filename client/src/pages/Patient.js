@@ -1,4 +1,5 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { Fragment, useState, useEffect } from "react";
+import { useIsFocused } from '@react-navigation/native';
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
@@ -17,6 +18,13 @@ const Patient = ({ setAuth }) => {
     const patient_fullname = location.state?.patient_name;
     const first_name = location.state?.first_name;
     const last_name = location.state?.last_name;
+    const isFocused = useIsFocused();
+
+    const [exercises, setExercises] = useState([]);
+
+    const resetExercises = (val) => {
+        setExercises(val);
+    };
 
     const logout = async (e) => {
         e.preventDefault();
@@ -28,6 +36,25 @@ const Patient = ({ setAuth }) => {
             console.error(err.message);
         }
     };
+
+    useEffect(() => {
+        const getExercises = async () => {
+            try {
+                const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
+                const exerciseParse = await exerciseRes.json();
+                
+                resetExercises(exerciseParse);
+                if (exerciseParse.length === 0) {
+                    console.log("currently no exercise items");
+                } else {
+                    console.log("iterate through current exercise items");
+                }
+            } catch (err) {
+                console.error(err.message);
+            }
+        };
+        getExercises();
+    },[isFocused]);
 
     return (
         <Fragment>
@@ -59,7 +86,13 @@ const Patient = ({ setAuth }) => {
                         Create a new exercise
                     </Link>
                 </div>
-                <Exercises patient_id={patient_id} first_name={first_name} last_name={last_name} />
+                <Exercises 
+                    patient_id={patient_id} 
+                    first_name={first_name} 
+                    last_name={last_name} 
+                    exercises={exercises}  
+                    resetExercises={resetExercises}
+                />
             </div>
         </Fragment>
     );

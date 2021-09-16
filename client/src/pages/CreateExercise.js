@@ -21,6 +21,7 @@ const CreateExercise = ({ setAuth }) => {
     const history = useHistory();
 
     const patient_id = location.state?.patient_id;
+    const resetExercises = location.state?.resetExercises;
 
     const [data, setData] = useState({
         exercise_name: "",
@@ -52,6 +53,22 @@ const CreateExercise = ({ setAuth }) => {
         setData({ ...data, [e.target.name]: e.target.value });
     };
 
+    const getExercises = async () => {
+        try {
+            const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
+            const exerciseParse = await exerciseRes.json();
+            
+            resetExercises(exerciseParse);
+            if (exerciseParse.length === 0) {
+                console.log("currently no exercise items");
+            } else {
+                console.log("iterate through current exercise items");
+            }
+        } catch (err) {
+            console.error(err.message);
+        }
+    };
+
     const submitExercise = async (e) => {
         e.preventDefault();
         try {
@@ -62,9 +79,8 @@ const CreateExercise = ({ setAuth }) => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
-
+            getExercises();
             const parseRes = await response.json();
-
             console.log(parseRes);
             
         } catch (err) {

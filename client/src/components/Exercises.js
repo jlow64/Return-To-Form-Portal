@@ -1,8 +1,7 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import ExerciseCard from "./ExerciseCard";
 
-const Exercises = ({ patient_id, first_name, last_name }) => {
-    const [exercises, setExercises] = useState([]);
+const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercises }) => {
     const password = "password123";
     const email = first_name + "_" + last_name + "@returntoform.com";
     const role = "patient";
@@ -17,7 +16,6 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
             });
             const parseRes = await response.json();
             console.log("created user");
-            console.log(parseRes);
         } catch (err) {
             console.error(err.message);
         }
@@ -44,7 +42,7 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
             const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
             const exerciseParse = await exerciseRes.json();
             
-            setExercises(exerciseParse);
+            resetExercises(exerciseParse);
             if (exerciseParse.length === 0) {
                 console.log("currently no exercise items");
             } else {
@@ -55,8 +53,8 @@ const Exercises = ({ patient_id, first_name, last_name }) => {
         }
     };
 
-    const refreshExercises = (exercise_list, id) => {
-        setExercises(exercise_list.filter(exercise => exercise.exercise_id !== id));
+    const refreshExercises = () => {
+        getExercises();
     };
 
     useEffect(() => {

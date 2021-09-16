@@ -5,7 +5,7 @@ import { Card, Modal, Button } from "react-bootstrap";
 import { ThreeDotsVertical, TrashFill, PenFill } from "react-bootstrap-icons" ;
 import "../styles/ExerciseCard.css";
 
-const ExerciseCard = ({ exercise_list, refreshExercises, exercise, showOptions }) => {
+const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
 
     const [show, setShow] = useState({
         editModal: null,
@@ -18,7 +18,7 @@ const ExerciseCard = ({ exercise_list, refreshExercises, exercise, showOptions }
                 method: "DELETE"
             });
 
-            refreshExercises(exercise_list, exercise.exercise_id);
+            refreshExercises();
             toast.success("Exercise deleted!");
          } catch (err) {
              console.error(err);

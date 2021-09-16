@@ -18,7 +18,7 @@ const Dashboard = ({ setAuth }) => {
 
     const displayAppointments = (bool) => {
         setIsSearch(bool);
-    }
+    };
 
     const logout = async (e) => {
         e.preventDefault();
@@ -34,7 +34,7 @@ const Dashboard = ({ setAuth }) => {
     // useEffect(() => {
         // const getAppointment = async (url) => {
         //     try {
-        //         const response = await fetch("http://localhost:5000/dashboard/appointment", {
+        //         const response = await fetch("http://localhost:5000/dashboard/appointments", {
         //         method: "GET",
         //         headers: { jwt_token: sessionStorage.token }
         //     });

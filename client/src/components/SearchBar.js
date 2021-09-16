@@ -9,7 +9,6 @@ const SearchBar = ({ placeholder, patient_data, displayAppointments }) => {
 
     const handleFilter = (e) => {
       const input = e.target.value;
-      console.log(input);
       setWordEntered(input);
       input? displayAppointments(true):displayAppointments(false);
       const newFilter = patient_data.filter((value) => {
