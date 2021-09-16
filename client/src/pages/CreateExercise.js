@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
 
-import { Form, Button, Row, InputGroup, Modal } from "react-bootstrap";
+import { Form, Button, Row, InputGroup, Modal, Spinner } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
 
 import ReactPlayer from "react-player";
@@ -14,6 +14,7 @@ import ExerciseCard from "../components/ExerciseCard";
 const CreateExercise = ({ setAuth }) => {
     const [takingVideo, setTakingvideo] = useState(true);
     const [video, setVideo] = useState();
+    const [loading, setLoading] = useState(false);
     const [fileBase64String, setFileBase64String] = useState("");
     const video_url = useRef("");
     const video_id = useRef("");
@@ -21,7 +22,6 @@ const CreateExercise = ({ setAuth }) => {
     const history = useHistory();
 
     const patient_id = location.state?.patient_id;
-    const resetExercises = location.state?.resetExercises;
 
     const [data, setData] = useState({
         exercise_name: "",
@@ -53,21 +53,6 @@ const CreateExercise = ({ setAuth }) => {
         setData({ ...data, [e.target.name]: e.target.value });
     };
 
-    const getExercises = async () => {
-        try {
-            const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
-            const exerciseParse = await exerciseRes.json();
-            
-            resetExercises(exerciseParse);
-            if (exerciseParse.length === 0) {
-                console.log("currently no exercise items");
-            } else {
-                console.log("iterate through current exercise items");
-            }
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
 
     const submitExercise = async (e) => {
         e.preventDefault();
@@ -79,10 +64,11 @@ const CreateExercise = ({ setAuth }) => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
-            getExercises();
+      
             const parseRes = await response.json();
+            setLoading(false);
             console.log(parseRes);
-            
+            history.goBack();
         } catch (err) {
             console.error(err);
         }
@@ -323,7 +309,7 @@ const CreateExercise = ({ setAuth }) => {
                             <Modal.Title className="modal-title" >Confirm you want to assign?</Modal.Title>
                         </Modal.Header>
 
-                        <Modal.Body>
+                        <Modal.Body style={{display: "flex-row", justifyContent: "center", alignItems: "center"}}>
                             <ExerciseCard exercise={data} />
                         </Modal.Body>
 
@@ -333,9 +319,15 @@ const CreateExercise = ({ setAuth }) => {
                                 form="createExercise"
                                 variant="primary"
                                 type="submit" 
-                                onClick={() => history.goBack()} 
+                                onClick={() => setLoading(true)} 
                             >
-                                Yes
+                                {loading? (
+                                    <>
+                                        <Spinner animation="border" />
+                                    </>
+                                    ) : (                                     
+                                    "Yes"
+                                )}
                             </Button>
                             <Button 
                                 className="btn-exercise"

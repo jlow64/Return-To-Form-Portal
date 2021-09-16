@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { useIsFocused } from '@react-navigation/native';
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
@@ -18,7 +17,7 @@ const Patient = ({ setAuth }) => {
     const patient_fullname = location.state?.patient_name;
     const first_name = location.state?.first_name;
     const last_name = location.state?.last_name;
-    const isFocused = useIsFocused();
+    // const isFocused = useIsFocused();
 
     const [exercises, setExercises] = useState([]);
 
@@ -44,17 +43,17 @@ const Patient = ({ setAuth }) => {
                 const exerciseParse = await exerciseRes.json();
                 
                 resetExercises(exerciseParse);
-                if (exerciseParse.length === 0) {
-                    console.log("currently no exercise items");
-                } else {
-                    console.log("iterate through current exercise items");
-                }
+                // if (exerciseParse.length === 0) {
+                //     console.log("currently no exercise items");
+                // } else {
+                //     console.log("iterate through current exercise items");
+                // }
             } catch (err) {
                 console.error(err.message);
             }
         };
         getExercises();
-    },[isFocused]);
+    },[]);
 
     return (
         <Fragment>

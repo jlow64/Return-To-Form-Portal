@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
-import { Form, Button, Row, InputGroup, Modal } from "react-bootstrap";
+import { Form, Button, Row, InputGroup, Modal, Spinner } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
@@ -14,6 +14,7 @@ const EditExercise = ({ setAuth }) => {
     const exercise = location.state?.exercise;
 
     const [takingVideo, setTakingvideo] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [video, setVideo] = useState(exercise.video_url);
     const [fileBase64String, setFileBase64String] = useState("");
 
@@ -64,8 +65,9 @@ const EditExercise = ({ setAuth }) => {
             });
 
             const parseRes = await response.json();
-
             console.log(parseRes);
+            setLoading(false);
+            history.goBack();
             
         } catch (err) {
             console.error(err);
@@ -312,9 +314,15 @@ const EditExercise = ({ setAuth }) => {
                                 form="editExercise"
                                 variant="primary" 
                                 type="submit" 
-                                onClick={() => history.goBack()} 
+                                onClick={() => setLoading(true)} 
                             >
-                                Yes
+                                {!loading? (
+                                    <>
+                                        <Spinner animation="border" />
+                                    </>
+                                    ) : (                                     
+                                    "Yes"
+                                )}
                             </Button>
                             <Button 
                                 className="btn-exercise"

@@ -43,11 +43,11 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
             const exerciseParse = await exerciseRes.json();
             
             resetExercises(exerciseParse);
-            if (exerciseParse.length === 0) {
-                console.log("currently no exercise items");
-            } else {
-                console.log("iterate through current exercise items");
-            }
+            // if (exerciseParse.length === 0) {
+            //     console.log("currently no exercise items");
+            // } else {
+            //     console.log("iterate through current exercise items");
+            // }
         } catch (err) {
             console.error(err.message);
         }
@@ -59,6 +59,7 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
 
     useEffect(() => {
         getUser();
+        getExercises();
     }, [])
 
     return (
