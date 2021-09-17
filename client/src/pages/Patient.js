@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { toast } from "react-toastify";
+
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
 import { useLocation, useHistory, Link } from "react-router-dom";
@@ -10,30 +11,18 @@ import logo from "../logos/rtf-logo-grey.png";
 import "../styles/Patient.css";
 
 
-const Patient = ({ setAuth }) => {
+const Patient = ({ logout }) => {
     const location = useLocation();
     const history = useHistory();
     const patient_id = location.state?.patient_id;
     const patient_fullname = location.state?.patient_name;
     const first_name = location.state?.first_name;
     const last_name = location.state?.last_name;
-    // const isFocused = useIsFocused();
 
     const [exercises, setExercises] = useState([]);
 
     const resetExercises = (val) => {
         setExercises(val);
-    };
-
-    const logout = async (e) => {
-        e.preventDefault();
-        try {
-            sessionStorage.removeItem("token");
-            setAuth(false);
-            toast.success("Logged out Successfully!");
-        } catch (err) {
-            console.error(err.message);
-        }
     };
 
     useEffect(() => {
@@ -43,11 +32,6 @@ const Patient = ({ setAuth }) => {
                 const exerciseParse = await exerciseRes.json();
                 
                 resetExercises(exerciseParse);
-                // if (exerciseParse.length === 0) {
-                //     console.log("currently no exercise items");
-                // } else {
-                //     console.log("iterate through current exercise items");
-                // }
             } catch (err) {
                 console.error(err.message);
             }

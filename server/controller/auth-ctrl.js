@@ -57,7 +57,15 @@ reqLogin = async (req, res) => {
 
         const token = jwtGenerator(user.rows[0].user_id, rememberMe);
 
+        res.cookie('access_token', token, {
+        //    sameSite: 'strict',
+        //    path: '/',
+           expires: new Date(new Date().getTime() + (rememberMe? 24 * 30 : 1) * 60 * 60 * 1000),
+           httpOnly: true
+        });
+
         res.json({ token });
+
     } catch (err) {
         console.error(err.message);
         res.status(500).send("Server Error");
@@ -73,8 +81,15 @@ reqVerify = async (req, res) => {
     }
 }
 
+reqLogout = async (req, res) => {
+    res
+        .status(202)
+        .clearCookie('access_token').json("cookies cleared");
+}
+
 module.exports = {
     reqAuth,
     reqLogin,
-    reqVerify
+    reqVerify,
+    reqLogout
 }

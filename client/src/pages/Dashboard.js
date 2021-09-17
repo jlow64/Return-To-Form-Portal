@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import { toast } from "react-toastify";
 import Button from "react-bootstrap/Button";
 import { BoxArrowRight } from "react-bootstrap-icons";
@@ -11,7 +11,7 @@ import "../styles/Dashboard.css";
 import PatientData from "../Data/Patient.json";
 import AppointmentData from "../Data/Appointment.json";
 
-const Dashboard = ({ setAuth }) => {
+const Dashboard = ({ logout }) => {
     const [isSearch, setIsSearch] = useState(false);
     // const [users, setUsers] = useState([]);
     // const [appointments, setAppointments] = useState([]);
@@ -20,23 +20,12 @@ const Dashboard = ({ setAuth }) => {
         setIsSearch(bool);
     };
 
-    const logout = async (e) => {
-        e.preventDefault();
-        try {
-            sessionStorage.removeItem("token");
-            setAuth(false);
-            toast.success("Logged out Successfully!");
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
-
     // useEffect(() => {
         // const getAppointment = async (url) => {
         //     try {
         //         const response = await fetch("http://localhost:5000/dashboard/appointments", {
         //         method: "GET",
-        //         headers: { jwt_token: sessionStorage.token }
+        //         headers: { jwt_token: inMemoryJWT.getToken() }
         //     });
         //         const parseRes = await response.json();
         //         setAppointments(parseRes.individual_appointments);
@@ -48,7 +37,7 @@ const Dashboard = ({ setAuth }) => {
         //     try {
         //         const response = await fetch("http://localhost:5000/dashboard/patients", {
         //         method: "GET",
-        //         headers: { jwt_token: sessionStorage.token }
+        //         headers: { jwt_token: inMemoryJWT.getToken() }
         //     });
         //         const parseRes = await response.json();
         //         setAppointments(parseRes.individual_appointments);

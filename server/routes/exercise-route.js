@@ -38,4 +38,8 @@ router.post("/video", ExerciseCtrl.uploadVideo);
 
 router.put("/video", ExerciseCtrl.updateVideo);
 
+// delete exercise_video
+
+router.delete("/video", ExerciseCtrl.deleteVideo);
+
 module.exports = router;

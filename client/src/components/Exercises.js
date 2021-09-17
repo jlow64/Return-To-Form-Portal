@@ -14,7 +14,7 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
-            const parseRes = await response.json();
+            await response.json();
             console.log("created user");
         } catch (err) {
             console.error(err.message);
@@ -43,11 +43,6 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
             const exerciseParse = await exerciseRes.json();
             
             resetExercises(exerciseParse);
-            // if (exerciseParse.length === 0) {
-            //     console.log("currently no exercise items");
-            // } else {
-            //     console.log("iterate through current exercise items");
-            // }
         } catch (err) {
             console.error(err.message);
         }

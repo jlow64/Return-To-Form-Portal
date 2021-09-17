@@ -11,7 +11,7 @@ import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
 
 
-const CreateExercise = ({ setAuth }) => {
+const CreateExercise = ({ logout }) => {
     const [takingVideo, setTakingvideo] = useState(true);
     const [video, setVideo] = useState();
     const [loading, setLoading] = useState(false);
@@ -38,17 +38,6 @@ const CreateExercise = ({ setAuth }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const logout = async (e) => {
-        e.preventDefault();
-        try {
-            sessionStorage.removeItem("token");
-            setAuth(false);
-            toast.success("Logged out Successfully!");
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
-
     const dataInputChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
     };
@@ -65,9 +54,10 @@ const CreateExercise = ({ setAuth }) => {
                 body: JSON.stringify(body)
             });
       
-            const parseRes = await response.json();
+            await response.json();
             setLoading(false);
-            console.log(parseRes);
+            // console.log(parseRes);
+            toast.success("Successfully Created Exercise!");
             history.goBack();
         } catch (err) {
             console.error(err);

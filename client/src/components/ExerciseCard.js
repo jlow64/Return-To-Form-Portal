@@ -17,12 +17,28 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
             const response = await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
                 method: "DELETE"
             });
-
+            await response.json();
             refreshExercises();
             toast.success("Exercise deleted!");
          } catch (err) {
-             console.error(err);
+            console.error(err);
          }
+    };
+
+    const deleteVideo = async () => {
+        try {
+            const body = { 'public_id': exercise.video_id}
+            const response = await fetch("http://192.168.1.79:5000/exercise/video", {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+            });
+
+            await response.json();
+
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     /* Make edit page and delete section from three vertical dots from a modal */
@@ -41,7 +57,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
                         ""
                     }
                     <Card.Title className="exercise-card-content">    
-                        { `Reps:${exercise.reps} ` + `Sets:${exercise.sets} ` + `Frequency:${exercise.frequency}` }
+                        { `Reps:${exercise.reps} Sets:${exercise.sets} Frequency:${exercise.frequency}` }
                     </Card.Title>
                 </Card.Body> 
             </Card>
@@ -116,6 +132,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
                         type="submit" 
                         onClick={() => {
                             deleteExercise();
+                            deleteVideo();
                             setShow({...show, deleteModal:false});
                         }} 
                     >

@@ -12,4 +12,6 @@ router.post("/login", validInfo, AuthCtrl.reqLogin);
 
 router.get("/is-verify", authorization, AuthCtrl.reqVerify);
 
+router.get("/logout", AuthCtrl.reqLogout);
+
 module.exports = router;

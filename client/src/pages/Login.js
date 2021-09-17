@@ -29,16 +29,17 @@ const Login = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { email, password, rememberMe };
-            // http://192.168.1.79:5000/auth/login
             const response = await fetch("http://192.168.1.79:5000/auth/login/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
+                credentials: 'include',
                 body: JSON.stringify(body)
             });
 
-            const parseRes = await response.json();
-            if (parseRes.token) {
-                sessionStorage.setItem("token", parseRes.token);
+            const parseRes = await response;
+            console.log(parseRes);
+            if (parseRes.status===200) {
+                // localStorage.setItem("token", parseRes.token);
                 setAuth(true);
                 toast.success("Login Successfully!");
             } else {

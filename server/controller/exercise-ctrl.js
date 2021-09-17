@@ -2,7 +2,7 @@ const pool = require("../db");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({ 
     cloud_name: process.env.CLOUD_NAME, 
-    api_key: process.env.CLOUDINARY_API, 
+    api_key: process.env.CLOUDINARY_KEY, 
     api_secret: process.env.CLOUDINARY_SECRET 
 });
 require('dotenv').config();
@@ -141,6 +141,23 @@ updateVideo = async(req, res) => {
     }
 }
 
+deleteVideo = async(req, res) => {
+    try {
+        const { public_id } = req.body;
+        cloudinary.uploader.destroy(public_id, 
+            {
+                resource_type: 'video'
+            }, 
+        function(error,result) {
+            console.log(result, error); 
+            res.json(result);
+        });
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
 module.exports = {
     getUser,
     createExercise,
@@ -150,5 +167,6 @@ module.exports = {
     updateExercise,
     deleteExercise,
     uploadVideo,
-    updateVideo
+    updateVideo,
+    deleteVideo
 }

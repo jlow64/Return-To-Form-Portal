@@ -1,14 +1,16 @@
-import React, { Fragment, useRef, useEffect, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
+
 import { Form, Button, Row, InputGroup, Modal, Spinner } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
 import logo from "../logos/rtf-logo-grey.png";
+
 import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
 
-const EditExercise = ({ setAuth }) => {
+const EditExercise = ({ logout }) => {
     const location = useLocation();
     const history = useHistory();
     const exercise = location.state?.exercise;
@@ -36,17 +38,6 @@ const EditExercise = ({ setAuth }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const logout = async (e) => {
-        e.preventDefault();
-        try {
-            sessionStorage.removeItem("token");
-            setAuth(false);
-            toast.success("Logged out Successfully!");
-        } catch (err) {
-            console.error(err.message);
-        }
-    };
-
     const dataInputChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
     };
@@ -55,8 +46,6 @@ const EditExercise = ({ setAuth }) => {
         e.preventDefault();
         try {
             await onSubmitUpdatedVideo();
-            console.log(video_url);
-            console.log(video_id);
             const body = { exercise_name, description, reps, sets, frequency, video_url: video_url.current, video_id: video_id.current };
             const response =  await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
                 method: "PUT",
@@ -67,6 +56,7 @@ const EditExercise = ({ setAuth }) => {
             const parseRes = await response.json();
             console.log(parseRes);
             setLoading(false);
+            toast.success("Successfully Updated Exercise!");
             history.goBack();
             
         } catch (err) {
@@ -76,6 +66,7 @@ const EditExercise = ({ setAuth }) => {
 
     const onSubmitUpdatedVideo = async () => {
         try {
+            console.log(video_id);
             const body = { 'file': fileBase64String, 'public_id': video_id };
             const response =  await fetch("http://192.168.1.79:5000/exercise/video", {
                 method: "PUT",
@@ -316,7 +307,7 @@ const EditExercise = ({ setAuth }) => {
                                 type="submit" 
                                 onClick={() => setLoading(true)} 
                             >
-                                {!loading? (
+                                {loading? (
                                     <>
                                         <Spinner animation="border" />
                                     </>
