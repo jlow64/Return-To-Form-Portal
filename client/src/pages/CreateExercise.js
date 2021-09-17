@@ -18,6 +18,7 @@ const CreateExercise = ({ logout }) => {
     const [fileBase64String, setFileBase64String] = useState("");
     const video_url = useRef("");
     const video_id = useRef("");
+    const thumbnail = useRef("");
     const location = useLocation();
     const history = useHistory();
 

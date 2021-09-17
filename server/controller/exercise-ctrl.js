@@ -111,6 +111,8 @@ uploadVideo = async(req, res) => {
             res.json(result);
         });
 
+        console.log("still continues");
+
     } catch (err) {
         console.error(err.message);
     }

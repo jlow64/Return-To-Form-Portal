@@ -45,10 +45,22 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
     return (
         <Fragment>
             <Card className="exercise-card-container" >   
-                <Card.Body>
-                    {exercise.exercise_name}
+                <Card.Body style={{display: 'flex'}}>
+                    <img 
+                        src={`https://res.cloudinary.com/return-to-form-cloud/video/upload/so_4.0/bo_1px_solid_black,r_max/${exercise.video_id}.jpg`} 
+                        alt={"Video thumbnail"} 
+                        style={{height: 50, width: 50, alignItems: 'center', marginRight: '1rem', marginTop: 2}} 
+                    />
+                
+                    <div style={{ alignContent:'center', margin: 2, height: '50px'}}>
+                        <p>{exercise.exercise_name}</p>
+                        <div className="exercise-card-content" >    
+                            { `Reps:${exercise.reps} Sets:${exercise.sets} Frequency:${exercise.frequency}` }
+                        </div>
+                    </div>
+                    
                     {showOptions? (<ThreeDotsVertical 
-                        style={{float: "right", alignItems: "center", marginTop: "2rem"}} 
+                        style={{float: "right", alignItems: "center", marginTop: "2rem", marginLeft: "3rem"}} 
                         size={16} 
                         onClick={() => {
                             setShow({...show, editModal:true, deleteModal:false})
@@ -56,9 +68,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
                     />):
                         ""
                     }
-                    <Card.Title className="exercise-card-content">    
-                        { `Reps:${exercise.reps} Sets:${exercise.sets} Frequency:${exercise.frequency}` }
-                    </Card.Title>
+
                 </Card.Body> 
             </Card>
             <Modal
