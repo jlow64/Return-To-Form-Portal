@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 // middleware
-app.use(cors({origin: 'http://localhost:3000', credentials: true}));
+app.use(cors({origin: ['http://localhost:3000', 'http://192.168.1.79:3000'], credentials: true}));
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb'}));
 app.use(cookieParser());

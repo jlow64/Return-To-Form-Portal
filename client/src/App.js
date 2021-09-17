@@ -50,7 +50,7 @@ function App() {
     try {
       const response = await fetch("http://192.168.1.79:5000/auth/is-verify", {
         method: "GET",
-        credentials: 'include'
+        credentials: 'include',
         // headers: { jwt_token: localStorage.token },
       });
 
