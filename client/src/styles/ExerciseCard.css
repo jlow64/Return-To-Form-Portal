@@ -58,6 +58,6 @@
 }
 
 .exercise-card-content {
-    word-spacing: 1.5rem;
-    line-height: 1rem;
+    word-spacing: 1rem !important;
+    line-height: 1rem !important;
 }

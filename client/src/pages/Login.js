@@ -5,6 +5,7 @@ import logo from '../logos/rtf-logo-white-Solid.png';
 
 import  { Form, InputGroup, Button, Row, Col } from "react-bootstrap";
 import { Person, LockFill, EyeSlashFill } from "react-bootstrap-icons";
+import * as Constant from "../Data/Constants";
 import "../styles/Login.css";
 
 const Login = ({ setAuth }) => {
@@ -29,7 +30,7 @@ const Login = ({ setAuth }) => {
         e.preventDefault();
         try {
             const body = { email, password, rememberMe };
-            const response = await fetch("http://192.168.1.79:5000/auth/login/", {
+            const response = await fetch(`${Constant.API_ENDPOINT}/auth/login/`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: 'include',

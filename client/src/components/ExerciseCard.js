@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { Card, Modal, Button } from "react-bootstrap";
 import { ThreeDotsVertical, TrashFill, PenFill } from "react-bootstrap-icons" ;
+import * as Constant from "../Data/Constants";
 import "../styles/ExerciseCard.css";
 
 const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
@@ -14,7 +15,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
 
     const deleteExercise = async () => {
          try {
-            const response = await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
+            const response = await fetch(`${Constant.API_ENDPOINT}/exercise/item/${exercise.exercise_id}`, {
                 method: "DELETE"
             });
             await response.json();
@@ -28,7 +29,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
     const deleteVideo = async () => {
         try {
             const body = { 'public_id': exercise.video_id}
-            const response = await fetch("http://192.168.1.79:5000/exercise/video", {
+            const response = await fetch(`${Constant.API_ENDPOINT}/exercise/video`, {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -49,10 +50,10 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
                     <img 
                         src={`https://res.cloudinary.com/return-to-form-cloud/video/upload/so_4.0/bo_1px_solid_black,r_max/${exercise.video_id}.jpg`} 
                         alt={"Video thumbnail"} 
-                        style={{height: 50, width: 50, alignItems: 'center', marginRight: '1rem', marginTop: 2}} 
+                        style={{height: 50, width: 50, alignItems: 'center', marginTop: 2}} 
                     />
                 
-                    <div style={{ alignContent:'center', margin: 2, height: '50px'}}>
+                    <div style={{ alignContent:'center', marginLeft: '1rem', height: '50px'}}>
                         <p>{exercise.exercise_name}</p>
                         <div className="exercise-card-content" >    
                             { `Reps:${exercise.reps} Sets:${exercise.sets} Frequency:${exercise.frequency}` }

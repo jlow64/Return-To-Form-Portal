@@ -1,11 +1,12 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import ReactPlayer from "react-player";
 import { toast } from "react-toastify";
 import { useHistory, useLocation } from "react-router-dom";
 
 import { Form, Button, Row, InputGroup, Modal, Spinner } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
 
-import ReactPlayer from "react-player";
+import * as Constant from "../Data/Constants";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
@@ -18,7 +19,6 @@ const CreateExercise = ({ logout }) => {
     const [fileBase64String, setFileBase64String] = useState("");
     const video_url = useRef("");
     const video_id = useRef("");
-    const thumbnail = useRef("");
     const location = useLocation();
     const history = useHistory();
 
@@ -49,7 +49,7 @@ const CreateExercise = ({ logout }) => {
         try {
             await onSubmitVideo();
             var body = { patient_id, exercise_name, description, reps, sets, frequency, video_url: video_url.current, video_id: video_id.current };
-            const response =  await fetch("http://192.168.1.79:5000/exercise/item", {
+            const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/item`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -68,7 +68,7 @@ const CreateExercise = ({ logout }) => {
     const onSubmitVideo = async () => {
         try {
             const body = { 'file': fileBase64String };
-            const response =  await fetch("http://192.168.1.79:5000/exercise/video", {
+            const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/video`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)

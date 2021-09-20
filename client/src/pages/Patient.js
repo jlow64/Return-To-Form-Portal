@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { toast } from "react-toastify";
+import * as Constant from "../Data/Constants";
 
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
@@ -28,7 +28,7 @@ const Patient = ({ logout }) => {
     useEffect(() => {
         const getExercises = async () => {
             try {
-                const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
+                const exerciseRes = await fetch(`${Constant.API_ENDPOINT}/exercise/user-items/${patient_id}`);
                 const exerciseParse = await exerciseRes.json();
                 
                 resetExercises(exerciseParse);

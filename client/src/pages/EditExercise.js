@@ -8,6 +8,7 @@ import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from
 import logo from "../logos/rtf-logo-grey.png";
 
 import "../styles/CreateExercise.css";
+import * as Constant from "../Data/Constants";
 import ExerciseCard from "../components/ExerciseCard";
 
 const EditExercise = ({ logout }) => {
@@ -47,7 +48,7 @@ const EditExercise = ({ logout }) => {
         try {
             await onSubmitUpdatedVideo();
             const body = { exercise_name, description, reps, sets, frequency, video_url: video_url.current, video_id: video_id.current };
-            const response =  await fetch(`http://192.168.1.79:5000/exercise/item/${exercise.exercise_id}`, {
+            const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/item/${exercise.exercise_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -68,7 +69,7 @@ const EditExercise = ({ logout }) => {
         try {
             console.log(video_id);
             const body = { 'file': fileBase64String, 'public_id': video_id };
-            const response =  await fetch("http://192.168.1.79:5000/exercise/video", {
+            const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/video`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)

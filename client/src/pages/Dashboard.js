@@ -1,5 +1,4 @@
-import React, { Fragment, useState } from "react";
-import { toast } from "react-toastify";
+import React, { Fragment, useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { BoxArrowRight } from "react-bootstrap-icons";
 
@@ -8,46 +7,45 @@ import AppointmentCard from "../components/AppointmentCard";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/Dashboard.css";
 
-import PatientData from "../Data/Patient.json";
-import AppointmentData from "../Data/Appointment.json";
+import * as Constant from "../Data/Constants";
 
 const Dashboard = ({ logout }) => {
     const [isSearch, setIsSearch] = useState(false);
-    // const [users, setUsers] = useState([]);
-    // const [appointments, setAppointments] = useState([]);
+    const [appointments, setAppointments] = useState([]);
+    const [patients, setPatients] = useState([]);
 
     const displayAppointments = (bool) => {
         setIsSearch(bool);
     };
 
-    // useEffect(() => {
-        // const getAppointment = async (url) => {
-        //     try {
-        //         const response = await fetch("http://localhost:5000/dashboard/appointments", {
-        //         method: "GET",
-        //         headers: { jwt_token: inMemoryJWT.getToken() }
-        //     });
-        //         const parseRes = await response.json();
-        //         setAppointments(parseRes.individual_appointments);
-        //     } catch (err) {
-        //         console.error(err);
-        //     }
-        // };
-        // const getPatients = async (url) => {
-        //     try {
-        //         const response = await fetch("http://localhost:5000/dashboard/patients", {
-        //         method: "GET",
-        //         headers: { jwt_token: inMemoryJWT.getToken() }
-        //     });
-        //         const parseRes = await response.json();
-        //         setAppointments(parseRes.individual_appointments);
-        //     } catch (err) {
-        //         console.error(err);
-        //     }
-        // };
-        // getPatients();
-        // getAppointment();
-    // }, []);
+    useEffect(() => {
+        const getAppointment = async () => {
+            try {
+                const response = await fetch(`${Constant.API_ENDPOINT}/dashboard/appointments`, {
+                method: "GET",
+                credentials: "include"
+            });
+                const parseRes = await response.json();
+                setAppointments(parseRes.individual_appointments);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        const getPatients = async () => {
+            try {
+                const response = await fetch(`${Constant.API_ENDPOINT}/dashboard/patients`, {
+                method: "GET",
+                credentials: "include"
+            });
+                const parseRes = await response.json();
+                setPatients(parseRes.patients);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        getPatients();
+        getAppointment();
+    }, []);
 
     return (
         <Fragment>
@@ -64,7 +62,7 @@ const Dashboard = ({ logout }) => {
                 <h3 className="select-client-label">Search Client</h3>
                 <SearchBar 
                     placeholder="Search..." 
-                    patient_data={PatientData.patients} 
+                    patient_data={patients} 
                     displayAppointments={displayAppointments}
                 />       
                 {isSearch? (
@@ -72,7 +70,7 @@ const Dashboard = ({ logout }) => {
                     </>
                     ) : (
                     <div className="appointment-display-container">
-                        {AppointmentData.individual_appointments.slice(0,50).map((value, key) => {
+                        {appointments.slice(0,50).map((value, key) => {
                             return (
                                 <div key={key}>
                                     <AppointmentCard

@@ -28,7 +28,8 @@ router.get("/patients",  authorization, async (req, res) => {
 router.get("/appointments", authorization, async (req, res) => {
     try {
         const API_KEY = Buffer.from(process.env.CLINIKO_API + ':').toString('base64');
-        const appointments = await fetch("https://api.au1.cliniko.com/v1/individual_appointments", {
+        const date = new Date().toISOString();
+        const appointments = await fetch(`https://api.au1.cliniko.com/v1/individual_appointments?q=starts_at:>${date}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Basic ${API_KEY}`,
