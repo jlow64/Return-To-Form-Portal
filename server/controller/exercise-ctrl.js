@@ -111,8 +111,6 @@ uploadVideo = async(req, res) => {
             res.json(result);
         });
 
-        console.log("still continues");
-
     } catch (err) {
         console.error(err.message);
     }
@@ -121,7 +119,7 @@ uploadVideo = async(req, res) => {
 updateVideo = async(req, res) => {
     try {
         const { file, public_id } = req.body;
-        cloudinary.uploader.destroy(public_id, 
+        await cloudinary.uploader.destroy(public_id, 
             {
                 resource_type: 'video'
             }, 
@@ -146,6 +144,7 @@ updateVideo = async(req, res) => {
 deleteVideo = async(req, res) => {
     try {
         const { public_id } = req.body;
+        console.log(public_id);
         cloudinary.uploader.destroy(public_id, 
             {
                 resource_type: 'video'

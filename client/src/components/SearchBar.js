@@ -12,7 +12,7 @@ const SearchBar = ({ placeholder, displayAppointments }) => {
     useEffect(() => {
         const timerId = setTimeout(() => {
             setDebouncedWord(term);
-        }, 500);
+        }, 300);
 
         return () => {
             clearTimeout(timerId);
@@ -27,7 +27,7 @@ const SearchBar = ({ placeholder, displayAppointments }) => {
                 credentials: "include"
             });
                 const parseRes = await response.json();
-                setResults(parseRes.patients);
+                setResults(parseRes);
             } catch (err) {
                 console.error(err);
             }

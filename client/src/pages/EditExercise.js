@@ -68,7 +68,7 @@ const EditExercise = ({ logout }) => {
     const onSubmitUpdatedVideo = async () => {
         try {
             console.log(video_id);
-            const body = { 'file': fileBase64String, 'public_id': video_id };
+            const body = { 'file': fileBase64String, 'public_id': video_id.current };
             const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/video`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

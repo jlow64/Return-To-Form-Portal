@@ -29,8 +29,7 @@ router.get("/patients/:term",  authorization, async (req, res) => {
         const parseFname = await first_name.json();
         const parseLname = await last_name.json();
         const result_array = Object.assign(parseFname.patients, parseLname.patients);
-        console.log(result_array);
-        res.json(parseFname);
+        res.json(result_array);
     } catch (err) {
         console.error(err.message);
         res.status(500).json("Server Error");

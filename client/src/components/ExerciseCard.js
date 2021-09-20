@@ -50,6 +50,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
                     <img 
                         src={`https://res.cloudinary.com/return-to-form-cloud/video/upload/so_4.0/bo_1px_solid_black,r_max/${exercise.video_id}.jpg`} 
                         alt={"Video thumbnail"} 
+                        loading="lazy"
                         style={{height: 50, width: 50, alignItems: 'center', marginTop: 2}} 
                     />
                 
