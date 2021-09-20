@@ -4,10 +4,11 @@ const pool = require("../db");
 const authorization = require("../middleware/authorization");
 require('dotenv').config();
 
-router.get("/patients",  authorization, async (req, res) => {
+router.get("/patients/:term",  authorization, async (req, res) => {
     try {
+        const { term } = req.params;
         const API_KEY = Buffer.from(process.env.CLINIKO_API + ':').toString('base64');
-        const patients = await fetch('https://api.au1.cliniko.com/v1/patients', {
+        const first_name = await fetch(`https://api.au1.cliniko.com/v1/patients?q=first_name:~${term}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Basic ${API_KEY}`,
@@ -16,9 +17,20 @@ router.get("/patients",  authorization, async (req, res) => {
             }
         });
 
-        const parseRes = await patients.json();
+        const last_name = await fetch(`https://api.au1.cliniko.com/v1/patients?q=last_name:~${term}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Basic ${API_KEY}`,
+                'Accept': 'application/json',
+                'User-Agent': 'Return-To-Form (justinl@missionreadyhq.com)'
+            }
+        });
 
-        res.json(parseRes);
+        const parseFname = await first_name.json();
+        const parseLname = await last_name.json();
+        const result_array = Object.assign(parseFname.patients, parseLname.patients);
+        console.log(result_array);
+        res.json(parseFname);
     } catch (err) {
         console.error(err.message);
         res.status(500).json("Server Error");

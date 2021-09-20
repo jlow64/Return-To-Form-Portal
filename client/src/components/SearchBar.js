@@ -1,30 +1,54 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { Search, XCircle } from "react-bootstrap-icons";
 import PatientCard from "./PatientCard";
+import * as Constant from "../Data/Constants";
 import "../styles/SearchBar.css";
 
-const SearchBar = ({ placeholder, patient_data, displayAppointments }) => {
-    const [filteredData, setFilteredData] = useState([]);
-    const [wordEntered, setWordEntered] = useState("");
+const SearchBar = ({ placeholder, displayAppointments }) => {
+    const [term, setTerm] = useState("");
+    const [debouncedTerm, setDebouncedWord] = useState(term);
+    const [results, setResults] = useState([]);
+
+    useEffect(() => {
+        const timerId = setTimeout(() => {
+            setDebouncedWord(term);
+        }, 500);
+
+        return () => {
+            clearTimeout(timerId);
+        };
+    }, [term]);
+
+    useEffect(() => {
+        const search = async () => {
+            try {
+                const response = await fetch(`${Constant.API_ENDPOINT}/dashboard/patients/${debouncedTerm}`, {
+                method: "GET",
+                credentials: "include"
+            });
+                const parseRes = await response.json();
+                setResults(parseRes.patients);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        if(debouncedTerm!==""){
+            search();
+        };
+    }, [debouncedTerm]);
 
     const handleFilter = (e) => {
       const input = e.target.value;
-      setWordEntered(input);
+      setTerm(input);
       input? displayAppointments(true):displayAppointments(false);
-      const newFilter = patient_data.filter((value) => {
-        return value.first_name.toLowerCase().includes(input.toLowerCase());
-      });
-  
       if (input === "") {
-        setFilteredData([]);
-      } else {
-        setFilteredData(newFilter);
+        setResults([]);
       }
     };
   
     const clearInput = () => {
-      setFilteredData([]);
-      setWordEntered("");
+      setResults([]);
+      setTerm("");
       displayAppointments(false);
     };
 
@@ -37,13 +61,13 @@ const SearchBar = ({ placeholder, patient_data, displayAppointments }) => {
                             type="text"
                             className="form-control search-bar"
                             placeholder={placeholder}
-                            value={wordEntered}
+                            value={term}
                             onChange={handleFilter}
                             style={{fontSize: 18}}
                         />
                         <div className="input-group-append search-icon">
                             <span className="input-group-text search-icon" id="search-addon">
-                                {filteredData.length === 0? (
+                                {results.length === 0? (
                                         <Search size={18}/> 
                                     ) : (
                                         <XCircle size={18} id="clearBtn" onClick={clearInput} /> 
@@ -53,10 +77,10 @@ const SearchBar = ({ placeholder, patient_data, displayAppointments }) => {
                         </div>
                     </div> 
                 </div>
-                {filteredData.length !== 0 && (
+                {results.length !== 0 && (
                     <div className="dataResult">
                         <h5 className="results-label">Search results</h5>
-                        {filteredData.slice(0, 8).map((value, key) => {
+                        {results.slice(0, 49).map((value, key) => {
                             return (
                                 <div key={key} 
                                     className="dataItem"
