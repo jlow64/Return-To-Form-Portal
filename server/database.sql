@@ -1,4 +1,4 @@
-CREATE DATABASE physiopern;
+CREATE DATABASE physio_portal_db;
 
 CREATE TABLE exercises(
     exercise_id SERIAL PRIMARY KEY,
