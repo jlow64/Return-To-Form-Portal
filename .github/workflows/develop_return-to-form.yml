@@ -21,16 +21,16 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: npm install, build, and test client
+      - name: yarn install, build, and test client
         run: |
-          npm install
-          npm run build 
+          yarn install
+          CI=false yarn run build 
         working-directory: client 
       
-      - name: npm install, build, and test server
+      - name: yarn install, build, and test server
         run: |
-          npm install
-          npm run build 
+          yarn install
+          CI=false yarn run build 
         working-directory: server
       
       - name: Upload artifact for deployment job
