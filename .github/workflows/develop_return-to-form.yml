@@ -21,12 +21,17 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: yarn install, build, and test
+      - name: yarn install, build, and test client
         run: |
           yarn install
           yarn run build --if-present
-          yarn run test --if-present
         working-directory: client 
+      
+      - name: yarn install, build, and test server
+        run: |
+          yarn install
+          yarn run build --if-present
+        working-directory: server
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
