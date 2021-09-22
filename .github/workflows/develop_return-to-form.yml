@@ -24,7 +24,7 @@ jobs:
       - name: yarn install, build, and test client
         run: |
           yarn install
-          yarn build 
+          yarn run build 
         env:
           CI: false 
         working-directory: client 
@@ -32,7 +32,7 @@ jobs:
       - name: yarn install, build, and test server
         run: |
           yarn install
-          yarn build 
+          yarn run build 
         env:
           CI: false
         working-directory: server
