@@ -6,7 +6,6 @@ import { useHistory, useLocation } from "react-router-dom";
 import { Form, Button, Row, InputGroup, Modal, Spinner } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, DashCircleFill, PlusCircleFill, Film } from "react-bootstrap-icons";
 
-import * as Constant from "../Data/Constants";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/CreateExercise.css";
 import ExerciseCard from "../components/ExerciseCard";
@@ -49,7 +48,7 @@ const CreateExercise = ({ logout }) => {
         try {
             await onSubmitVideo();
             var body = { patient_id, exercise_name, description, reps, sets, frequency, video_url: video_url.current, video_id: video_id.current };
-            const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/item`, {
+            const response =  await fetch(`exercise/item`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -68,7 +67,7 @@ const CreateExercise = ({ logout }) => {
     const onSubmitVideo = async () => {
         try {
             const body = { 'file': fileBase64String };
-            const response =  await fetch(`${Constant.API_ENDPOINT}/exercise/video`, {
+            const response =  await fetch(`exercise/video`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)

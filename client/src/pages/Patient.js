@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import * as Constant from "../Data/Constants";
 
 import { Button } from "react-bootstrap";
 import { BoxArrowRight, ChevronLeft, PlusCircleFill } from "react-bootstrap-icons";
@@ -28,7 +27,7 @@ const Patient = ({ logout }) => {
     useEffect(() => {
         const getExercises = async () => {
             try {
-                const exerciseRes = await fetch(`${Constant.API_ENDPOINT}/exercise/user-items/${patient_id}`);
+                const exerciseRes = await fetch(`exercise/user-items/${patient_id}`);
                 const exerciseParse = await exerciseRes.json();
                 
                 resetExercises(exerciseParse);

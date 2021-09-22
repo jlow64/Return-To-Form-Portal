@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { Card, Modal, Button } from "react-bootstrap";
 import { ThreeDotsVertical, TrashFill, PenFill } from "react-bootstrap-icons" ;
-import * as Constant from "../Data/Constants";
 import "../styles/ExerciseCard.css";
 
 const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
@@ -15,7 +14,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
 
     const deleteExercise = async () => {
          try {
-            const response = await fetch(`${Constant.API_ENDPOINT}/exercise/item/${exercise.exercise_id}`, {
+            const response = await fetch(`exercise/item/${exercise.exercise_id}`, {
                 method: "DELETE"
             });
             await response.json();
@@ -29,7 +28,7 @@ const ExerciseCard = ({ refreshExercises, exercise, showOptions }) => {
     const deleteVideo = async () => {
         try {
             const body = { 'public_id': exercise.video_id}
-            const response = await fetch(`${Constant.API_ENDPOINT}/exercise/video`, {
+            const response = await fetch(`exercise/video`, {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)

@@ -1,7 +1,6 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { Search, XCircle } from "react-bootstrap-icons";
 import PatientCard from "./PatientCard";
-import * as Constant from "../Data/Constants";
 import "../styles/SearchBar.css";
 
 const SearchBar = ({ placeholder, displayAppointments }) => {
@@ -22,7 +21,7 @@ const SearchBar = ({ placeholder, displayAppointments }) => {
     useEffect(() => {
         const search = async () => {
             try {
-                const response = await fetch(`${Constant.API_ENDPOINT}/dashboard/patients/${debouncedTerm}`, {
+                const response = await fetch(`dashboard/patients/${debouncedTerm}`, {
                 method: "GET",
                 credentials: "include"
             });

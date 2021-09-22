@@ -7,8 +7,6 @@ import AppointmentCard from "../components/AppointmentCard";
 import logo from "../logos/rtf-logo-grey.png";
 import "../styles/Dashboard.css";
 
-import * as Constant from "../Data/Constants";
-
 const Dashboard = ({ logout }) => {
     const [isSearch, setIsSearch] = useState(false);
     const [appointments, setAppointments] = useState([]);
@@ -20,7 +18,7 @@ const Dashboard = ({ logout }) => {
     useEffect(() => {
         const getAppointment = async () => {
             try {
-                const response = await fetch(`${Constant.API_ENDPOINT}/dashboard/appointments`, {
+                const response = await fetch(`dashboard/appointments`, {
                 method: "GET",
                 credentials: "include"
             });
