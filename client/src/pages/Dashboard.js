@@ -12,7 +12,6 @@ import * as Constant from "../Data/Constants";
 const Dashboard = ({ logout }) => {
     const [isSearch, setIsSearch] = useState(false);
     const [appointments, setAppointments] = useState([]);
-    // const [patients, setPatients] = useState([]);
 
     const displayAppointments = (bool) => {
         setIsSearch(bool);
@@ -31,19 +30,6 @@ const Dashboard = ({ logout }) => {
                 console.error(err);
             }
         };
-        // const getPatients = async () => {
-        //     try {
-        //         const response = await fetch(`${Constant.API_ENDPOINT}/dashboard/patients`, {
-        //         method: "GET",
-        //         credentials: "include"
-        //     });
-        //         const parseRes = await response.json();
-        //         setPatients(parseRes.patients);
-        //     } catch (err) {
-        //         console.error(err);
-        //     }
-        // };
-        // getPatients();
         getAppointment();
     }, []);
 
@@ -62,7 +48,6 @@ const Dashboard = ({ logout }) => {
                 <h3 className="select-client-label">Search Client</h3>
                 <SearchBar 
                     placeholder="Search..." 
-                    // patient_data={patients} 
                     displayAppointments={displayAppointments}
                 />       
                 {isSearch? (

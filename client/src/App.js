@@ -1,6 +1,7 @@
-import React , { Fragment, useState, useEffect, StrictMode } from "react";
+import React , { Fragment, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import './App.css';
+import * as Constant from "./Data/Constants";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,7 +37,7 @@ function App() {
   // };
 
   const logout = async () => {
-    const url = 'http://192.168.1.79:5000/auth/logout';
+    const url = `${Constant.API_ENDPOINT}/auth/logout`;
     const response = await fetch (url, {
       method: 'GET',
       credentials: 'include'
@@ -48,7 +49,7 @@ function App() {
 
   const isAuth = async() => {
     try {
-      const response = await fetch("http://192.168.1.79:5000/auth/is-verify", {
+      const response = await fetch(`${Constat.API_ENDPOINT}/auth/is-verify`, {
         method: "GET",
         credentials: 'include',
         // headers: { jwt_token: localStorage.token },

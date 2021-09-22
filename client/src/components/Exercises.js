@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import ExerciseCard from "./ExerciseCard";
+import * as Constant from "../Data/Constants";
 
 const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercises }) => {
     const password = "password123";
@@ -9,7 +10,7 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
     const createUser = async () => {
         try {
             const body = { patient_id, first_name, last_name, password, email, role }
-            const response = await fetch("http://localhost:5000/auth/register", {
+            const response = await fetch(`${Constant.API_ENDPOINT}/auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -23,7 +24,7 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
 
     const getUser = async () => {
         try {
-            const userResponse = await fetch(`http://192.168.1.79:5000/exercise/user/${patient_id}`);
+            const userResponse = await fetch(`${Constant.API_ENDPOINT}/exercise/user/${patient_id}`);
             const parseRes = await userResponse.json();
 
             if (parseRes.length === 0) {
@@ -39,7 +40,7 @@ const Exercises = ({ patient_id, first_name, last_name, exercises, resetExercise
 
     const getExercises = async () => {
         try {
-            const exerciseRes = await fetch(`http://192.168.1.79:5000/exercise/user-items/${patient_id}`);
+            const exerciseRes = await fetch(`${Constant.API_ENDPOINT}/exercise/user-items/${patient_id}`);
             const exerciseParse = await exerciseRes.json();
             
             resetExercises(exerciseParse);
