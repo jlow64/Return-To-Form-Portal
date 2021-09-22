@@ -20,23 +20,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        
-      - uses: borales/actions-yarn@v2.0.0 # `yarn install`
-        with:
-          cmd: install
-        working-directory: client
-      
-      - uses: borales/actions-yarn@v2.0.0 # `yarn install`
-        with:
-          cmd: install
-        working-directory: server
 
-      - name: yarn build client
-        run: yarn build 
+      - name: yarn install, build, and test client
+        run: |
+          yarn install
+          yarn test
+          yarn build 
         working-directory: client 
       
-      - name: yarn build server
-        run: yarn build 
+      - name: yarn install, build, and test server
+        run: |
+          yarn install
+          yarn test
+          yarn build 
         working-directory: server
       
       - name: Upload artifact for deployment job
