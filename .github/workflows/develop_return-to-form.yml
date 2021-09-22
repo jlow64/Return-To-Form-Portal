@@ -24,13 +24,17 @@ jobs:
       - name: yarn install, build, and test client
         run: |
           yarn install
-          CI=false && yarn build 
+          yarn build 
+        env:
+          CI: false 
         working-directory: client 
       
       - name: yarn install, build, and test server
         run: |
           yarn install
-          CI=false && yarn build 
+          yarn build 
+        env:
+          CI: false
         working-directory: server
       
       - name: Upload artifact for deployment job
