@@ -49,7 +49,7 @@ function App() {
 
   const isAuth = async() => {
     try {
-      const response = await fetch(`${Constat.API_ENDPOINT}/auth/is-verify`, {
+      const response = await fetch(`${Constant.API_ENDPOINT}/auth/is-verify`, {
         method: "GET",
         credentials: 'include',
         // headers: { jwt_token: localStorage.token },
