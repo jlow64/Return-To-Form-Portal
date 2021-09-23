@@ -25,6 +25,7 @@ const Dashboard = ({ logout }) => {
                 credentials: "include"
             });
                 const parseRes = await response.json();
+                console.log(parseRes);
                 setAppointments(parseRes.individual_appointments);
             } catch (err) {
                 console.error(err);

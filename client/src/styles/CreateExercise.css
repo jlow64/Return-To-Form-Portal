@@ -7,8 +7,8 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    border: 2px solid #F99F1E;
-    background-color: #F99F1E;
+    border: 2px solid #353A3E;
+    background-color: #353A3E;
     color: #FFFFFF;
     margin-top: 1rem;
     justify-content: center;
@@ -23,9 +23,9 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    border: 2px solid #F99F1E;
+    border: 2px solid #353A3E;
     background-color: #FFFFFF;
-    color: #F99F1E;
+    color: #353A3E;
     margin-top: 1rem;
     justify-content: center;
     text-align: center;
@@ -79,8 +79,8 @@
 .num-input-group {
     display: flex;
     position: absolute;
-    right: 1rem;
-    top: -4px;
+    right: 3rem;
+    top: 1px;
 }
 
 .select-video-container {

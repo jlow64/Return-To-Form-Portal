@@ -171,7 +171,7 @@ const EditExercise = ({ logout }) => {
                             value={data.exercise_name}
                             placeholder="Enter text"
                             onChange={dataInputChange}
-                            style={{height: "5rem", width:"100%"}}
+                            style={{height: 40, width:"100%"}}
                         />
                     </Form.Group>
                     <Form.Group as={Row} controlId="formDescription">
@@ -189,19 +189,20 @@ const EditExercise = ({ logout }) => {
                         />
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formReps" >  
+                    <Form.Group as={Row} controlId="formReps" style={{border: "1px solid #C9C9C9", borderRadius: "1rem", height: "50px"}} >  
                         <InputGroup className="mb-3 mt-3" >
-                            <Form.Label className="ml-10">
+                            <Form.Label style={{marginTop: '0.5rem', marginLeft: '2rem'}}>
                                 Reps
                             </Form.Label>
                             <div className="num-input-group">
                                 <DashCircleFill 
-                                    size={32} 
-                                    style={{color: data.reps<=0?"#EFEFF0":"#FCB333"}} 
-                                    onClick={() => {setData({ ...data, reps: parseInt(data.reps) -1 })}}
+                                    size={28} 
+                                    style={{color: data.reps<=0?"#EFEFF0":"#FCB333", marginRight: '2rem'}} 
+                                    onClick={() => {setData({ ...data, reps: parseInt(data.reps) <= 0? 0 : parseInt(data.reps) -1 })}}
                                 />
                                 <Form.Control
                                     className="form-input"
+                                    style={{marginRight: '2rem'}}
                                     size="lg"
                                     type="number"
                                     min="0"
@@ -210,7 +211,7 @@ const EditExercise = ({ logout }) => {
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
-                                    size={32} 
+                                    size={28} 
                                     style={{color: "#FCB333"}} 
                                     onClick={() => {setData({ ...data, reps: parseInt(data.reps) + 1})}}
                                 />
@@ -218,19 +219,20 @@ const EditExercise = ({ logout }) => {
                         </InputGroup>                      
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formSets" >   
+                    <Form.Group as={Row} controlId="formSets" style={{border: "1px solid #C9C9C9", borderRadius: "1rem", height: "50px"}} >   
                         <InputGroup className="mb-3 mt-3" >
-                            <Form.Label>
+                            <Form.Label style={{marginTop: '0.5rem', marginLeft: '2rem'}}>
                                 Sets
                             </Form.Label>
                             <div className="num-input-group">
                                 <DashCircleFill 
-                                    size={32} 
-                                    style={{color: data.sets===0?"#EFEFF0":"#FCB333"}} 
-                                    onClick={() => {setData({ ...data, sets: parseInt(data.sets) - 1})}}
+                                    size={28} 
+                                    style={{color: data.sets===0?"#EFEFF0":"#FCB333", marginRight: '2rem'}} 
+                                    onClick={() => {setData({ ...data, sets: parseInt(data.sets) <= 0? 0 : parseInt(data.sets) - 1})}}
                                 />
                                 <Form.Control
                                     className="form-input"
+                                    style ={{marginRight: '2rem'}}
                                     size="lg"
                                     type="number"
                                     min="0"
@@ -239,7 +241,7 @@ const EditExercise = ({ logout }) => {
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
-                                    size={32} 
+                                    size={28} 
                                     style={{color: "#FCB333"}} 
                                     onClick={() => {setData({ ...data, sets: parseInt(data.sets) + 1})}}
                                 />
@@ -247,17 +249,20 @@ const EditExercise = ({ logout }) => {
                         </InputGroup>                       
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formFrequency" >  
-                        <InputGroup className="mb-3 mt-3" >
-                            <Form.Label>Frequency</Form.Label>
+                    <Form.Group as={Row} controlId="formFrequency" style={{border: "1px solid #C9C9C9", borderRadius: "1rem", height: "50px"}} >  
+                        <InputGroup className="mb-3 mt-3 my-auto" >
+                            <Form.Label style={{marginTop: '0.5rem', marginLeft: '2rem'}}>
+                                Frequency
+                            </Form.Label>
                             <div className="num-input-group">
                                 <DashCircleFill 
-                                    size={32} 
-                                    style={{color: data.frequency===0?"#EFEFF0":"#FCB333"}} 
-                                    onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) -1 })}}
+                                    size={28} 
+                                    style={{color: data.frequency===0?"#EFEFF0":"#FCB333", marginRight: '2rem'}} 
+                                    onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) <= 0? 0 : parseInt(data.frequency) -1 })}}
                                 />
                                 <Form.Control
                                     className="form-input"
+                                    style={{marginRight: '2rem'}}
                                     size="lg"
                                     type="number"
                                     min="0"
@@ -266,7 +271,7 @@ const EditExercise = ({ logout }) => {
                                     onChange={dataInputChange}
                                 />
                                 <PlusCircleFill 
-                                    size={32} 
+                                    size={28} 
                                     style={{color: "#FCB333"}} 
                                     onClick={() => {setData({ ...data, frequency: parseInt(data.frequency) + 1})}}
                                 />
@@ -275,7 +280,7 @@ const EditExercise = ({ logout }) => {
                     </Form.Group>
 
                     <Form.Group as={Row} controlId="formButton" role="form">
-                        <InputGroup className="mb-1">
+                        <InputGroup className="mb-2">
                            <Button 
                                 className="btn-exercise"
                                 size="large"

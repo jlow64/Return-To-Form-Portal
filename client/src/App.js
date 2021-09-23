@@ -74,7 +74,14 @@ function App() {
             <Route exact path="/" >
               <Redirect to="/login" />
             </Route>   
-            <Route exact path="/login" render={props => !isAuthenticated ? <Login {...props} setAuth={setAuth} logout={logout} /> : <Redirect to="/dashboard" />} />
+            <Route 
+              exact path="/login" 
+              render= {props => !isAuthenticated ? ( 
+                <Login {...props} setAuth={setAuth} logout={logout} /> 
+                  ) : (
+                <Redirect to="/dashboard" />
+              )} 
+            />
             <Route exact path="/dashboard" render={props => isAuthenticated ? <Dashboard {...props} setAuth={setAuth} logout={logout} /> : <Redirect to="/login" />} />
             <Route exact path="/dashboard/patient" render={props => isAuthenticated ? <Patient {...props} setAuth={setAuth} logout={logout} /> : <Redirect to="/login" />} />
             <Route exact path="/dashboard/patient/create-exercise" render={props => isAuthenticated ? <CreateExercise {...props} setAuth={setAuth} logout={logout} /> : <Redirect to="/login" />} />
